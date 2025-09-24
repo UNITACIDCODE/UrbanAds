@@ -318,6 +318,7 @@ a {
   width: 64px;
   height: 64px;
   flex-shrink: 0;
+  opacity: 1;
 }
 
 .hero__bottom {
