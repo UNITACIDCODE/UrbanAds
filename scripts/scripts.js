@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
   const svgElements = document.querySelectorAll("#hero-background svg *");
   const svgElementsIntro = document.querySelectorAll(
     ".hero__logo, .hero__company-item svg, .hero__data-item, .hero__text"
@@ -29,4 +28,3 @@ document.addEventListener("DOMContentLoaded", () => {
       from: "start"
     }
   });
-})
