@@ -280,7 +280,7 @@ a {
   position: relative;
   display: flex;
   padding-block: 40px;
-  min-height: 100dvh;
+  min-height: 816px;
   background: var(--gradient-hero);
 }
 
