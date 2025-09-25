@@ -238,6 +238,7 @@ a {
   margin: 0 auto;
 }
 
+
 .header__row {
   position: relative;
   display: flex;
@@ -476,6 +477,34 @@ a {
 .about__card-description {
   font-weight: var(--font-weight-regular);
 }
+
+.for-whom__container {
+  position: relative;
+}
+
+#for-whom-background {
+  position: absolute;
+  top: 0;
+  width: calc(100% - var(--bs-container) * 2);
+  pointer-events: none;
+}
+
+.for-whom__list {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.for-whom__item {
+  background: linear-gradient(118.63deg, rgba(255, 255, 255, 0.6) 2.05%, rgba(255, 255, 255, 0.12) 100%);
+  border: 1px solid;
+  border-radius: 30px;
+  border-image-source: linear-gradient(0deg, #FFFFFF 0%, #D4D4D4 100%);
+  backdrop-filter: blur(20px);
+  box-shadow: 0px 4px 48px 0px #292B3126;
+}
+
 
 
 @media (max-width: 1282px) {

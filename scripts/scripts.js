@@ -1,47 +1,68 @@
-if (window.innerWidth >= 440) {
-  const svgElements = document.querySelectorAll("#hero-background svg *");
-  const svgElementsIntro = document.querySelectorAll(
-    ".hero__logo, .hero__company-item svg, .hero__data-item, .hero__text"
-  );
+document.addEventListener("DOMContentLoaded", () => {
+  if (window.innerWidth < 440) return
 
-  gsap.from(svgElements, {
+  gsap.registerPlugin(ScrollTrigger)
+
+  // --- Анимация элементов hero ---
+  const heroElements = document.querySelectorAll("#hero-background svg *")
+  const heroIntro = document.querySelectorAll(
+    ".hero__logo, .hero__company-item svg, .hero__data-item, .hero__text"
+  )
+
+  const animateElements = (elements, config) => {
+    if (!elements.length) return
+    gsap.from(elements, config)
+  }
+
+  animateElements(heroElements, {
     opacity: 0,
     y: () => gsap.utils.random(10, 20),
     scale: () => gsap.utils.random(0.94, 1),
     duration: 1,
     ease: "power3.out",
-    stagger: {
-      each: 0.04,
-      from: "start"
-    }
-  });
+    stagger: { each: 0.04, from: "start" },
+  })
 
-  gsap.from(svgElementsIntro, {
+  animateElements(heroIntro, {
     opacity: 0,
     y: () => gsap.utils.random(10, 25),
     scale: () => gsap.utils.random(0.9, 1),
     rotation: () => gsap.utils.random(-3, 3),
     duration: 1.2,
     ease: "power3.out",
-    stagger: {
-      each: 0.1,
-      from: "start"
+    stagger: { each: 0.1, from: "start" },
+  })
+
+  const forWhomElements = document.querySelectorAll("#for-whom-background svg *")
+  gsap.utils.toArray(forWhomElements).forEach((el, i) => {
+    gsap.from(el, {
+      opacity: 0,
+      y: gsap.utils.random(20, 50),
+      x: gsap.utils.random(-10, 10),
+      scale: gsap.utils.random(0.8, 1),
+      duration: 1,
+      ease: "back.out(1.7)",
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%",
+        toggleActions: "play none none none",
+      },
+    })
+  })
+
+  const runline = document.querySelector(".marquee__wrapper")
+  if (runline) {
+    runline.innerHTML += runline.innerHTML
+    let pos = 0
+    const speed = 0.8
+
+    const animateMarquee = () => {
+      pos -= speed
+      if (Math.abs(pos) >= runline.scrollWidth / 2) pos = 0
+      runline.style.transform = `translate3d(${pos}px, 0, 0)`
+      requestAnimationFrame(animateMarquee)
     }
-  });
-}
 
-
-const runline = document.querySelector('.marquee__wrapper')
-runline.innerHTML += runline.innerHTML;
-
-let pos = 0;
-const speed = 0.8
-
-function animate() {
-  pos -= speed;
-  if (Math.abs(pos) >= runline.scrollWidth / 2) pos = 0;
-  runline.style.transform = `translate3d(${pos}px, 0, 0)`;
-  requestAnimationFrame(animate);
-}
-
-animate();
+    animateMarquee()
+  }
+})
