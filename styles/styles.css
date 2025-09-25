@@ -483,7 +483,7 @@ a {
 
 #for-whom-background {
   position: absolute;
-  top: 0;
+  top: 10%;
   width: calc(100% - var(--bs-container) * 2);
   pointer-events: none;
 }
@@ -492,19 +492,38 @@ a {
   z-index: 2;
   display: flex;
   flex-direction: column;
+  max-width: 969px;
+  margin-top: 64px;
+  margin-inline: auto;
+  padding: 12px;
   gap: 8px;
+  border-radius: 40px;
+  background: linear-gradient(118.63deg, rgba(255, 255, 255, 0.6) 2.05%, rgba(255, 255, 255, 0.12) 100%);
+  border: 1px solid;
+  border-image-source: linear-gradient(0deg, #FFFFFF 0%, #D4D4D4 100%);
 }
 
 .for-whom__item {
-  background: linear-gradient(118.63deg, rgba(255, 255, 255, 0.6) 2.05%, rgba(255, 255, 255, 0.12) 100%);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  text-wrap: balance;
+  padding: 20px;
   border: 1px solid;
+  font-size: 32px;
   border-radius: 30px;
   border-image-source: linear-gradient(0deg, #FFFFFF 0%, #D4D4D4 100%);
   backdrop-filter: blur(20px);
+  background: linear-gradient(118.63deg, rgba(255, 255, 255, 0.6) 2.05%, rgba(255, 255, 255, 0.12) 100%);
   box-shadow: 0px 4px 48px 0px #292B3126;
 }
 
-
+.for-whom__item .icon {
+  width: 27px;
+  height: 27px;
+  transform: rotate(-90deg);
+  flex-shrink: 0;
+}
 
 @media (max-width: 1282px) {
   :root {
@@ -616,6 +635,11 @@ a {
   .about__card-inner {
     gap: 38px;
   }
+
+  .for-whom__list {
+    max-width: 869px;
+    margin-top: 54px;
+  }
 }
 
 @media (max-width: 1026px) {
@@ -718,6 +742,15 @@ a {
   .about__card-inner {
     gap: 32px;
   }
+
+  .about__card-inner {
+    gap: 38px;
+  }
+
+  .for-whom__list {
+    max-width: 669px;
+    margin-top: 48px;
+  }
 }
 
 @media (max-width: 822px) {
@@ -806,6 +839,22 @@ a {
   }
 
   .about__card-inner .icon {
+    width: 25px;
+    height: 24px;
+  }
+
+  .for-whom__list {
+    max-width: 100%;
+    margin-top: 48px;
+    padding: 8px 10px;
+  }
+
+  .for-whom__item {
+    gap: 16px;
+    border-radius: 32px;
+  }
+
+  .for-whom__item .icon {
     width: 25px;
     height: 24px;
   }
@@ -932,6 +981,17 @@ a {
   .marquee span {
     gap: 18px;
     font-size: 22px;
+  }
+
+  .for-whom__item {
+    gap: 12px;
+    border-radius: 32px;
+    font-size: 22px;
+  }
+
+  .for-whom__item .icon {
+    width: 22px;
+    height: 22px;
   }
 }
 

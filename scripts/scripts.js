@@ -32,33 +32,38 @@ document.addEventListener("DOMContentLoaded", () => {
     stagger: { each: 0.1, from: "start" },
   })
 
-  const forWhomElements = document.querySelectorAll("#for-whom-background svg *")
-  gsap.utils.toArray(forWhomElements).forEach((el, i) => {
-    gsap.from(el, {
-      opacity: 0,
-      y: gsap.utils.random(20, 50),
-      x: gsap.utils.random(-10, 10),
-      scale: gsap.utils.random(0.8, 1),
-      duration: 1,
-      ease: "back.out(1.7)",
-      scrollTrigger: {
-        trigger: el,
-        start: "top 85%",
-        toggleActions: "play none none none",
-      },
-    })
-  })
+const forWhomElements = document.querySelectorAll("#for-whom-background svg *");
+
+
+gsap.utils.toArray(forWhomElements).forEach((el, i) => {
+  gsap.from(el, {
+    opacity: 0,
+    y: gsap.utils.random(20, 50),
+    x: gsap.utils.random(-10, 10),
+    scale: gsap.utils.random(0.8, 1),
+    duration: 2, 
+    delay: i * 0.1, 
+    ease: "back.out(1.7)",
+    scrollTrigger: {
+      trigger: el,
+      start: "top 75%", 
+      toggleActions: "play none none none",
+    },
+  });
+});
+
+
 
   const runline = document.querySelector(".marquee__wrapper")
   if (runline) {
     runline.innerHTML += runline.innerHTML
-    let pos = 0
+    let pos = -runline.scrollWidth / 2
     const speed = 0.8
 
     const animateMarquee = () => {
-      pos -= speed
-      if (Math.abs(pos) >= runline.scrollWidth / 2) pos = 0
-      runline.style.transform = `translate3d(${pos}px, 0, 0)`
+      pos += speed
+      if (pos >= 0) pos = -runline.scrollWidth / 2
+      runline.style.transform = `translate(${pos}px, 0)`
       requestAnimationFrame(animateMarquee)
     }
 
