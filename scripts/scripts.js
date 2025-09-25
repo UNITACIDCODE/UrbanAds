@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     opacity: 0,
     y: () => gsap.utils.random(10, 25),
     scale: () => gsap.utils.random(0.9, 1),
-    rotation: () => gsap.utils.random(-3, 3),
     duration: 1.2,
     ease: "power3.out",
     stagger: { each: 0.1, from: "start" },
