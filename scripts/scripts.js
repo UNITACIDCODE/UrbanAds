@@ -1,8 +1,8 @@
+if (window.innerWidth >= 440) {
   const svgElements = document.querySelectorAll("#hero-background svg *");
   const svgElementsIntro = document.querySelectorAll(
     ".hero__logo, .hero__company-item svg, .hero__data-item, .hero__text"
   );
-
 
   gsap.from(svgElements, {
     opacity: 0,
@@ -14,7 +14,7 @@
       each: 0.04,
       from: "start"
     }
-  })
+  });
 
   gsap.from(svgElementsIntro, {
     opacity: 0,
@@ -28,3 +28,20 @@
       from: "start"
     }
   });
+}
+
+
+const runline = document.querySelector('.marquee__wrapper')
+runline.innerHTML += runline.innerHTML;
+
+let pos = 0;
+const speed = 0.8
+
+function animate() {
+  pos -= speed;
+  if (Math.abs(pos) >= runline.scrollWidth / 2) pos = 0;
+  runline.style.transform = `translate3d(${pos}px, 0, 0)`;
+  requestAnimationFrame(animate);
+}
+
+animate();
