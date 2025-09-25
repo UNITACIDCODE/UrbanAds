@@ -601,6 +601,7 @@ a {
   border-radius: 50px;
   background: var(--color-light);
 }
+
 .program__item.skeleton div span:nth-child(2),
 .program__item.skeleton div span:nth-child(3) {
   display: block;
@@ -625,17 +626,15 @@ a {
   height: 88px;
   opacity: 0.1;
   border-radius: 50%;
+  flex-shrink: 0;
   background: var(--color-light);
 }
-
-
-
 
 #questions-background {
   position: absolute;
   top: 80px;
   width: calc(100% - var(--bs-container) * 2);
-  pointer-events: none;  
+  pointer-events: none;
 }
 
 .questions {
@@ -657,8 +656,9 @@ a {
   padding: 12px;
   border-radius: 40px;
   background: #FFFFFF33;
-  backdrop-filter: blur(22);
+  backdrop-filter: blur(22px);
   box-shadow: 0px 0px 31.38px 0px #292B3126;
+  z-index: 4;
 }
 
 .questions__item {
@@ -677,7 +677,7 @@ a {
   justify-content: space-between;
   font-weight: 500;
   padding: 20px;
-
+  text-align: start;
   font-size: 32px;
   text-transform: lowercase;
   background: transparent;
@@ -786,17 +786,13 @@ a {
   border-radius: 40px;
   background: #292B31CC;
   box-shadow:
-    0px 4px 10px #0000004c, inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 1px 0 0 rgba(
+    0px 4px 10px #0000004c, inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 1px 0 0 rgba(255,
       255,
       255,
-      255,
-      0.32
-    ), inset 0 -1px 1px rgba(0, 0, 0, 0.13), inset -1px 0 1px rgba(
+      0.32), inset 0 -1px 1px rgba(0, 0, 0, 0.13), inset -1px 0 1px rgba(0,
       0,
       0,
-      0,
-      0.11
-    );
+      0.11);
   backdrop-filter: blur(2.0px) brightness(100.0%) saturate(100.0%);
   -webkit-backdrop-filter: blur(2.0px) brightness(100.0%) saturate(100.0%);
 
@@ -810,17 +806,13 @@ a {
   border-radius: 30px;
   background: #292B31CC;
   box-shadow:
-    0px 4px 10px #0000004c, inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 1px 0 0 rgba(
+    0px 4px 10px #0000004c, inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 1px 0 0 rgba(255,
       255,
       255,
-      255,
-      0.32
-    ), inset 0 -1px 1px rgba(0, 0, 0, 0.13), inset -1px 0 1px rgba(
+      0.32), inset 0 -1px 1px rgba(0, 0, 0, 0.13), inset -1px 0 1px rgba(0,
       0,
       0,
-      0,
-      0.11
-    );
+      0.11);
   backdrop-filter: blur(2.0px) brightness(100.0%) saturate(100.0%);
   -webkit-backdrop-filter: blur(2.0px) brightness(100.0%) saturate(100.0%);
 }
@@ -831,7 +823,6 @@ a {
   font-size: 32px;
   color: var(--color-light);
 }
-
 
 @media (max-width: 1282px) {
   :root {
@@ -948,6 +939,55 @@ a {
     max-width: 869px;
     margin-top: 54px;
   }
+
+  #questions-background {
+    top: 70px;
+  }
+
+  .questions {
+    padding-top: 125px;
+  }
+
+  .questions__list {
+    max-width: 869px;
+  }
+
+  .footer {
+    padding-top: 125px;
+    padding-bottom: 110px;
+  }
+
+  .footer__container {
+    gap: 22px;
+  }
+
+  .footer__card-text {
+    gap: 26px;
+    padding: 30px;
+    font-size: 22px;
+  }
+
+  .footer__register {
+    gap: 54px;
+  }
+
+  .footer__register-title {
+    font-size: 54px;
+  }
+
+  .footer__register-box-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 30px;
+  }
+
+  .footer__register-box-title {
+    text-align: center;
+    font-weight: 400;
+    font-size: 28px;
+    color: var(--color-light);
+  }
 }
 
 @media (max-width: 1026px) {
@@ -1058,6 +1098,97 @@ a {
   .for-whom__list {
     max-width: 669px;
     margin-top: 48px;
+  }
+
+.program {
+  margin-top: 100px;
+  padding-top: 82px;
+  max-height: 788px;
+}
+
+.program__list {
+  padding: 8px;
+}
+
+.program__item.skeleton {
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+}
+
+.program__item.skeleton div span:nth-child(1) {
+  width: 178px;
+  height: 25px;
+}
+
+.program__item.skeleton div span:nth-child(2),
+.program__item.skeleton div span:nth-child(3) {
+  width: 100%;
+  height: 25px;
+}
+
+.program__item.skeleton span {
+  order: -1;
+  width: 60px;
+  height: 60px;
+}
+
+  #questions-background {
+    top: 60px;
+  }
+
+  .questions {
+    padding-top: 115px;
+  }
+
+  .questions__list {
+    max-width: 669px;
+    margin-top: 48px;
+    padding: 8px;
+  }
+
+  .footer {
+    padding-top: 115px;
+    padding-bottom: 64px;
+  }
+
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+  }
+
+  .footer__card {
+    padding: 8px;
+  }
+
+  .footer__card-text {
+    gap: 26px;
+    padding: 30px;
+    font-size: 18px;
+    max-width: 500px;
+  }
+
+  .footer__register {
+    gap: 32px;
+    max-width: 500px;
+  }
+
+  .footer__register-title {
+    font-size: 40px;
+  }
+
+  .footer__register-box {
+    padding: 8px;
+  }
+
+  .footer__register-box-inner {
+    padding: 20px;
+  }
+
+  .footer__register-box-title {
+    font-size: 32px;
   }
 }
 
@@ -1303,6 +1434,28 @@ a {
     width: 22px;
     height: 22px;
   }
+
+  .program {
+    margin-top: 100px;
+    padding-top: 82px;
+    max-height: 700px;
+  }
+
+  .program__item {
+    font-size: 22px;
+  }
+  
+  .questions {
+    padding-top: 100px;
+  }
+
+  .questions__list {
+    max-width: 669px;
+  }
+
+  .questions__item .open {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 440px) {
@@ -1368,7 +1521,77 @@ a {
   .about__card-title {
     font-size: 22px;
   }
+
   .about__card-description {
     font-size: 14px;
+  }
+
+  .program {
+    margin-top: 80px;
+    padding-top: 52px;
+    max-height: 670px;
+  }
+
+  .program__item {
+    font-size: 22px;
+    padding: 20px;
+  }
+
+  .questions {
+    padding-top: 80px;
+  }
+
+  .questions__list {
+    max-width: 100%;
+  }
+
+  .questions__item .open {
+    font-size: 22px;
+  }
+
+  .questions__item .icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .questions__item .icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .questions__item .content {
+    font-size: 14px;
+  }
+
+  .footer {
+    padding-top: 80px;
+    padding-bottom: 32px;
+  }
+
+  .footer__card {
+    padding: 8px;
+  }
+
+  .footer__card-text {
+    gap: 20px;
+    padding: 20px;
+    font-size: 16px;
+    max-width: 500px;
+  }
+
+  .footer__register {
+    gap: 24px;
+  }
+
+  .footer__register-title {
+    font-size: 28px;
+  }
+
+  .footer__register-box {
+    padding: 8px;
+  }
+
+  .footer__register-box-title {
+    font-size: 22px;
   }
 }
