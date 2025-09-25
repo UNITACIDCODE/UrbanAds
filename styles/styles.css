@@ -543,6 +543,94 @@ a {
   flex-shrink: 0;
 }
 
+.program {
+  margin-top: 280px;
+  padding-top: 128px;
+  max-height: 850px;
+  background-color: var(--color-dark);
+  overflow: hidden;
+}
+
+.program__list {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 8px;
+  background: linear-gradient(118.63deg, rgba(255, 255, 255, 0.1) 2.05%, rgba(255, 255, 255, 0.02) 100%);
+
+  border-radius: 40px;
+  box-shadow: 0px 4px 48px #292b3126, inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 1px 0 0 rgba(255, 255, 255, 0.32),
+    inset 0 -1px 8px rgba(0, 0, 0, 0.2), inset -1px 0 8px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(10px) brightness(100%) blur(12.5px) brightness(100%) saturate(100%) hue-rotate(10deg);
+  -webkit-backdrop-filter: blur(10px) brightness(100%) blur(12.5px) brightness(100%) saturate(100%) hue-rotate(10deg);
+
+}
+
+.program__item {
+  text-wrap: balance;
+  border-radius: 30px;
+  background: #292B31CC;
+  padding: 20px 32px;
+  box-shadow: 0px 4px 48px #292b3126, inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 1px 0 0 rgba(255, 255, 255, 0.32),
+    inset 0 -1px 8px rgba(0, 0, 0, 0.2), inset -1px 0 8px rgba(0, 0, 0, 0.16);
+  backdrop-filter: blur(10px) brightness(100%) blur(12.5px) brightness(100%) saturate(100%) hue-rotate(10deg);
+  -webkit-backdrop-filter: blur(10px) brightness(100%) blur(12.5px) brightness(100%) saturate(100%) hue-rotate(10deg);
+  color: var(--color-light);
+  font-size: 32px;
+}
+
+.program__item.skeleton {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: linear-gradient(118.63deg, rgba(255, 255, 255, 0.2) 2.05%, rgba(255, 255, 255, 0.04) 100%);
+
+  backdrop-filter: blur(20px);
+  box-shadow: 0px 4px 48px 0px #292B3126;
+}
+
+.program__item.skeleton div {
+  width: 100%;
+}
+
+.program__item.skeleton div span:nth-child(1) {
+  display: block;
+  width: 335px;
+  height: 30px;
+  opacity: 0.1;
+  border-radius: 50px;
+  background: var(--color-light);
+}
+.program__item.skeleton div span:nth-child(2),
+.program__item.skeleton div span:nth-child(3) {
+  display: block;
+  width: 700px;
+  height: 30px;
+  opacity: 0.1;
+  border-radius: 50px;
+  background: var(--color-light);
+}
+
+.program__item.skeleton div span:nth-child(2) {
+  margin-top: 16px;
+}
+
+.program__item.skeleton div span:nth-child(3) {
+  margin-top: 8px;
+}
+
+.program__item.skeleton span {
+  display: block;
+  width: 88px;
+  height: 88px;
+  opacity: 0.1;
+  border-radius: 50%;
+  background: var(--color-light);
+}
+
+
+
+
 #questions-background {
   position: absolute;
   top: 80px;
