@@ -31,17 +31,17 @@ if (window.innerWidth >= 440) {
 }
 
 
-const runline = document.querySelector('.marquee__wrapper')
-runline.innerHTML += runline.innerHTML;
+// const runline = document.querySelector('.marquee__wrapper')
+// runline.innerHTML += runline.innerHTML;
 
-let pos = 0;
-const speed = 0.8
+// let pos = 0;
+// const speed = 0.8
 
-function animate() {
-  pos -= speed;
-  if (Math.abs(pos) >= runline.scrollWidth / 2) pos = 0;
-  runline.style.transform = `translate3d(${pos}px, 0, 0)`;
-  requestAnimationFrame(animate);
-}
+// function animate() {
+//   pos -= speed;
+//   if (Math.abs(pos) >= runline.scrollWidth / 2) pos = 0;
+//   runline.style.transform = `translate3d(${pos}px, 0, 0)`;
+//   requestAnimationFrame(animate);
+// }
 
-animate();
+// animate();
