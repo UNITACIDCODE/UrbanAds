@@ -510,7 +510,7 @@ a {
   z-index: 2;
   display: flex;
   flex-direction: column;
-  max-width: 969px;
+  max-width: 990PX;
   margin-top: 64px;
   margin-inline: auto;
   padding: 12px;
@@ -545,7 +545,7 @@ a {
 
 #questions-background {
   position: absolute;
-  top: 90px;
+  top: 80px;
   width: calc(100% - var(--bs-container) * 2);
   pointer-events: none;  
 }
