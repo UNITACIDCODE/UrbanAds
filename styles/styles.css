@@ -737,12 +737,12 @@ a {
 }
 
 .footer__container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: center;
   align-items: flex-end;
   gap: 24px;
 }
-
+/* 
 .footer__card {
   padding: 20px;
   border-radius: 40px;
@@ -762,12 +762,13 @@ a {
   background: linear-gradient(118.63deg, rgba(255, 255, 255, 0.6) 2.05%, rgba(255, 255, 255, 0.12) 100%);
   backdrop-filter: blur(20px);
   box-shadow: 0px 3px 48px 0px #292B311C;
-}
+} */
 
 .footer__register {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 656px;
   gap: 64px;
 }
 
