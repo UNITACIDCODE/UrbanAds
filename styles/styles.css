@@ -476,6 +476,14 @@ br {
   margin-top: 40px;
 }
 
+br.predlog {
+  display: unset;
+}
+
+.hero__box.--mobile .hero__text p {
+  max-width: 304px;
+}
+
 .marquee {
   display: flex;
   overflow: hidden;
@@ -936,6 +944,7 @@ br {
 }
 
 @media (min-width:640px) {
+
   .title {
     font-size: 48px;
   }
