@@ -986,7 +986,7 @@ br.predlog {
   }
 
   .hero {
-    min-height: 568px;
+    min-height: 482px;
   }
 
   .hero__box {
@@ -1016,13 +1016,13 @@ br.predlog {
 
   .hero__logo {
     position: absolute;
-    top: 30%;
+    top: 37%;
     right: 0;
-    padding: 25px 30px;
+    padding: 10px 30px;
   }
 
   .hero__logo svg {
-    width: 352px;
+    width: 252px;
     height: 62px;
   }
 
@@ -1102,7 +1102,7 @@ br.predlog {
   }
 
   .program-decor {
-    top: 16%;
+    top: 5%;
     left: unset;
     transform: unset;
   }
@@ -1136,7 +1136,7 @@ br.predlog {
 
   .faq-decor {
     display: block;
-    bottom: -25%;
+    top: 50px;
   }
 
   .accordion {
@@ -1273,7 +1273,7 @@ br.predlog {
 
   .hero__logo {
     position: absolute;
-    top: 54%;
+    top: 41%;
     transform: translateY(-50%);
     right: 0;
     padding: 38px 50px;
