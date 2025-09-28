@@ -362,7 +362,7 @@ body {
 .hero__data-list {
   display: flex;
   align-items: center;
-  gap: 8px2;
+  gap: 8px;
 }
 
 .hero__data-item {
