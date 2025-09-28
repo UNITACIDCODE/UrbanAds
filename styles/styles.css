@@ -147,6 +147,10 @@ body {
   }
 }
 
+br {
+  display: none;
+}
+
 .decor svg {
   overflow: visible;
 }
@@ -1298,6 +1302,10 @@ body {
 }
 
 @media (min-width:1280px) {
+    br {
+    display: unset;
+  }
+
   .hero {
     min-height: 806px;
   }
@@ -1346,6 +1354,7 @@ body {
     left: 0;
     margin-top: 30px;
     padding: 24px 50px;
+    font-size: 24px;
     max-width: 578px;
     border-radius: 35px;
   }
@@ -1353,7 +1362,6 @@ body {
   .hero__text p {
     font-size: 24px;
   }
-
 
   .marquee__wrapper {
     gap: 24px;
@@ -1425,6 +1433,10 @@ body {
     height: 28px;
   }
 
+  .program-decor {
+    top: -25%;
+  }
+
   .program {
     padding-block: 95px;
   }
@@ -1435,9 +1447,13 @@ body {
     border-radius: 35px;
   }
 
+  .page {
+    overflow: hidden;
+  }
+
   .faq-decor {
     display: block;
-    bottom: -75%;
+    top: 220px;
   }
 
   .faq {
