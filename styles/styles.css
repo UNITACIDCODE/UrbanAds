@@ -1170,12 +1170,75 @@ body {
 }
 
 @media (min-width:1024px) {
+  .button--primary {
+    font-size: 21px;
+  }
+
+  .header {
+    top: 20px;
+  }
+
+  .header__nav {
+    backdrop-filter: none;
+  }
+
+  .header__nav::before {
+    content: none;
+  }
+
+  .header__item:nth-child(2) {
+    display: block;
+  }
+  
+  .header__row {
+    position: relative;
+    display: flex;
+    padding: 3px;
+    border-radius: 30px;
+    padding: 12px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 3px 48px 0px #292B311C;
+    gap: 8px;
+  }
+
+  .header__row::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: var(--gradient-linear-3);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .header__item {
+    padding: 10px 16px;
+  }
+
+  .header__item span {
+    font-size: 21px;
+  }
+
+  .header__item:nth-child(2) {
+    display: block;
+  }
+
+  .header__logo {
+    max-width: 172px;
+    max-height: 24px;
+  }
+
   .hero {
-    min-height: 694px;
+    min-height: 654px;
   }
 
   .hero__box {
-    padding: 100px 40px;
+    margin-top: 45px;
+    padding: 20px 40px;
   }
 
   .hero__data-list {
@@ -1255,66 +1318,6 @@ body {
 }
 
 @media (min-width:1280px) {
-
-  .header {
-    top: 20px;
-  }
-
-  .header__nav {
-    backdrop-filter: none;
-  }
-
-  .header__nav::before {
-    content: none;
-  }
-
-  .header__item:nth-child(2) {
-    display: block;
-  }
-  
-  .header__row {
-    position: relative;
-    display: flex;
-    padding: 3px;
-    border-radius: 30px;
-    padding: 12px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0px 3px 48px 0px #292B311C;
-    gap: 8px;
-  }
-
-  .header__row::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    padding: 1px;
-    border-radius: inherit;
-    background: var(--gradient-linear-3);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    pointer-events: none;
-  }
-
-
-  .header__item {
-    padding: 10px 16px;
-  }
-
-  .header__item span {
-    font-size: 21px;
-  }
-
-  .header__item:nth-child(2) {
-    display: block;
-  }
-
-  .header__logo {
-    max-width: 172px;
-    max-height: 24px;
-  }
-
   .hero {
     min-height: 806px;
   }
