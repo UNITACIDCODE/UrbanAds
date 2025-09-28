@@ -733,14 +733,6 @@ body {
   background: rgba(40, 44, 50, 0.3);
   backdrop-filter: blur(20px);
   color: var(--color-neutral-100);
-  opacity: 0;
-  transform: translateY(32px);
-  transition: opacity var(--bs-transition), transform var(--bs-transition);
-}
-
-.program__item.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .program__item::before {
@@ -761,17 +753,6 @@ body {
   display: inline-block;
   white-space: pre-wrap;
   max-width: 100%;
-}
-
-.cursor {
-  display: inline-block;
-  vertical-align: bottom;
-  width: 1ch;
-  color: currentColor;
-}
-
-.cursor.blink {
-  animation: blink 1s ease-in-out infinite;
 }
 
 @keyframes blink {
@@ -1291,7 +1272,7 @@ body {
   }
 
   .program-decor {
-    top: -34%;
+    top: -10%;
   }
 
   .program-decor .decor, 
