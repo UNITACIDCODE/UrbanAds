@@ -336,7 +336,7 @@ body {
 .hero {
   display: flex;
   overflow: hidden;
-  min-height: 720px;  
+  min-height: 100vh;  
 }
 
 .hero .container {
