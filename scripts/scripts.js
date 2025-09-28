@@ -5,12 +5,20 @@ const heroCompanyLogos = document.querySelectorAll(".hero__company-list, .hero__
 const heroDatePlace = document.querySelectorAll(".hero__data-item");
 const heroDescription = document.querySelectorAll(".hero__text");
 
-const heroTl = gsap.timeline();
+const heroTl = gsap.timeline({ defaults: { opacity: 0, duration: 0.8, ease: "back.out(1.2)" } });
 
-heroTl.from(heroLogoUrban, { opacity: 0, y: -10, scale: 0.8, duration: 0.8, ease: "back.out(1.2)" }, "-=1.8");
-heroTl.from(heroCompanyLogos, { opacity: 0, y: 10, scale: 0.85, duration: 0.7, ease: "back.out(1.2)", stagger: 0.05 }, "-=1.6");
-heroTl.from(heroDatePlace, { opacity: 0, y: 15, scale: 0.85, duration: 0.7, ease: "power1.out", stagger: 0.05 }, "-=1.4");
-heroTl.from(heroDescription, { opacity: 0, y: 20, scale: 0.8, duration: 0.8, ease: "back.out(1.2)" }, "-=1.2");
+// Логотип Urban
+heroTl.from(heroLogoUrban, { y: -20, scale: 0.8 });
+
+// Логотипы компаний с небольшим смещением по времени
+heroTl.from(heroCompanyLogos, { y: 10, scale: 0.85, stagger: 0.05 }, "-=0.6");
+
+// Дата и место
+heroTl.from(heroDatePlace, { y: 15, scale: 0.85, stagger: 0.05, ease: "power1.out" }, "-=0.6");
+
+// Описание
+heroTl.from(heroDescription, { y: 20, scale: 0.8 }, "-=0.5");
+
 
 const runline = document.querySelector(".marquee__wrapper");
 if (runline) {
