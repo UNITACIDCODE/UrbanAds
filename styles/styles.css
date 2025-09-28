@@ -151,6 +151,11 @@ br {
   display: none;
 }
 
+br.display {
+  display: unset;
+}
+
+
 .decor svg {
   overflow: visible;
 }
@@ -279,35 +284,35 @@ br {
   z-index: 100;
 }
 
-  .header__nav {
-    position: relative;
-    display: flex;
-    width: fit-content;
-    margin: 0 auto;
-    gap: 8px;
-    padding: 4px;
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0px 3px 48px 0px #292B311C;
-  }
+.header__nav {
+  position: relative;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  gap: 8px;
+  padding: 4px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0px 3px 48px 0px #292B311C;
+}
 
-  .header__nav::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    padding: 1px;
-    border-radius: inherit;
-    background: var(--gradient-linear-3);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask-composite: exclude;
-    pointer-events: none;
-  }
+.header__nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: var(--gradient-linear-3);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+}
 
-  .header__row::before {
-    content: none;
-  }
+.header__row::before {
+  content: none;
+}
 
 .header__item {
   position: relative;
@@ -473,6 +478,8 @@ br {
 }
 
 .hero__box.--mobile .hero__text {
+  width: fit-content;
+
   margin-top: 40px;
 }
 
@@ -481,7 +488,8 @@ br.predlog {
 }
 
 .hero__box.--mobile .hero__text p {
-  max-width: 304px;
+  max-width: fit-content;
+  width: fit-content;
 }
 
 .marquee {
@@ -1018,7 +1026,6 @@ br.predlog {
     position: relative;
     margin-top: 20px;
     border-radius: 16px;
-    max-width: 364px;
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(20px);
     box-shadow: 0px 4px 48px 0px rgba(34, 38, 42, 0.05);
@@ -1251,7 +1258,7 @@ br.predlog {
 
   .hero__logo {
     position: absolute;
-    top: 51%;
+    top: 54%;
     transform: translateY(-50%);
     right: 0;
     padding: 38px 50px;
@@ -1278,7 +1285,7 @@ br.predlog {
     left: 0;
     margin-top: 30px;
     padding: 24px 50px;
-    max-width: 448px;
+    width: 478px;
     border-radius: 35px;
   }
 
@@ -1330,7 +1337,7 @@ br.predlog {
 
   .hero__box {
     margin-block: 42px;
-    padding: 100px 50px;
+    padding: 100px 90px;
   }
 
   .hero__data-list {
@@ -1345,7 +1352,7 @@ br.predlog {
 
   .hero__logo {
     position: absolute;
-    top: 50%;
+    top: 46%;
     transform: translateY(-50%);
     right: 0;
     padding: 52px 60px;
@@ -1368,12 +1375,14 @@ br.predlog {
     height: 64px;
   }
 
+
   .hero__text {
+    display: flex;
     left: 0;
     margin-top: 30px;
     padding: 24px 50px;
     font-size: 24px;
-    max-width: 578px;
+    width: 578px;
     border-radius: 35px;
   }
 
