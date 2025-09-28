@@ -344,7 +344,7 @@ br {
   z-index: -1;
 }
 
-.hero-decor svg {
+.hero-decor svg, .hero-decor img {
   width: 100%;
 }
 
