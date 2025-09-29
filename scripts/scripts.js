@@ -1,77 +1,124 @@
-gsap.registerPlugin(ScrollTrigger);
-
-const heroLogoUrban = document.querySelectorAll(".hero__logo");
-const heroKeyUrban = document.querySelectorAll(".key");
-const heroCompanyLogos = document.querySelectorAll(".hero__company-list, .hero__company-item svg");
-const heroDatePlace = document.querySelectorAll(".hero__data-item");
-const heroDescription = document.querySelectorAll(".hero__text");
-const heroDecorElements = document.querySelectorAll(".hero-decor");
+gsap.registerPlugin(ScrollTrigger)
 
 
-const heroTl = gsap.timeline({ defaults: { opacity: 0, duration: 0.8, ease: "back.out(1.2)" } });
-
-heroKeyUrban
-heroTl.from(heroLogoUrban, { y: -20, scale: 0.8 });
-heroTl.from(heroKeyUrban, { y: -20, scale: 0.8 },"-=0.6");
-heroTl.from(heroCompanyLogos, { y: 10, scale: 0.85, stagger: 0.05 }, "-=0.6");
-heroTl.from(heroDatePlace, { y: 15, scale: 0.85, stagger: 0.05, ease: "power1.out" }, "-=0.6");
-heroTl.from(heroDescription, { y: 20, scale: 0.8 }, "-=0.5");
-
-
-
-
-const svgs = document.querySelectorAll(".decor svg > *");
-
-svgs.forEach((el, i) => {
-  gsap.fromTo(
-    el,
-    { opacity: 0, y: 24 },
-    {
-      opacity: 1,
-      y: 0,
-      duration: 2,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: el,
-        start: "top 85%",
-        end: "bottom 10%",
-        toggleActions: "play none none reverse",
-      },
-    }
-  );
-
-  gsap.to(el, {
-    y: "-=10",
-    ease: "none",
-    scrollTrigger: {
-      trigger: el,
-      start: "top bottom",
-      end: "bottom top",
-      scrub: true,
-    },
-  });
-});
-
-
-
-
-
-const runline = document.querySelector(".marquee__wrapper")
-if (runline) {
-  runline.innerHTML += runline.innerHTML
-  let pos = -runline.scrollWidth / 2
-  const speed = 0.8
-  const animateMarquee = () => {
-    pos += speed
-    if (pos >= 0) pos = -runline.scrollWidth / 2
-    runline.style.transform = `translateX(${pos}px)`
-    requestAnimationFrame(animateMarquee)
+const initHeroAnimation = () => {
+  const elements = {
+    logo: document.querySelectorAll(".hero__logo"),
+    key: document.querySelectorAll(".key"),
+    companies: document.querySelectorAll(".hero__company-list, .hero__company-item svg"),
+    date: document.querySelectorAll(".hero__data-item"),
+    description: document.querySelectorAll(".hero__text")
   }
-  animateMarquee()
+
+  
+  if (!elements.logo.length) return
+
+  const tl = gsap.timeline({
+    defaults: {
+      opacity: 0,
+      duration: 0.8,
+      ease: "back.out(1.7)"
+    }
+  })
+
+  tl.from(elements.logo, { y: -30, scale: 0.85 })
+    .from(elements.key, { y: -30, scale: 0.85 }, "-=0.6")
+    .from(elements.companies, {
+      y: 20,
+      scale: 0.9,
+      stagger: 0.08
+    }, "-=0.5")
+    .from(elements.date, {
+      y: 20,
+      scale: 0.9,
+      stagger: 0.08,
+      ease: "power2.out"
+    }, "-=0.5")
+    .from(elements.description, { y: 25, scale: 0.9 }, "-=0.4")
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+const initSvgStrokeAnimation = () => {
+  const svg = document.querySelector(".hero-decor svg")
+  if (!svg) return
+
+  const paths = svg.querySelectorAll("path, rect, foreignObject > path")
+
+  paths.forEach((el, i) => {
+    const length = el.getTotalLength?.() || (el.getBBox().width + el.getBBox().height) * 2
+
+    gsap.set(el, {
+      strokeDasharray: length,
+      strokeDashoffset: length
+    })
+
+
+    gsap.to(el, {
+      strokeDashoffset: 0,
+      duration: 4,
+      delay: i * 0.15,
+      ease: "power2.inOut",
+      yoyo: true,
+      repeat: -1,
+    })
+
+    gsap.to(el, {
+      opacity: 0.6,
+      duration: 4,
+      delay: i * 0.15,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut"
+    })
+  })
+}
+
+const initDecorScrollAnimation = () => {
+  const decorElements = document.querySelectorAll(".decor svg > *")
+
+  decorElements.forEach((el) => {
+    gsap.fromTo(el,
+      { opacity: 0, y: 60, scale: 0.8 },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 1.4,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 90%",
+          end: "bottom 15%",
+          toggleActions: "play none none reverse"
+        }
+      }
+    )
+  })
+}
+
+const initMarquee = () => {
+  const marquee = document.querySelector(".marquee__wrapper")
+  if (!marquee) return
+
+  marquee.innerHTML += marquee.innerHTML
+
+  let pos = -marquee.scrollWidth / 2  
+  const speed = 1
+  const totalWidth = marquee.scrollWidth / 2
+
+  const animate = () => {
+    pos += speed 
+    if (pos >= 0) pos = -totalWidth 
+    marquee.style.transform = `translate3d(${pos}px, 0, 0)`
+    requestAnimationFrame(animate)
+  }
+
+  animate()
+}
+
+const initAccordion = () => {
   const accordion = document.querySelector('.accordion')
+  if (!accordion) return
+
   const items = accordion.querySelectorAll('.accordion__item')
 
   items.forEach(item => {
@@ -82,18 +129,89 @@ document.addEventListener('DOMContentLoaded', () => {
       const isOpen = item.classList.contains('is-open')
 
       items.forEach(i => {
-        i.classList.remove('is-open')
-        const c = i.querySelector('.accordion__content')
-        c.style.height = 0
+        if (i !== item || isOpen) {
+          i.classList.remove('is-open')
+          const c = i.querySelector('.accordion__content')
+          gsap.to(c, { height: 0, duration: 0.3, ease: "power2.inOut" })
+        }
       })
 
       if (!isOpen) {
         item.classList.add('is-open')
-        content.style.height = '0px'
-        requestAnimationFrame(() => {
-          content.style.height = content.scrollHeight + 20 + 'px'
-        })
+        gsap.fromTo(content,
+          { height: 0 },
+          {
+            height: content.scrollHeight + 20,
+            duration: 0.4,
+            ease: "power2.out"
+          }
+        )
       }
     })
   })
+}
+
+const initModal = () => {
+  const modal = document.querySelector(".modal")
+  if (!modal) return
+
+  const header = document.querySelector("header") // или ".header"
+
+  // Функция для получения ширины скроллбара
+  const getScrollbarWidth = () => {
+    return window.innerWidth - document.documentElement.clientWidth
+  }
+
+  // Открытие модалки
+  document.querySelectorAll(".form-open").forEach(btn => {
+    btn.addEventListener("click", event => {
+      event.preventDefault()
+      
+      const scrollbarWidth = getScrollbarWidth()
+      
+      modal.classList.add("is-open")
+      document.body.style.overflow = 'hidden'
+      document.body.style.paddingRight = `${scrollbarWidth}px`
+      modal.style.paddingRight = `${scrollbarWidth}px`
+      
+      if (header) {
+        header.style.paddingRight = `${scrollbarWidth}px`
+      }
+    })
+  })
+
+  // Закрытие модалки (общая функция)
+  const closeModal = () => {
+    modal.classList.remove("is-open")
+    document.body.style.overflow = ''
+    document.body.style.paddingRight = ''
+    modal.style.paddingRight = ''
+    
+    if (header) {
+      header.style.paddingRight = ''
+    }
+  }
+
+  // Закрытие по клику на фон
+  modal.addEventListener("click", event => {
+    if (event.target === modal) {
+      closeModal()
+    }
+  })
+
+  // Закрытие по ESC
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && modal.classList.contains("is-open")) {
+      closeModal()
+    }
+  })
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initHeroAnimation()
+  initSvgStrokeAnimation()
+  initDecorScrollAnimation()
+  initMarquee()
+  initAccordion()
+  initModal()
 })
