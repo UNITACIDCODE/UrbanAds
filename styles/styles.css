@@ -465,7 +465,7 @@ svg {
 .key {
   padding: 6px 13px;
   margin-left: auto;
-  margin-top: -10px;
+  margin-top: -8px;
   border-radius: 20px;
   background: var(--gradient-linear-2);
   backdrop-filter: blur(20px);
@@ -491,36 +491,42 @@ svg {
 }
 
 .key span {
-  font-size: 14px;
+  font-size: 18px;
   text-align: center;
 }
 
 .hero__box.--mobile {
-  display: flex;
   position: relative;
-  margin-top: 35px;
-  margin-bottom: 32px;
-  padding-top: 38px;
-  padding-bottom: 45px;
-  width: 100%;
-}
-
-.hero__box.--mobile .hero__box-inner {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   flex-grow: 1;
-  max-width: 350px;
+  margin-top: 20px;
+  margin-bottom: 32px;
   margin-inline: auto;
+  padding-top: 60px;
+  padding-bottom: 45px;
 }
+
 
 .hero__box.--mobile .hero__data-list {
   justify-content: center;
   margin-bottom: 98px;
 }
 
+.hero__box.--mobile .hero__data-item {
+  font-size: 15px;
+
+}
+
 .hero__box.--mobile .hero__logo {
   margin-top: -8px;
+  
+}
+
+.hero__box.--mobile .hero__logo img {
+  width: 100%;
+  height: auto;
 }
 
 .hero__box.--mobile .hero__company-list {
@@ -541,6 +547,7 @@ br.predlog {
 .hero__box.--mobile .hero__text p {
   max-width: fit-content;
   width: fit-content;
+  font-size: 19px;
 }
 
 .marquee {
