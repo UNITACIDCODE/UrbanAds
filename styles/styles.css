@@ -507,7 +507,7 @@ svg {
 
 .hero__box.--mobile .hero__data-list {
   justify-content: center;
-  margin-bottom: auto;
+  margin-bottom: 98px;
 }
 
 .hero__box.--mobile .hero__logo {
@@ -515,14 +515,13 @@ svg {
 }
 
 .hero__box.--mobile .hero__company-list {
-  margin-top: 35px;
   margin-right: auto;
   z-index: 2;
 }
 
 .hero__box.--mobile .hero__text {
   width: fit-content;
-  margin-top: auto;
+  margin-top: 135px;
   margin-inline: auto;
 }
 
@@ -934,7 +933,6 @@ br.predlog {
   border: none;
   border-radius: 20px;
 }
-
 
 .footer {
   display: flex;
