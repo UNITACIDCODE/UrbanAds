@@ -497,7 +497,7 @@ svg {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   flex-grow: 1;
   margin-top: 20px;
   margin-bottom: 32px;
