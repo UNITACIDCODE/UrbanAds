@@ -35,28 +35,96 @@ const initHeroAnimation = () => {
     .from(elements.description, { y: 25, scale: 0.9 }, "-=0.4")
 }
 
-const initDecorScrollAnimation = () => {
-  const decorElements = document.querySelectorAll(".decor svg > *, .hero-decor svg > *")
 
-  decorElements.forEach((el) => {
-    gsap.fromTo(el,
-      { opacity: 0, y: 60, scale: 0.8 },
-      {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 1.4,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 90%",
-          end: "bottom 15%",
-          toggleActions: "play none none reverse"
+
+const initDecorScrollAnimation = () => {
+  const heroDecor = document.querySelectorAll(".hero-decor *")
+  const otherDecor = document.querySelectorAll(".decor *")
+  
+  const animate = (elements, start) => {
+    gsap.utils.toArray(elements).forEach((el, i) => {
+      const parentWidth = el.parentElement.offsetWidth
+      const parentHeight = el.parentElement.offsetHeight
+      
+      // Получаем позицию элемента относительно родителя
+      const rect = el.getBoundingClientRect()
+      const parentRect = el.parentElement.getBoundingClientRect()
+      
+      // Вычисляем позицию центра элемента относительно родителя
+      const elCenterX = rect.left - parentRect.left + rect.width / 2
+      const elCenterY = rect.top - parentRect.top + rect.height / 2
+      
+      // Относительные координаты центра (0-1)
+      const ratioX = elCenterX / parentWidth
+      const ratioY = elCenterY / parentHeight
+      
+      let config
+      
+      // Определяем сторону элемента на основе его позиции
+      if (ratioX < 0.4) {
+        // Левый край → уходит влево
+        config = { 
+          x: gsap.utils.random(-80, -120), 
+          y: gsap.utils.random(30, 60), 
+          scale: 0.97, 
+          rotate: gsap.utils.random(-8, -15) 
+        }
+      } else if (ratioX > 0.6) {
+        // Правый край → уходит вправо
+        config = { 
+          x: gsap.utils.random(80, 120), 
+          y: gsap.utils.random(30, 60), 
+          scale: 0.97, 
+          rotate: gsap.utils.random(8, 15) 
+        }
+      } else if (ratioY < 0.4) {
+        // Верхний край → уходит вверх
+        config = { 
+          x: gsap.utils.random(-40, 40), 
+          y: gsap.utils.random(-80, -120), 
+          scale: 0.97, 
+          rotate: gsap.utils.random(-5, 5) 
+        }
+      } else if (ratioY > 0.6) {
+        // Нижний край → уходит вниз
+        config = { 
+          x: gsap.utils.random(-40, 40), 
+          y: gsap.utils.random(80, 120), 
+          scale: 0.97, 
+          rotate: gsap.utils.random(-5, 5) 
+        }
+      } else {
+        // Центр → равномерное исчезновение
+        config = { 
+          x: 0, 
+          y: gsap.utils.random(30, 60), 
+          scale: 0.8 
         }
       }
-    )
-  })
+      
+      gsap.to(el, {
+        autoAlpha: 0,
+        filter: "blur(8px)",
+        ease: "power3.out",
+        ...config,
+        scrollTrigger: {
+          trigger: el,
+          start: start,
+          end: "bottom 20%",
+          scrub: 2,
+          toggleActions: "play reverse play reverse"
+        },
+        delay: i * 0.025
+      })
+    })
+  }
+  
+  animate(heroDecor, "top top")
+  animate(otherDecor, "center center")
 }
+
+
+
 
 const initMarquee = () => {
   const marquee = document.querySelector(".marquee__wrapper")
