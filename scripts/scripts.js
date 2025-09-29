@@ -199,11 +199,9 @@ const initModal = () => {
   })
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  initHeroAnimation()
-  initSvgStrokeAnimation()
-  initDecorScrollAnimation()
-  initMarquee()
-  initAccordion()
-  initModal()
-})
+initHeroAnimation()
+initSvgStrokeAnimation()
+initDecorScrollAnimation()
+initMarquee()
+initAccordion()
+initModal()
