@@ -39,10 +39,12 @@ const initSvgStrokeAnimation = () => {
   const svg = document.querySelector(".hero-decor svg")
   if (!svg) return
 
-  const paths = svg.querySelectorAll("path, rect, foreignObject > path")
+  
+  const paths = Array.from(svg.querySelectorAll("path, rect, circle, line, polyline, polygon, foreignObject > path"))
+    .filter(el => typeof el.getTotalLength === 'function')
 
   paths.forEach((el, i) => {
-    const length = el.getTotalLength?.() || (el.getBBox().width + el.getBBox().height) * 2
+    const length = el.getTotalLength()
 
     gsap.set(el, {
       strokeDasharray: length,
@@ -126,9 +128,9 @@ const initAccordion = () => {
       const isOpen = item.classList.contains('is-open')
 
       items.forEach(i => {
+        const c = i.querySelector('.accordion__content')
         if (i !== item || isOpen) {
           i.classList.remove('is-open')
-          const c = i.querySelector('.accordion__content')
           gsap.to(c, { height: 0, duration: 0.3, ease: "power2.inOut" })
         }
       })
@@ -140,7 +142,8 @@ const initAccordion = () => {
           {
             height: content.scrollHeight + 20,
             duration: 0.4,
-            ease: "power2.out"
+            ease: "power2.out",
+            onComplete: () => gsap.set(content, { height: "auto" }) // корректная высота после анимации
           }
         )
       }
@@ -154,14 +157,11 @@ const initModal = () => {
 
   const header = document.querySelector("header")
 
-  const getScrollbarWidth = () => {
-    return window.innerWidth - document.documentElement.clientWidth
-  }
+  const getScrollbarWidth = () => window.innerWidth - document.documentElement.clientWidth
 
   document.querySelectorAll(".form-open").forEach(btn => {
     btn.addEventListener("click", event => {
       event.preventDefault()
-
       const scrollbarWidth = getScrollbarWidth()
 
       modal.classList.add("is-open")
@@ -169,9 +169,7 @@ const initModal = () => {
       document.body.style.paddingRight = `${scrollbarWidth}px`
       modal.style.paddingRight = `${scrollbarWidth}px`
 
-      if (header) {
-        header.style.paddingRight = `${scrollbarWidth}px`
-      }
+      if (header) header.style.paddingRight = `${scrollbarWidth}px`
     })
   })
 
@@ -181,21 +179,15 @@ const initModal = () => {
     document.body.style.paddingRight = ''
     modal.style.paddingRight = ''
 
-    if (header) {
-      header.style.paddingRight = ''
-    }
+    if (header) header.style.paddingRight = ''
   }
 
   modal.addEventListener("click", event => {
-    if (event.target === modal) {
-      closeModal()
-    }
+    if (event.target === modal) closeModal()
   })
 
   document.addEventListener("keydown", event => {
-    if (event.key === "Escape" && modal.classList.contains("is-open")) {
-      closeModal()
-    }
+    if (event.key === "Escape" && modal.classList.contains("is-open")) closeModal()
   })
 }
 
