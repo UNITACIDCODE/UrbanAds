@@ -929,7 +929,7 @@ br.predlog {
   font-size: 14px;
   line-height: 1.3;
   opacity: 0;
-  transition: height var(--bs-transition), opacity var(--bs-transition);
+  transition: opacity var(--bs-transition);
 }
 
 .accordion__item.is-open .accordion__content {

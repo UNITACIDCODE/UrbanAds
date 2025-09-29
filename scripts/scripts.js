@@ -1,77 +1,100 @@
 gsap.registerPlugin(ScrollTrigger)
 
 const initHeroAnimation = () => {
-  const elements = {
-    logo: document.querySelectorAll(".hero__logo"),
-    key: document.querySelectorAll(".key"),
-    companies: document.querySelectorAll(".hero__company-list, .hero__company-item svg"),
-    date: document.querySelectorAll(".hero__data-item"),
-    description: document.querySelectorAll(".hero__text")
+  const logo = document.querySelectorAll(".hero__logo")
+  const key = document.querySelectorAll(".key")
+  const companies = document.querySelectorAll(".hero__company-list, .hero__company-item svg")
+  const date = document.querySelectorAll(".hero__data-item")
+  const description = document.querySelectorAll(".hero__text")
+
+  // Если нет элементов, выходим
+  if (logo.length === 0 && key.length === 0 && companies.length === 0 && date.length === 0 && description.length === 0) {
+    return
   }
 
-  if (!elements.logo.length) return
+  const tl = gsap.timeline()
 
-  // Создаем отдельную временную линию для каждой группы элементов
-  const tl = gsap.timeline({
-    defaults: {
+  if (logo.length > 0) {
+    tl.from(logo, {
+      y: -30,
+      scale: 0.85,
       opacity: 0,
       duration: 0.8,
       ease: "back.out(1.7)"
-    }
-  })
+    })
+  }
 
-  // Устанавливаем начальные стили чтобы избежать мигания
-  gsap.set([...elements.logo, ...elements.key, ...elements.companies, ...elements.date, ...elements.description], {
-    opacity: 0
-  })
+  if (key.length > 0) {
+    tl.from(key, {
+      y: -30,
+      scale: 0.85,
+      opacity: 0,
+      duration: 0.8,
+      ease: "back.out(1.7)"
+    }, "-=0.6")
+  }
 
-  tl.from(elements.logo, { y: -30, scale: 0.85 })
-    .from(elements.key, { y: -30, scale: 0.85 }, "-=0.6")
-    .from(elements.companies, {
+  if (companies.length > 0) {
+    tl.from(companies, {
       y: 20,
       scale: 0.9,
-      stagger: 0.08
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.08,
+      ease: "back.out(1.7)"
     }, "-=0.5")
-    .from(elements.date, {
+  }
+
+  if (date.length > 0) {
+    tl.from(date, {
       y: 20,
       scale: 0.9,
+      opacity: 0,
+      duration: 0.8,
       stagger: 0.08,
       ease: "power2.out"
     }, "-=0.5")
-    .from(elements.description, { y: 25, scale: 0.9 }, "-=0.4")
+  }
+
+  if (description.length > 0) {
+    tl.from(description, {
+      y: 25,
+      scale: 0.9,
+      opacity: 0,
+      duration: 0.8,
+      ease: "back.out(1.7)"
+    }, "-=0.4")
+  }
 }
 
 const initDecorScrollAnimation = () => {
   const heroDecor = document.querySelectorAll(".hero-decor *")
   const otherDecor = document.querySelectorAll(".decor *")
   
+  // Если нет элементов, выходим
+  if (heroDecor.length === 0 && otherDecor.length === 0) return
+  
   const animate = (elements, start) => {
-    gsap.utils.toArray(elements).forEach((el, i) => {
-      // Проверяем, что элемент существует и видим
-      if (!el || el.offsetParent === null) return
+    elements.forEach((el, i) => {
+      if (!el || !el.parentElement) return
       
       const parentWidth = el.parentElement.offsetWidth
       const parentHeight = el.parentElement.offsetHeight
       
       if (parentWidth === 0 || parentHeight === 0) return
       
-      // Получаем позицию элемента относительно родителя
       const rect = el.getBoundingClientRect()
       const parentRect = el.parentElement.getBoundingClientRect()
       
-      // Вычисляем позицию центра элемента относительно родителя
       const elCenterX = rect.left - parentRect.left + rect.width / 2
       const elCenterY = rect.top - parentRect.top + rect.height / 2
       
-      // Относительные координаты центра (0-1)
       const ratioX = elCenterX / parentWidth
       const ratioY = elCenterY / parentHeight
       
       let config
       
-      // Определяем сторону элемента на основе его позиции
       if (ratioX < 0.4) {
-        // Левый край → уходит влево
         config = { 
           x: gsap.utils.random(-80, -120), 
           y: gsap.utils.random(30, 60), 
@@ -79,7 +102,6 @@ const initDecorScrollAnimation = () => {
           rotate: gsap.utils.random(-8, -15) 
         }
       } else if (ratioX > 0.6) {
-        // Правый край → уходит вправо
         config = { 
           x: gsap.utils.random(80, 120), 
           y: gsap.utils.random(30, 60), 
@@ -87,7 +109,6 @@ const initDecorScrollAnimation = () => {
           rotate: gsap.utils.random(8, 15) 
         }
       } else if (ratioY < 0.4) {
-        // Верхний край → уходит вверх
         config = { 
           x: gsap.utils.random(-40, 40), 
           y: gsap.utils.random(-80, -120), 
@@ -95,7 +116,6 @@ const initDecorScrollAnimation = () => {
           rotate: gsap.utils.random(-5, 5) 
         }
       } else if (ratioY > 0.6) {
-        // Нижний край → уходит вниз
         config = { 
           x: gsap.utils.random(-40, 40), 
           y: gsap.utils.random(80, 120), 
@@ -103,7 +123,6 @@ const initDecorScrollAnimation = () => {
           rotate: gsap.utils.random(-5, 5) 
         }
       } else {
-        // Центр → равномерное исчезновение
         config = { 
           x: 0, 
           y: gsap.utils.random(30, 60), 
@@ -111,13 +130,7 @@ const initDecorScrollAnimation = () => {
         }
       }
       
-      // Устанавливаем начальное состояние
-      gsap.set(el, {
-        opacity: 1,
-        filter: "blur(0px)"
-      })
-      
-      const animation = gsap.to(el, {
+      gsap.to(el, {
         opacity: 0,
         filter: "blur(8px)",
         ease: "power3.out",
@@ -127,42 +140,21 @@ const initDecorScrollAnimation = () => {
           start: start,
           end: "bottom 20%",
           scrub: 2,
-          toggleActions: "play reverse play reverse",
-          // Предотвращаем баги с пересчетом
-          invalidateOnRefresh: true,
-          markers: false // убрать в продакшене
+          toggleActions: "play none none none"
         },
         delay: i * 0.025
-      })
-      
-      // Обработчик ошибок
-      animation.eventCallback("onInvalidate", () => {
-        animation.scrollTrigger?.refresh()
       })
     })
   }
   
-  // Запускаем после полной загрузки страницы
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-      setTimeout(() => {
-        animate(heroDecor, "top top")
-        animate(otherDecor, "center center")
-      }, 100)
-    })
-  } else {
-    setTimeout(() => {
-      animate(heroDecor, "top top")
-      animate(otherDecor, "center center")
-    }, 100)
-  }
+  if (heroDecor.length > 0) animate(Array.from(heroDecor), "top top")
+  if (otherDecor.length > 0) animate(Array.from(otherDecor), "center 25%")
 }
 
 const initMarquee = () => {
   const marquee = document.querySelector(".marquee__wrapper")
   if (!marquee) return
 
-  // Проверяем, не дублировали ли уже содержимое
   if (marquee.children.length <= 1) {
     marquee.innerHTML += marquee.innerHTML
   }
@@ -178,7 +170,6 @@ const initMarquee = () => {
     requestAnimationFrame(animate)
   }
 
-  // Запускаем анимацию только если элемент видим
   if (marquee.offsetParent !== null) {
     animate()
   }
@@ -196,7 +187,6 @@ const initAccordion = () => {
 
     if (!button || !content) return
 
-    // Устанавливаем начальную высоту
     gsap.set(content, { height: 0 })
 
     button.addEventListener('click', () => {
@@ -211,7 +201,7 @@ const initAccordion = () => {
               height: 0, 
               duration: 0.3, 
               ease: "power2.inOut",
-              overwrite: true // предотвращает конфликты анимаций
+              overwrite: true 
             })
           }
         }
@@ -219,11 +209,12 @@ const initAccordion = () => {
 
       if (!isOpen) {
         item.classList.add('is-open')
+        const contentHeight = content.scrollHeight + 20
         gsap.fromTo(content,
           { height: 0 },
           {
-            height: "auto",
-            duration: 0.4,
+            height: contentHeight,
+            duration: 0.3,
             ease: "power2.out",
             overwrite: true
           }
@@ -295,9 +286,13 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     initDecorScrollAnimation()
     ScrollTrigger.refresh()
-  }, 500)
+  }, 100)
 })
 
+let resizeTimeout
 window.addEventListener('resize', () => {
-  ScrollTrigger.refresh()
+  clearTimeout(resizeTimeout)
+  resizeTimeout = setTimeout(() => {
+    ScrollTrigger.refresh()
+  }, 250)
 })
