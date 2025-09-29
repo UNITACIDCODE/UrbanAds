@@ -305,9 +305,9 @@ svg {
   padding: 1px;
   border-radius: inherit;
   background: var(--gradient-linear-3);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   mask-composite: exclude;
   pointer-events: none;
 }
@@ -391,17 +391,12 @@ svg {
   position: absolute;
   inset: 0;
   padding: 1px;
-  border-radius: 20px;
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(212, 212, 212, 1) 100%
-  );
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  border-radius: inherit;
+  background: var(--gradient-linear-3);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   mask-composite: exclude;
-  z-index: 1;
   pointer-events: none;
 }
 
@@ -416,7 +411,7 @@ svg {
   backdrop-filter: blur(4px);
 }
 
-.hero__logo svg {
+.hero__logo img {
   width: 292px;
   height: 42px;
 }
