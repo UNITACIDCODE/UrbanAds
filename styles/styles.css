@@ -1041,7 +1041,7 @@ br.predlog {
   border-radius: 20px;
   width: 90%;    
   max-width: 650px; 
-  height: 90%;
+  max-height: 90%;
   overflow: auto;
   transform: translateY(24px);
   transition: transform var(--bs-transition);
