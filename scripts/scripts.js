@@ -1,13 +1,18 @@
 gsap.registerPlugin(ScrollTrigger)
 
+const isTouchDevice = () => {
+  return 'ontouchstart' in window || navigator.maxTouchPoints > 0
+}
+
 const initHeroAnimation = () => {
+  if (isTouchDevice()) return
+  
   const logo = document.querySelectorAll(".hero__logo")
   const key = document.querySelectorAll(".key")
   const companies = document.querySelectorAll(".hero__company-list, .hero__company-item svg")
   const date = document.querySelectorAll(".hero__data-item")
   const description = document.querySelectorAll(".hero__text")
 
-  // Если нет элементов, выходим
   if (logo.length === 0 && key.length === 0 && companies.length === 0 && date.length === 0 && description.length === 0) {
     return
   }
@@ -42,7 +47,7 @@ const initHeroAnimation = () => {
       duration: 0.8,
       stagger: 0.08,
       ease: "back.out(1.7)"
-    }, "-=0.5")
+    }, "-=0.6")
   }
 
   if (date.length > 0) {
@@ -53,7 +58,7 @@ const initHeroAnimation = () => {
       duration: 0.8,
       stagger: 0.08,
       ease: "power2.out"
-    }, "-=0.5")
+    }, "-=0.6")
   }
 
   if (description.length > 0) {
@@ -63,18 +68,24 @@ const initHeroAnimation = () => {
       opacity: 0,
       duration: 0.8,
       ease: "back.out(1.7)"
-    }, "-=0.4")
+    }, "-=0.6")
   }
 }
 
 const initDecorScrollAnimation = () => {
+  if (isTouchDevice()) return
+  
   const heroDecor = document.querySelectorAll(".hero-decor *")
-  const otherDecor = document.querySelectorAll(".decor *")
+  const forWhomDecor = document.querySelectorAll(".for-whom-decor .decor *")
+  const programDecor = document.querySelectorAll(".program-decor .decor")
+  const faqDecor = document.querySelectorAll(".faq-decor .decor")
   
-  // Если нет элементов, выходим
-  if (heroDecor.length === 0 && otherDecor.length === 0) return
+
+  const hasElements = heroDecor.length > 0 || faqDecor.length > 0 || forWhomDecor.length > 0 || programDecor.length > 0
+  if (!hasElements) return
   
-  const animate = (elements, start) => {
+
+  const animateDisappear = (elements, start) => {
     elements.forEach((el, i) => {
       if (!el || !el.parentElement) return
       
@@ -146,9 +157,99 @@ const initDecorScrollAnimation = () => {
       })
     })
   }
+
+
+  const animateAppear = (elements) => {
+    elements.forEach((el, i) => {
+      if (!el || !el.parentElement) return
+      
+      const parentWidth = el.parentElement.offsetWidth
+      const parentHeight = el.parentElement.offsetHeight
+      
+      if (parentWidth === 0 || parentHeight === 0) return
+      
+      const rect = el.getBoundingClientRect()
+      const parentRect = el.parentElement.getBoundingClientRect()
+      
+      const elCenterX = rect.left - parentRect.left + rect.width / 2
+      const elCenterY = rect.top - parentRect.top + rect.height / 2
+      
+      const ratioX = elCenterX / parentWidth
+      const ratioY = elCenterY / parentHeight
+      
+      let fromConfig
+      
+   
+      if (ratioX < 0.4) {
+        fromConfig = { 
+          x: gsap.utils.random(-80, -120), 
+          y: gsap.utils.random(30, 60), 
+          scale: 0.8, 
+          rotate: gsap.utils.random(-15, -25),
+          opacity: 0,
+          filter: "blur(12px)"
+        }
+      } else if (ratioX > 0.6) {
+        fromConfig = { 
+          x: gsap.utils.random(80, 120), 
+          y: gsap.utils.random(30, 60), 
+          scale: 0.8, 
+          rotate: gsap.utils.random(15, 25),
+          opacity: 0,
+          filter: "blur(12px)"
+        }
+      } else if (ratioY < 0.4) {
+        fromConfig = { 
+          x: gsap.utils.random(-40, 40), 
+          y: gsap.utils.random(-80, -120), 
+          scale: 0.8, 
+          rotate: gsap.utils.random(-10, 10),
+          opacity: 0,
+          filter: "blur(12px)"
+        }
+      } else if (ratioY > 0.6) {
+        fromConfig = { 
+          x: gsap.utils.random(-40, 40), 
+          y: gsap.utils.random(80, 120), 
+          scale: 0.8, 
+          rotate: gsap.utils.random(-10, 10),
+          opacity: 0,
+          filter: "blur(12px)"
+        }
+      } else {
+        fromConfig = { 
+          x: 0, 
+          y: gsap.utils.random(50, 80), 
+          scale: 0.7,
+          opacity: 0,
+          filter: "blur(12px)"
+        }
+      }
+      
+      gsap.fromTo(el, fromConfig, {
+        x: 0,
+        y: 0,
+        scale: 1,
+        rotate: 0,
+        opacity: 1,
+        filter: "blur(0px)",
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 80%",
+          end: "top 30%",
+          scrub: 1.5,
+          toggleActions: "play none none none"
+        },
+        delay: i * 0.05
+      })
+    })
+  }
   
-  if (heroDecor.length > 0) animate(Array.from(heroDecor), "top top")
-  if (otherDecor.length > 0) animate(Array.from(otherDecor), "center 25%")
+  if (heroDecor.length > 0) animateDisappear(Array.from(heroDecor), "botton 2%")
+  if (forWhomDecor.length > 0) animateDisappear(Array.from(forWhomDecor), "center 42%")
+  if (programDecor.length > 0) animateDisappear(Array.from(programDecor), "center 30%")
+  if (faqDecor.length > 0) animateAppear(Array.from(faqDecor), "top top")
 }
 
 const initMarquee = () => {
@@ -214,7 +315,7 @@ const initAccordion = () => {
           { height: 0 },
           {
             height: contentHeight,
-            duration: 0.3,
+            duration: 0.4,
             ease: "power2.out",
             overwrite: true
           }
@@ -274,6 +375,7 @@ const initModal = () => {
     }
   })
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
   initHeroAnimation()
