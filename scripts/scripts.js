@@ -35,42 +35,6 @@ const initHeroAnimation = () => {
     .from(elements.description, { y: 25, scale: 0.9 }, "-=0.4")
 }
 
-const initSvgStrokeAnimation = () => {
-  const svg = document.querySelector(".hero-decor svg")
-  if (!svg) return
-
-  
-  const paths = Array.from(svg.querySelectorAll("path, rect, circle, line, polyline, polygon, foreignObject > path"))
-    .filter(el => typeof el.getTotalLength === 'function')
-
-  paths.forEach((el, i) => {
-    const length = el.getTotalLength()
-
-    gsap.set(el, {
-      strokeDasharray: length,
-      strokeDashoffset: length
-    })
-
-    gsap.to(el, {
-      strokeDashoffset: 0,
-      duration: 4,
-      delay: i * 0.15,
-      ease: "power2.inOut",
-      yoyo: true,
-      repeat: -1,
-    })
-
-    gsap.to(el, {
-      opacity: 0.6,
-      duration: 4,
-      delay: i * 0.15,
-      repeat: -1,
-      yoyo: true,
-      ease: "sine.inOut"
-    })
-  })
-}
-
 const initDecorScrollAnimation = () => {
   const decorElements = document.querySelectorAll(".decor svg > *, .hero-decor svg > *")
 
@@ -128,9 +92,9 @@ const initAccordion = () => {
       const isOpen = item.classList.contains('is-open')
 
       items.forEach(i => {
-        const c = i.querySelector('.accordion__content')
         if (i !== item || isOpen) {
           i.classList.remove('is-open')
+          const c = i.querySelector('.accordion__content')
           gsap.to(c, { height: 0, duration: 0.3, ease: "power2.inOut" })
         }
       })
@@ -142,8 +106,7 @@ const initAccordion = () => {
           {
             height: content.scrollHeight + 20,
             duration: 0.4,
-            ease: "power2.out",
-            onComplete: () => gsap.set(content, { height: "auto" }) // корректная высота после анимации
+            ease: "power2.out"
           }
         )
       }
@@ -157,11 +120,14 @@ const initModal = () => {
 
   const header = document.querySelector("header")
 
-  const getScrollbarWidth = () => window.innerWidth - document.documentElement.clientWidth
+  const getScrollbarWidth = () => {
+    return window.innerWidth - document.documentElement.clientWidth
+  }
 
   document.querySelectorAll(".form-open").forEach(btn => {
     btn.addEventListener("click", event => {
       event.preventDefault()
+
       const scrollbarWidth = getScrollbarWidth()
 
       modal.classList.add("is-open")
@@ -169,7 +135,9 @@ const initModal = () => {
       document.body.style.paddingRight = `${scrollbarWidth}px`
       modal.style.paddingRight = `${scrollbarWidth}px`
 
-      if (header) header.style.paddingRight = `${scrollbarWidth}px`
+      if (header) {
+        header.style.paddingRight = `${scrollbarWidth}px`
+      }
     })
   })
 
@@ -179,20 +147,25 @@ const initModal = () => {
     document.body.style.paddingRight = ''
     modal.style.paddingRight = ''
 
-    if (header) header.style.paddingRight = ''
+    if (header) {
+      header.style.paddingRight = ''
+    }
   }
 
   modal.addEventListener("click", event => {
-    if (event.target === modal) closeModal()
+    if (event.target === modal) {
+      closeModal()
+    }
   })
 
   document.addEventListener("keydown", event => {
-    if (event.key === "Escape" && modal.classList.contains("is-open")) closeModal()
+    if (event.key === "Escape" && modal.classList.contains("is-open")) {
+      closeModal()
+    }
   })
 }
 
 initHeroAnimation()
-initSvgStrokeAnimation()
 initDecorScrollAnimation()
 initMarquee()
 initAccordion()
