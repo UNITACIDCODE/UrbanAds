@@ -11,12 +11,18 @@ const initHeroAnimation = () => {
 
   if (!elements.logo.length) return
 
+  // Создаем отдельную временную линию для каждой группы элементов
   const tl = gsap.timeline({
     defaults: {
       opacity: 0,
       duration: 0.8,
       ease: "back.out(1.7)"
     }
+  })
+
+  // Устанавливаем начальные стили чтобы избежать мигания
+  gsap.set([...elements.logo, ...elements.key, ...elements.companies, ...elements.date, ...elements.description], {
+    opacity: 0
   })
 
   tl.from(elements.logo, { y: -30, scale: 0.85 })
@@ -35,16 +41,19 @@ const initHeroAnimation = () => {
     .from(elements.description, { y: 25, scale: 0.9 }, "-=0.4")
 }
 
-
-
 const initDecorScrollAnimation = () => {
   const heroDecor = document.querySelectorAll(".hero-decor *")
   const otherDecor = document.querySelectorAll(".decor *")
   
   const animate = (elements, start) => {
     gsap.utils.toArray(elements).forEach((el, i) => {
+      // Проверяем, что элемент существует и видим
+      if (!el || el.offsetParent === null) return
+      
       const parentWidth = el.parentElement.offsetWidth
       const parentHeight = el.parentElement.offsetHeight
+      
+      if (parentWidth === 0 || parentHeight === 0) return
       
       // Получаем позицию элемента относительно родителя
       const rect = el.getBoundingClientRect()
@@ -102,8 +111,14 @@ const initDecorScrollAnimation = () => {
         }
       }
       
-      gsap.to(el, {
-        autoAlpha: 0,
+      // Устанавливаем начальное состояние
+      gsap.set(el, {
+        opacity: 1,
+        filter: "blur(0px)"
+      })
+      
+      const animation = gsap.to(el, {
+        opacity: 0,
         filter: "blur(8px)",
         ease: "power3.out",
         ...config,
@@ -112,25 +127,45 @@ const initDecorScrollAnimation = () => {
           start: start,
           end: "bottom 20%",
           scrub: 2,
-          toggleActions: "play reverse play reverse"
+          toggleActions: "play reverse play reverse",
+          // Предотвращаем баги с пересчетом
+          invalidateOnRefresh: true,
+          markers: false // убрать в продакшене
         },
         delay: i * 0.025
+      })
+      
+      // Обработчик ошибок
+      animation.eventCallback("onInvalidate", () => {
+        animation.scrollTrigger?.refresh()
       })
     })
   }
   
-  animate(heroDecor, "top top")
-  animate(otherDecor, "center center")
+  // Запускаем после полной загрузки страницы
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        animate(heroDecor, "top top")
+        animate(otherDecor, "center center")
+      }, 100)
+    })
+  } else {
+    setTimeout(() => {
+      animate(heroDecor, "top top")
+      animate(otherDecor, "center center")
+    }, 100)
+  }
 }
-
-
-
 
 const initMarquee = () => {
   const marquee = document.querySelector(".marquee__wrapper")
   if (!marquee) return
 
-  marquee.innerHTML += marquee.innerHTML
+  // Проверяем, не дублировали ли уже содержимое
+  if (marquee.children.length <= 1) {
+    marquee.innerHTML += marquee.innerHTML
+  }
 
   let pos = -marquee.scrollWidth / 2
   const speed = 1
@@ -143,7 +178,10 @@ const initMarquee = () => {
     requestAnimationFrame(animate)
   }
 
-  animate()
+  // Запускаем анимацию только если элемент видим
+  if (marquee.offsetParent !== null) {
+    animate()
+  }
 }
 
 const initAccordion = () => {
@@ -156,6 +194,11 @@ const initAccordion = () => {
     const button = item.querySelector('.accordion__button')
     const content = item.querySelector('.accordion__content')
 
+    if (!button || !content) return
+
+    // Устанавливаем начальную высоту
+    gsap.set(content, { height: 0 })
+
     button.addEventListener('click', () => {
       const isOpen = item.classList.contains('is-open')
 
@@ -163,7 +206,14 @@ const initAccordion = () => {
         if (i !== item || isOpen) {
           i.classList.remove('is-open')
           const c = i.querySelector('.accordion__content')
-          gsap.to(c, { height: 0, duration: 0.3, ease: "power2.inOut" })
+          if (c) {
+            gsap.to(c, { 
+              height: 0, 
+              duration: 0.3, 
+              ease: "power2.inOut",
+              overwrite: true // предотвращает конфликты анимаций
+            })
+          }
         }
       })
 
@@ -172,9 +222,10 @@ const initAccordion = () => {
         gsap.fromTo(content,
           { height: 0 },
           {
-            height: content.scrollHeight + 20,
+            height: "auto",
             duration: 0.4,
-            ease: "power2.out"
+            ease: "power2.out",
+            overwrite: true
           }
         )
       }
@@ -233,8 +284,20 @@ const initModal = () => {
   })
 }
 
-initHeroAnimation()
-initDecorScrollAnimation()
-initMarquee()
-initAccordion()
-initModal()
+document.addEventListener('DOMContentLoaded', () => {
+  initHeroAnimation()
+  initMarquee()
+  initAccordion()
+  initModal()
+})
+
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    initDecorScrollAnimation()
+    ScrollTrigger.refresh()
+  }, 500)
+})
+
+window.addEventListener('resize', () => {
+  ScrollTrigger.refresh()
+})
