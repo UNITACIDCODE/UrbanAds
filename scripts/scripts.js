@@ -1,6 +1,5 @@
 gsap.registerPlugin(ScrollTrigger)
 
-
 const initHeroAnimation = () => {
   const elements = {
     logo: document.querySelectorAll(".hero__logo"),
@@ -10,7 +9,6 @@ const initHeroAnimation = () => {
     description: document.querySelectorAll(".hero__text")
   }
 
-  
   if (!elements.logo.length) return
 
   const tl = gsap.timeline({
@@ -51,7 +49,6 @@ const initSvgStrokeAnimation = () => {
       strokeDashoffset: length
     })
 
-
     gsap.to(el, {
       strokeDashoffset: 0,
       duration: 4,
@@ -73,7 +70,7 @@ const initSvgStrokeAnimation = () => {
 }
 
 const initDecorScrollAnimation = () => {
-  const decorElements = document.querySelectorAll(".decor svg > *")
+  const decorElements = document.querySelectorAll(".decor svg > *, .hero-decor svg > *")
 
   decorElements.forEach((el) => {
     gsap.fromTo(el,
@@ -101,13 +98,13 @@ const initMarquee = () => {
 
   marquee.innerHTML += marquee.innerHTML
 
-  let pos = -marquee.scrollWidth / 2  
+  let pos = -marquee.scrollWidth / 2
   const speed = 1
   const totalWidth = marquee.scrollWidth / 2
 
   const animate = () => {
-    pos += speed 
-    if (pos >= 0) pos = -totalWidth 
+    pos += speed
+    if (pos >= 0) pos = -totalWidth
     marquee.style.transform = `translate3d(${pos}px, 0, 0)`
     requestAnimationFrame(animate)
   }
@@ -155,51 +152,46 @@ const initModal = () => {
   const modal = document.querySelector(".modal")
   if (!modal) return
 
-  const header = document.querySelector("header") // или ".header"
+  const header = document.querySelector("header")
 
-  // Функция для получения ширины скроллбара
   const getScrollbarWidth = () => {
     return window.innerWidth - document.documentElement.clientWidth
   }
 
-  // Открытие модалки
   document.querySelectorAll(".form-open").forEach(btn => {
     btn.addEventListener("click", event => {
       event.preventDefault()
-      
+
       const scrollbarWidth = getScrollbarWidth()
-      
+
       modal.classList.add("is-open")
       document.body.style.overflow = 'hidden'
       document.body.style.paddingRight = `${scrollbarWidth}px`
       modal.style.paddingRight = `${scrollbarWidth}px`
-      
+
       if (header) {
         header.style.paddingRight = `${scrollbarWidth}px`
       }
     })
   })
 
-  // Закрытие модалки (общая функция)
   const closeModal = () => {
     modal.classList.remove("is-open")
     document.body.style.overflow = ''
     document.body.style.paddingRight = ''
     modal.style.paddingRight = ''
-    
+
     if (header) {
       header.style.paddingRight = ''
     }
   }
 
-  // Закрытие по клику на фон
   modal.addEventListener("click", event => {
     if (event.target === modal) {
       closeModal()
     }
   })
 
-  // Закрытие по ESC
   document.addEventListener("keydown", event => {
     if (event.key === "Escape" && modal.classList.contains("is-open")) {
       closeModal()
