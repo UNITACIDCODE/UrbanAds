@@ -368,12 +368,6 @@ svg {
   background-image: url("../assets/bg-pc.png");
 }
 
-
-
-
-
-
-
 .hero-decor {
   position: absolute;
   width: 100%; 
@@ -469,12 +463,6 @@ svg {
   z-index: 1;
 }
 
-
-
-
-
-
-
 .hero {
   display: flex;
   overflow: hidden;
@@ -505,7 +493,6 @@ svg {
   align-items: center;
   width: 100%;
 }
-
 
 .hero__data-item {
   padding: 6px 13px;
@@ -1097,37 +1084,36 @@ br.predlog {
   width: 100%;
 }
 
-.footer__top .container,
-.footer__copyright .container {
+.footer__top .container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
 }
 
 .footer__box {
   position: relative;
-  padding: 4px;
+  max-width: 656px;
   width: 100%;
   border-radius: 20px;
 }
-
-.footer__box-inner {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  padding: 20px;
-  border-radius: 16px;
-  text-align: center;
-}
-
-.footer__box-title {
-  font-size: 20px;
-  color: var(--color-neutral-100);
-}
-
-.footer__box-button {
+.footer__box> div::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
+  height: 61px;
+  background-color: var(--color-neutral-300);
+}
+.footer__box iframe {
+  width: 100%;
+}
+
+.footer__top .container,
+.footer__copyright .container {
+  display: flex;
+  justify-content: center;
 }
 
 .footer__copyright {
@@ -1157,6 +1143,8 @@ br.predlog {
 .footer__privacy-policy {
   text-decoration: underline;
 }
+
+
 
 @media (hover:hover) {
   .footer__privacy-policy:hover {
@@ -1354,19 +1342,6 @@ br.predlog {
     padding-block: 100px;
   }
 
-  .footer__box {
-    padding: 8px;
-    max-width: 500px;
-  }
-
-  .footer__box-inner {
-    gap: 24px;
-  }
-
-  .footer__box-title {
-    font-size: 30px;
-  }
-
   .footer__copyright .container {
     justify-content: flex-end;
   }
@@ -1530,6 +1505,11 @@ br.predlog {
   .accordion {
     max-width: 990px;
   }
+
+  .footer__top .container {
+    gap: 64px;
+  }
+
 }
 
 @media (min-width:1280px) {
@@ -1738,23 +1718,6 @@ br.predlog {
 
   .footer__top {
     padding-block: 135px;
-  }
-
-  .footer__box {
-    padding: 20px;
-    max-width: 656px;
-    border-radius: 40px;
-  }
-
-
-  .footer__box-inner {
-    gap: 24px;
-    padding: 32px;
-    border-radius: 30px;
-  }
-
-  .footer__box-title {
-    font-size: 32px;
   }
 
   .footer__copyright-inner {
