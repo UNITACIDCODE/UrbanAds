@@ -134,13 +134,13 @@ body {
 
 @media (min-width:640px) {
   .container {
-    max-width: calc(640px  + var(--bs-container) * 2);
+    max-width: calc(640px + var(--bs-container) * 2);
   }
 }
 
 @media (min-width:1024px) {
   .container {
-    max-width: calc(1024px  + var(--bs-container) * 2);
+    max-width: calc(1024px + var(--bs-container) * 2);
   }
 }
 
@@ -355,14 +355,26 @@ svg {
   z-index: -1;
 }
 
-.hero-decor svg, .hero-decor img {
+.hero-decor img {
   width: 100%;
 }
+
+.hero-decor .decor {
+  width: 100%;                
+  aspect-ratio: 1280 / 724;    
+  background-size: cover;      
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../assets/bg-pc.png");
+}
+
+
+
 
 .hero {
   display: flex;
   overflow: hidden;
-  min-height: 100vh;  
+  min-height: 100vh;
 }
 
 .hero .container {
@@ -457,8 +469,8 @@ svg {
 }
 
 .hero__text {
-  margin-top: -20px;
-  margin-left: auto;
+  margin-top: 55px;
+  margin-right: auto;
   padding: 20px;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.5);
@@ -472,11 +484,9 @@ svg {
   inset: 0;
   padding: 1px;
   border-radius: inherit;
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(212, 212, 212, 1) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(212, 212, 212, 1) 100%);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: xor;
   mask-composite: exclude;
@@ -507,11 +517,9 @@ svg {
   inset: 0;
   padding: 1px;
   border-radius: 20px;
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(212, 212, 212, 1) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(212, 212, 212, 1) 100%);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: xor;
   mask-composite: exclude;
@@ -652,11 +660,9 @@ br.predlog {
   inset: 0;
   padding: 1px;
   border-radius: inherit;
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(212, 212, 212, 1) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(212, 212, 212, 1) 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -670,7 +676,7 @@ br.predlog {
   padding: 20px;
   height: 100%;
   border-radius: 16px;
-  background: var( --gradient-linear-2);
+  background: var(--gradient-linear-2);
 }
 
 .about__card-inner {
@@ -736,11 +742,9 @@ br.predlog {
   inset: 0;
   padding: 1px;
   border-radius: inherit;
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(212, 212, 212, 1) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(212, 212, 212, 1) 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -760,7 +764,7 @@ br.predlog {
   border-radius: 16px;
   backdrop-filter: blur(20px);
   background: var(--gradient-linear-2);
-  box-shadow: 0px 4px 48px 0px #292B3126; 
+  box-shadow: 0px 4px 48px 0px #292B3126;
 }
 
 .for-whom__item::before {
@@ -769,11 +773,9 @@ br.predlog {
   inset: 0;
   padding: 1px;
   border-radius: inherit;
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(212, 212, 212, 1) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(212, 212, 212, 1) 100%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -1058,58 +1060,7 @@ br.predlog {
   }
 }
 
-.modal {
-  display: flex;
-  position: fixed;
-  top: 0; 
-  left: 0;
-  width: 100%; 
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity var(--bs-transition);
-}
-
-.modal.is-open {
-  opacity: 1;
-  pointer-events: unset;
-}
-
-.modal__content {
-  background: var(--color-neutral-100);
-  padding: 20px;
-  border-radius: 20px;
-  width: 90%;    
-  max-width: 650px; 
-  max-height: 90%;
-  overflow: auto;
-  transform: translateY(24px);
-  transition: transform var(--bs-transition);
-
-  scrollbar-width: none; 
-  -ms-overflow-style: none;
-}
-
-.modal.is-open .modal__content {
-  transform: translateX(0);
-}
-
-.modal__content::-webkit-scrollbar {
-  display: none; 
-}
-
-.modal__content iframe {
-  width: 100%;
-  height: 100%;
-}
-
-
 @media (min-width:640px) {
-
   .title {
     font-size: 48px;
   }
@@ -1140,7 +1091,7 @@ br.predlog {
 
   .hero__box.--mobile {
     display: none;
-  } 
+  }
 
   .hero__data-list {
     margin-right: 0;
@@ -1174,7 +1125,6 @@ br.predlog {
 
   .hero__text {
     position: relative;
-    margin-top: -10px;
     border-radius: 16px;
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(20px);
@@ -1344,7 +1294,7 @@ br.predlog {
   .header__item:nth-child(2) {
     display: block;
   }
-  
+
   .header__row {
     position: relative;
     display: flex;
@@ -1395,6 +1345,9 @@ br.predlog {
     margin-top: 45px;
     padding: 20px 40px;
   }
+  .header__box-row {
+    margin-top: 80px;
+  }
 
   .hero__data-list {
     gap: 8px;
@@ -1414,6 +1367,17 @@ br.predlog {
     width: 480px;
     height: 72px;
   }
+
+  .key {
+    margin-top: -18px;
+    margin-right: 130px;
+    padding: 11px 33px;
+    border-radius: 37px;
+  }
+
+  .key span {
+    font-size: 24px;
+  } 
 
   .hero__company-list {
     padding: 22px 30px;
@@ -1441,8 +1405,8 @@ br.predlog {
     top: -20%;
   }
 
-  .program-decor .decor, 
-  .for-whom-decor{
+  .program-decor .decor,
+  .for-whom-decor {
     display: block;
   }
 
@@ -1678,6 +1642,7 @@ br.predlog {
     border-radius: 40px;
   }
 
+
   .footer__box-inner {
     gap: 24px;
     padding: 32px;
@@ -1691,4 +1656,5 @@ br.predlog {
   .footer__copyright-inner {
     padding-block: 44px;
   }
+
 }

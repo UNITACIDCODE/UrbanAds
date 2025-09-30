@@ -49,7 +49,6 @@ class AnimationsManager {
     this.initHeroAnimation()
     this.initMarquee()
     this.initAccordion()
-    this.initModal()
     
     !this.isMobile() && this.initDecorAnimations()
     
@@ -257,51 +256,6 @@ class AnimationsManager {
         onComplete: () => content.style.overflow = 'visible'
       })
     }
-  }
-
-  initModal() {
-    const modal = document.querySelector(".modal")
-    modal && this.setupModalEventListeners(modal)
-  }
-
-  setupModalEventListeners(modal) {
-    const header = document.querySelector("header")
-    const btns = this.safeQuerySelectorAll(".form-open")
-
-    btns.forEach(btn => btn.addEventListener("click", e => {
-      e.preventDefault()
-      this.openModal(modal, header)
-    }))
-
-    modal.addEventListener("click", e => 
-      e.target === modal && this.closeModal(modal, header)
-    )
-
-    document.addEventListener("keydown", e => 
-      e.key === "Escape" && modal.classList.contains("is-open") && this.closeModal(modal, header)
-    )
-  }
-
-  calculateScrollbarWidth() {
-    return window.innerWidth - document.documentElement.clientWidth
-  }
-
-  openModal(modal, header) {
-    const w = this.calculateScrollbarWidth()
-    
-    modal.classList.add("is-open")
-    document.body.style.overflow = "hidden"
-    document.body.style.paddingRight = `${w}px`
-    modal.style.paddingRight = `${w}px`
-    header && (header.style.paddingRight = `${w}px`)
-  }
-
-  closeModal(modal, header) {
-    modal.classList.remove("is-open")
-    document.body.style.overflow = ""
-    document.body.style.paddingRight = ""
-    modal.style.paddingRight = ""
-    header && (header.style.paddingRight = "")
   }
 }
 
