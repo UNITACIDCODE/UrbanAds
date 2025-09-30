@@ -382,10 +382,7 @@ svg {
 .hero-decor > div {
   position: relative;
   width: 100%;
-  aspect-ratio: 1280 / 720;
-  /* Или можно так: */
-  /* padding-bottom: 56.25%; */
-  /* height: 0; */
+  aspect-ratio: 1280 / 728;
 }
 
 .hero-decor > div > div {
@@ -398,50 +395,50 @@ svg {
 .decor-1 {
   left: 0;
   top: 0;
-  width: 56.484375%; /* 723/1280 * 100 */
-  height: 102.5%; /* 738/720 * 100 */
+  width: 56.484375%; 
+  height: 102.5%; 
   background-image: url("../assets/decor-1.webp");
 }
 
 .decor-2 {
   left: 0;
   top: 0;
-  width: 42.34375%; /* 542/1280 * 100 */
-  height: 51.25%; /* 369/720 * 100 */
+  width: 42.34375%;
+  height: 51.25%; 
   background-image: url("../assets/decor-2.webp");
   z-index: 4;
 }
 
 .decor-3 {
-  left: 14.6875%; /* 188/1280 * 100 */
+  left: 14.6875%;
   bottom: 0;
-  width: 14.140625%; /* 181/1280 * 100 */
-  height: 65.972222%; /* 475/720 * 100 */
+  width: 14.140625%; 
+  height: 65.972222%; 
   background-image: url("../assets/decor-3.webp");
 }
 
 .decor-4 {
-  left: 14.6875%; /* 188/1280 * 100 */
+  left: 14.6875%; 
   bottom: 0;
-  width: 14.140625%; /* 181/1280 * 100 */
-  height: 46.388889%; /* 334/720 * 100 */
+  width: 14.140625%; 
+  height: 46.388889%; 
   background-image: url("../assets/decor-4.webp");
 }
 
 .decor-5 {
   right: 0;
   top: 0;
-  width: 70.703125%; /* 905/1280 * 100 */
-  height: 25%; /* 180/720 * 100 */
+  width: 70.703125%; 
+  height: 25%; 
   background-image: url("../assets/decor-5.webp");
   z-index: 2;
 }
 
 .decor-6 {
-  right: 14.84375%; /* 190/1280 * 100 */
+  right: 14.84375%; 
   top: 0;
-  width: 42.8125%; /* 548/1280 * 100 */
-  height: 76.111111%; /* 548/720 * 100 */
+  width: 42.8125%;
+  height: 76.111111%; 
   z-index: 1;
   background-image: url("../assets/decor-6.webp");
 }
@@ -449,24 +446,24 @@ svg {
 .decor-7 {
   right: 0;
   top: 0;
-  width: 30.390625%; /* 389/1280 * 100 */
-  height: 76.111111%; /* 548/720 * 100 */
+  width: 30.390625%; 
+  height: 76.111111%;
   background-image: url("../assets/decor-7.webp");
 }
 
 .decor-8 {
   right: 0;
-  bottom: 23.888889%; /* 172/720 * 100 */
-  width: 30.15625%; /* 386/1280 * 100 */
-  height: 27.777778%; /* 200/720 * 100 */
+  bottom: 23.888889%;
+  width: 30.15625%;
+  height: 27.777778%; 
   background-image: url("../assets/decor-8.webp");
 }
 
 .decor-9 {
   right: 0;
   bottom: 0;
-  width: 57.96875%; /* 742/1280 * 100 */
-  height: 25.416667%; /* 183/720 * 100 */
+  width: 57.96875%;
+  height: 25.416667%; 
   background-image: url("../assets/decor-9.webp");
   z-index: 1;
 }
