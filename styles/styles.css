@@ -376,7 +376,8 @@ svg {
 
 .hero-decor {
   position: absolute;
-  width: 100%; /* Или задайте конкретную ширину */
+  width: 100%; 
+  opacity: 0.84;
 }
 
 .hero-decor > div {
