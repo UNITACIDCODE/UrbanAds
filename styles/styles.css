@@ -377,7 +377,6 @@ svg {
 .hero__data-list {
   display: flex;
   align-items: center;
-  margin-top: 20px;
   margin-right: 120px;
   gap: 8px;
 }
@@ -387,7 +386,7 @@ svg {
   z-index: 2;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
 }
 
