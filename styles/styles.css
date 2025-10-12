@@ -2022,6 +2022,10 @@ br.predlog {
     border-radius: 35px;
   }
 
+  .directions {
+    padding-top: 135px;
+  }
+
   .page {
     overflow: hidden;
   }
@@ -2065,7 +2069,6 @@ br.predlog {
     padding: 10px 30px;
     font-size: 21px;
   }
-
 
   .button--light span {
     font-size: 24px;
