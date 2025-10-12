@@ -2164,6 +2164,12 @@ br.predlog {
     border-radius: 40px;
   }
 
+  @media (hover: hover) {
+    .what-else__item:hover {
+      transform: scale(1.08);
+    }
+  }
+
   .what-else__box {
     border-radius: 30px;
   }
