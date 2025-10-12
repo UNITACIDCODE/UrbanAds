@@ -1099,8 +1099,9 @@ br.predlog {
   padding: 4px;
   border-radius: 20px;
   background: linear-gradient(5.39deg, rgba(255, 255, 255, 0.02) 29.89%, rgba(126, 133, 151, 0.02) 108.33%);
-  backdrop-filter: blur(20px);
-  box-shadow: 0px 3px 30px 0px #292B311C;
+  backdrop-filter: blur(22px);
+  box-shadow: 0px 3px 31.38px 0px #292B311C;
+
   color: var(--color-neutral-100);
 }
 
