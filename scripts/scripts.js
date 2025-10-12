@@ -260,3 +260,19 @@ class AnimationsManager {
 }
 
 const animationsManager = new AnimationsManager()
+
+const speakers = new Swiper('.speakers .swiper', {
+  direction: 'horizontal',
+  speed: 800,
+  spaceBetween: 16,
+  slidesPerView: 'auto',
+
+  breakpoints: {
+    0: {
+      spaceBetween: 12,
+    },
+    768: {
+      spaceBetween: 16,
+    },
+  },
+});

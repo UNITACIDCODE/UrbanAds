@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Яндекс UrbanAds</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body, table, td {
+      margin: 0;
+      padding: 0;
+      font-family: 'Manrope', Arial, sans-serif;
+      line-height: 1.4;
+    }
+
+    body {
+      background-color: #E8E9EB;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: #e8fbfa;
+      pointer-events: auto;
+    }
+
+    img {
+      display: block;
+      border: 0;
+      outline: none;
+      text-decoration: none;
+      max-width: 100%;
+      height: auto;
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      -webkit-touch-callout: none;
+      -webkit-user-drag: none;
+      -khtml-user-drag: none;
+      -moz-user-drag: none;
+      -o-user-drag: none;
+    }
+
+    .card-link {
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    .card-link:hover {
+      transform: translateY(-2px);
+    }
+
+    .image-bg {
+      background: linear-gradient(180deg, #E8E9EB 0%, #D1D3D7 50%, #E8E9EB 100%);
+      border-radius: 24px;
+      padding: 40px 0;
+      margin-top: 10px;
+    }
+
+    .main-image {
+      border-radius: 16px;
+    }
+
+    @media screen and (max-width: 599px) {
+      .wrapper {
+        width: 100% !important;
+        padding: 20px 10px 0 10px !important;
+      }
+      
+      h1 {
+        font-size: 14px !important;
+        padding: 12px 14px !important;
+      }
+      
+      .header-cell {
+        padding: 15px 10px !important;
+      }
+      
+      .image-cell {
+        padding: 0 10px 25px 10px !important;
+      }
+
+      .image-cell img {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      
+      .cards-cell {
+        padding: 15px 10px !important;
+      }
+
+      .cards-table {
+        display: block !important;
+        width: 100% !important;
+      }
+
+      .cards-table tr {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px;
+      }
+
+      .cards-table td {
+        display: block !important;
+        width: 100% !important;
+        padding: 0 !important;
+      }
+
+      .cards-table img {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      
+      .program-label {
+        padding-left: 20px !important;
+        padding-top: 40px !important;
+        font-size: 14px !important;
+      }
+      
+      .grid-cell {
+        padding: 0 10px !important;
+      }
+
+      .card-spacing {
+        padding: 5px 0 !important;
+      }
+
+      .image-bg {
+        padding: 20px 0 !important;
+        border-radius: 16px !important;
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+      }
+
+      .image-bg img {
+        width: 100% !important;
+        max-width: calc(100% + 20px) !important;
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <center style="width:100%; background-color:#E8E9EB;">
+    <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" class="wrapper" style="background-color:#E8E9EB; padding:30px 20px 0 20px; max-width:600px; margin:0 auto;">
+      
+      <tr>
+        <td align="center" class="header-cell" style="padding:10px 0;">
+          <h1 style="margin:0; padding:18px 24px; font-weight:600; font-size:16px; border-radius:60px; background-color:#313339; color:#fff; line-height:1.5; text-align:center; width:100%; max-width:560px; ">
+            Приглашаем вас <br>на первую конференцию Яндекс UrbanAds
+          </h1>
+        </td>
+      </tr>
+
+      <tr>
+        <td align="center" class="image-cell" style="padding:10px 0; ">
+          <img src="https://i.ibb.co/LXj8jgP6/image.jpg" width="560" alt="Яндекс UrbanAds конференция" class="main-image" style="max-width:560px; width:560px; display:block; border:0; height:auto;">
+        </td>
+      </tr>
+
+      <tr>
+        <td align="center" class="cards-cell" style="padding:40px 0 40px 0;">
+          <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="cards-table" style="margin:0 auto; width:100%; max-width:560px;">
+            <tr>
+              <td align="center" class="card-spacing" style="padding:0 3px;">
+                <a href="https://yandex.ru/maps/org/kongress_tsentr_konnekt/68509122177?si=7mtjb024mgnn7tqmhxzk8uu51w" target="_blank" rel="noopener" class="card-link">
+                  <img src="https://i.ibb.co/v4H2FzLt/card.png" alt="Карта" style="display:block; width:180px; max-width:180px; height:auto; border:0; border-radius:12px;">
+                </a>
+              </td>
+              <td align="center" class="card-spacing" style="padding:0 3px;">
+                <a href="https://stripo.email/storage/ics/2025/9/ics_konferenciia-iandeks-urbanads-2025-09-29-180649.ics" target="_blank" rel="noopener" class="card-link">
+                  <img src="https://i.ibb.co/vvZ6f8GM/card-1.png" alt="Календарь" style="display:block; width:210px; max-width:210px; height:auto; border:0; border-radius:12px;">
+                </a>
+              </td>
+              <td align="center" class="card-spacing" style="padding:0 3px;">
+                <a href="https://www.yaurbanadsconf.ru" target="_blank" rel="noopener" class="card-link">
+                  <img src="https://i.ibb.co/kg6Vg0Bf/card-2.png" alt="Сайт" style="display:block; width:156px; max-width:156px; height:auto; border:0; border-radius:12px;">
+                </a>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      
+      <tr>
+        <td align="center" class="grid-cell" style="padding:0;">
+          <div class="image-bg" style="background: linear-gradient(180deg, #E8E9EB 0%, #D1D3D7 50%, #E8E9EB 100%); border-radius: 24px; padding: 40px 0; margin-top: 10px;">
+            <img src="https://i.ibb.co.com/Z1XpHg4x/image.jpg" width="692" alt="Программа конференции" style="max-width:none; width:692px; display:block; border:0; height:auto; border-radius:20px; margin:0 auto;">
+          </div>
+        </td>
+      </tr>
+    </table>
+  </center>
+</body>
+</html>

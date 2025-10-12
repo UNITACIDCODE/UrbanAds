@@ -10,98 +10,48 @@
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
   <meta name="apple-mobile-web-app-title" content="UrbanAds" />
   <link rel="manifest" href="./assets/favicon/site.webmanifest" />
-  <link rel="stylesheet" href="./styles/styles.min.css">
+  <link rel="stylesheet" href="./styles/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./styles/styles.css">
   <title>UrbanAds — конференция</title>
 </head>
 
 <body>
-  <div class="page">
-    <header class="header">
+  <header class="header">
+    <div class="container">
+      <nav class="header__nav">
+        <div class="header__row u-border-gradient">
+          <div class="header__item u-border-gradient">
+            <img class="header__logo" src="./assets/logo.svg" alt="Яндекс UrbanAds">
+          </div>
+        </div>
+        <div class="header__row u-border-gradient">
+          <a class="button button--primary" href="#form">
+            <span>регистрация</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="hero">
       <div class="container">
-        <nav class="header__nav">
-          <div class="header__row u-border-gradient">
-            <div class="header__item u-border-gradient">
-              <img class="header__logo" src="./assets/logo.svg" alt="Яндекс UrbanAds">
+        <div class="hero__box">
+          <div class="hero-decor">
+            <div>
+              <div class="decor-1"></div>
+              <div class="decor-2"></div>
+              <div class="decor-3"></div>
+              <div class="decor-4"></div>
+              <div class="decor-5"></div>
+              <div class="decor-6"></div>
+              <div class="decor-7"></div>
+              <div class="decor-8"></div>
+              <div class="decor-9"></div>
             </div>
           </div>
-          <div class="header__row u-border-gradient">
-            <a class="button button--primary" href="#form">
-              <span>регистрация</span>
-            </a>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <main class="main">
-
-      <section class="hero">
-        <div class="container">
-          <div class="hero__box">
-            <div class="hero-decor">
-              <div>
-                <div class="decor-1"></div>
-                <div class="decor-2"></div>
-                <div class="decor-3"></div>
-                <div class="decor-4"></div>
-                <div class="decor-5"></div>
-                <div class="decor-6"></div>
-                <div class="decor-7"></div>
-                <div class="decor-8"></div>
-                <div class="decor-9"></div>
-              </div>
-            </div>
-            <div class="header__box-row">
-              <ul class="hero__company-list u-border-gradient">
-                <li class="hero__company-item">
-                  <svg class="icon">
-                    <use href="./assets/sprite.svg#icon-1"></use>
-                  </svg>
-                </li>
-                <li class="hero__company-item">
-                  <svg class="icon">
-                    <use href="./assets/sprite.svg#icon-2"></use>
-                  </svg>
-                </li>
-                <li class="hero__company-item">
-                  <svg class="icon">
-                    <use href="./assets/sprite.svg#icon-3"></use>
-                  </svg>
-                </li>
-                <li class="hero__company-item">
-                  <svg class="icon">
-                    <use href="./assets/sprite.svg#icon-4"></use>
-                  </svg>
-                </li>
-              </ul>
-              <ul class="hero__data-list">
-                <li class="hero__data-item">29.10</li>
-                <li class="hero__data-item">Москва</li>
-                <li class="hero__data-item">Connect</li>
-              </ul>
-            </div>
-            <div class="hero__logo u-border-gradient">
-              <img src="./assets/logo.svg" alt="Яндекс UrbanAds">
-            </div>
-            <div class="key">
-              <span>всё в одном ключе</span>
-            </div>
-            <div class="hero__text">
-              <p>
-                первая конференция Яндекс UrbanAds<br class="display">
-                для брендов и агентств
-              </p>
-            </div>
-          </div>
-
-          <div class="hero__box --mobile">
-            <div class="hero-decor">
-              <img src="./assets/bg.png" alt="" preloder>
-            </div>
-            <ul class="hero__data-list">
-              <li class="hero__data-item">29.10</li>
-              <li class="hero__data-item">Москва</li>
-              <li class="hero__data-item">Connect</li>
-            </ul>
+          <div class="header__box-row">
             <ul class="hero__company-list u-border-gradient">
               <li class="hero__company-item">
                 <svg class="icon">
@@ -124,676 +74,843 @@
                 </svg>
               </li>
             </ul>
-            <div class="hero__logo u-border-gradient">
-              <img src="./assets/logo.svg" alt="Яндекс UrbanAds">
-            </div>
-            <div class="key">
-              <span>всё в одном ключе</span>
-            </div>
-            <div class="hero__text">
-              <p>
-                первая конференция Яндекс UrbanAds<br class="display">
-                для брендов и агентств
-              </p>
-            </div>
+            <ul class="hero__data-list">
+              <li class="hero__data-item">29.10</li>
+              <li class="hero__data-item">Москва</li>
+              <li class="hero__data-item">Connect</li>
+            </ul>
+          </div>
+          <div class="hero__logo u-border-gradient">
+            <img src="./assets/logo.svg" alt="Яндекс UrbanAds">
+          </div>
+          <div class="key">
+            <span>всё в одном ключе</span>
+          </div>
+          <div class="hero__text">
+            <p>
+              первая конференция Яндекс UrbanAds<br class="display">
+              для брендов и агентств
+            </p>
           </div>
         </div>
-      </section>
 
-      <section class="marquee">
-        <div class="marquee__wrapper">
-          <span>
-            <svg class="icon" aria-hidden="true">
-              <use href="./assets/sprite.svg#arrow-left"></use>
-            </svg>
-            новые возможности ритейл-медиа
-          </span>
-          <span>
-            <svg class="icon" aria-hidden="true">
-              <use href="./assets/sprite.svg#arrow-left"></use>
-            </svg>
-            универсальный ключ к Городским сервисам
-          </span>
-          <span>
-            <svg class="icon" aria-hidden="true">
-              <use href="./assets/sprite.svg#arrow-left"></use>
-            </svg>
-            видимость в эпоху баннерной слепоты
-          </span>
-          <span>
-            <svg class="icon" aria-hidden="true">
-              <use href="./assets/sprite.svg#arrow-left"></use>
-            </svg>
-            эффективные рекламные контакты
-          </span>
-          <span>
-            <svg class="icon" aria-hidden="true">
-              <use href="./assets/sprite.svg#arrow-left"></use>
-            </svg>
-            интеграция в ежедневный медиа-путь пользователя
-          </span>
-        </div>
-      </section>
-
-      <section class="about">
-        <div class="container">
-          <h2 class="title">что в программе:</h2>
-          <ul class="about__list">
-            <li class="about__item">
-              <div class="about__card">
-                <div class="about__card-inner">
-                  <svg class="icon" aria-hidden="true">
-                    <use href="./assets/sprite.svg#arrow-down"></use>
-                  </svg>
-                  <div class="about__card-box">
-                    <h3 class="about__card-title">
-                      команда Яндекс UrbanAds
-                    </h3>
-                    <p class="about__card-description">
-                      презентует обновления платформы и как все работает изнутри: расскажем про форматы, сценарии
-                      эффективного размещения, покажем результативность на реальных кейсах
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="about__item">
-              <div class="about__card">
-                <div class="about__card-inner">
-                  <svg class="icon" aria-hidden="true">
-                    <use href="./assets/sprite.svg#arrow-down"></use>
-                  </svg>
-                  <div class="about__card-box">
-                    <h3 class="about__card-title">
-                      доклады<br> топ-экспертов
-                    </h3>
-                    <p class="about__card-description">
-                      поговорим про рынок рекламы, <br class="predlog"> о его настоящем и будущем; <br class="predlog">
-                      обсудим растущие возможности <br> ритейл-медиа
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="about__item">
-              <div class="about__card">
-                <div class="about__card-inner">
-                  <svg class="icon" aria-hidden="true">
-                    <use href="./assets/sprite.svg#arrow-down"></use>
-                  </svg>
-                  <div class="about__card-box">
-                    <h3 class="about__card-title">
-                      вечеринка и нетворкинг
-                    </h3>
-                    <p class="about__card-description">
-                      после официальной части встретимся у бара, послушаем музыку, обменяемся опытом, идеями
-                      и контактами
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="for-whom">
-        <div class="container">
-          <div class="for-whom-decor">
-            <div class="decor">
-              <svg width="1280" height="797" viewBox="0 0 1280 797" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <mask id="path-1-inside-1_315_252" fill="white">
-                  <path
-                    d="M298.625 180.962C348.538 180.962 389 140.394 389 90.4815C389 40.5688 348.538 4.57589e-05 298.625 3.9206e-05L90.375 1.18652e-05C40.4623 5.31222e-06 1.95752e-05 40.4623 1.18651e-05 90.375C5.35464e-06 140.081 40.2944 180.962 90 180.962L298.625 180.962Z" />
-                </mask>
-                <path
-                  d="M298.625 180.962C348.538 180.962 389 140.394 389 90.4815C389 40.5688 348.538 4.57589e-05 298.625 3.9206e-05L90.375 1.18652e-05C40.4623 5.31222e-06 1.95752e-05 40.4623 1.18651e-05 90.375C5.35464e-06 140.081 40.2944 180.962 90 180.962L298.625 180.962Z"
-                  fill="#939393" fill-opacity="0.1" />
-                <path
-                  d="M298.625 180.962L298.625 180.212L298.625 180.962ZM389 90.4815L389.75 90.4815L389 90.4815ZM298.625 3.9206e-05L298.625 -0.749961L298.625 3.9206e-05ZM90.375 1.18652e-05L90.375 0.750012L90.375 1.18652e-05ZM1.18651e-05 90.375L-0.749988 90.375L1.18651e-05 90.375ZM298.625 180.962L298.625 180.212C348.122 180.212 388.25 139.981 388.25 90.4815L389 90.4815L389.75 90.4815C389.75 140.807 348.953 181.712 298.625 181.712L298.625 180.962ZM389 90.4815L388.25 90.4815C388.25 40.9818 348.122 0.750046 298.625 0.750039L298.625 3.9206e-05L298.625 -0.749961C348.953 -0.749954 389.75 40.1557 389.75 90.4815L389 90.4815ZM298.625 3.9206e-05L298.625 0.750039L90.375 0.750012L90.375 1.18652e-05L90.375 -0.749988L298.625 -0.749961L298.625 3.9206e-05ZM90.375 1.18652e-05L90.375 0.750012C40.8765 0.750005 0.75002 40.8765 0.750012 90.375L1.18651e-05 90.375L-0.749988 90.375C-0.74998 40.048 40.0481 -0.749995 90.375 -0.749988L90.375 1.18652e-05ZM90 180.962L90 180.212L298.625 180.212L298.625 180.962L298.625 181.712L90 181.712L90 180.962ZM1.18651e-05 90.375L0.750012 90.375C0.750005 139.673 40.7149 180.212 90 180.212L90 180.962L90 181.712C39.8738 181.712 -0.749995 140.488 -0.749988 90.375L1.18651e-05 90.375Z"
-                  fill="url(#paint0_linear_315_252)" mask="url(#path-1-inside-1_315_252)" />
-                <foreignObject x="361.737" y="165.05" width="928.214" height="202.65">
-                  <div xmlns="http://www.w3.org/1999/xhtml"
-                    style="backdrop-filter:blur(5.1px);clip-path:url(#bgblur_0_315_252_clip_path);height:100%;width:100%">
-                  </div>
-                </foreignObject>
-                <rect data-figma-bg-blur-radius="10.2" x="1279.38" y="175.625" width="181.5" height="907.064" rx="90.75"
-                  transform="rotate(90 1279.38 175.625)" fill="#BABABA" fill-opacity="0.1" stroke="white"
-                  stroke-width="0.75" />
-                <foreignObject x="-14.5995" y="419.15" width="572.587" height="392.7">
-                  <div xmlns="http://www.w3.org/1999/xhtml"
-                    style="backdrop-filter:blur(7.43px);clip-path:url(#bgblur_1_315_252_clip_path);height:100%;width:100%">
-                  </div>
-                </foreignObject>
-                <g data-figma-bg-blur-radius="14.85">
-                  <mask id="path-4-inside-2_315_252" fill="white">
-                    <path
-                      d="M90.7319 434C40.8192 434 0.250553 474.462 0.250496 524.375L0.250512 706.625C0.250516 748.258 28.4761 783.314 66.8062 793.8C66.8661 793.816 66.9259 793.833 66.9859 793.85C67.1506 793.894 67.3159 793.938 67.481 793.981C74.5346 795.86 81.9255 796.902 89.5435 796.992C89.6541 796.994 89.7648 796.993 89.8755 796.994C90.1251 796.996 90.3754 797 90.6255 797L452.762 797C502.675 797 543.137 756.163 543.137 706.25C543.137 656.337 502.675 615.5 452.762 615.5L264.463 615.5C218.486 615.5 181.213 578.228 181.213 532.25L181.213 524.375C181.213 474.462 140.645 434 90.7319 434Z" />
-                  </mask>
-                  <path
-                    d="M90.7319 434C40.8192 434 0.250553 474.462 0.250496 524.375L0.250512 706.625C0.250516 748.258 28.4761 783.314 66.8062 793.8C66.8661 793.816 66.9259 793.833 66.9859 793.85C67.1506 793.894 67.3159 793.938 67.481 793.981C74.5346 795.86 81.9255 796.902 89.5435 796.992C89.6541 796.994 89.7648 796.993 89.8755 796.994C90.1251 796.996 90.3754 797 90.6255 797L452.762 797C502.675 797 543.137 756.163 543.137 706.25C543.137 656.337 502.675 615.5 452.762 615.5L264.463 615.5C218.486 615.5 181.213 578.228 181.213 532.25L181.213 524.375C181.213 474.462 140.645 434 90.7319 434Z"
-                    fill="#ADADAD" fill-opacity="0.1" />
-                  <path
-                    d="M90.7319 434L90.7319 433.25L90.7319 434ZM0.250496 524.375L-0.499504 524.375L0.250496 524.375ZM0.250512 706.625L-0.499488 706.625L0.250512 706.625ZM66.8062 793.8L67.0041 793.076L67.0049 793.077L66.8062 793.8ZM66.9859 793.85L66.7895 794.573L66.7887 794.573L66.9859 793.85ZM67.481 793.981L67.6732 793.257L67.674 793.257L67.481 793.981ZM89.5435 796.992L89.5524 796.242L89.5532 796.242L89.5435 796.992ZM89.8755 796.994L89.8694 797.744L89.8686 797.744L89.8755 796.994ZM90.6255 797L90.6255 797.75L90.6255 797ZM452.762 797L452.762 797.75L452.762 797ZM543.137 706.25L543.887 706.25L543.137 706.25ZM452.762 615.5L452.762 614.75L452.762 615.5ZM181.213 524.375L181.963 524.375L181.213 524.375ZM264.463 615.5L264.463 614.75L264.463 615.5ZM90.7319 434L90.7319 434.75C41.2323 434.75 1.00055 474.878 1.0005 524.375L0.250496 524.375L-0.499504 524.375C-0.499447 474.047 40.4062 433.25 90.7319 433.25L90.7319 434ZM0.250496 524.375L1.0005 524.375L1.00051 706.625L0.250512 706.625L-0.499488 706.625L-0.499504 524.375L0.250496 524.375ZM0.250512 706.625L1.00051 706.625C1.00052 747.91 28.9906 782.677 67.0041 793.076L66.8062 793.8L66.6083 794.523C27.9616 783.951 -0.499484 748.605 -0.499488 706.625L0.250512 706.625ZM66.8062 793.8L67.0049 793.077C67.0803 793.097 67.1171 793.108 67.1831 793.126L66.9859 793.85L66.7887 794.573C66.7347 794.559 66.6519 794.535 66.6075 794.523L66.8062 793.8ZM66.9859 793.85L67.1823 793.126C67.3443 793.17 67.5055 793.212 67.6732 793.257L67.481 793.981L67.2887 794.706C67.1263 794.663 66.957 794.619 66.7895 794.573L66.9859 793.85ZM67.481 793.981L67.674 793.257C74.6682 795.12 81.9972 796.153 89.5524 796.242L89.5435 796.992L89.5346 797.742C81.8537 797.651 74.401 796.601 67.288 794.706L67.481 793.981ZM89.5435 796.992L89.5532 796.242C89.672 796.244 89.748 796.243 89.8825 796.244L89.8755 796.994L89.8686 797.744C89.7816 797.743 89.6363 797.743 89.5338 797.742L89.5435 796.992ZM89.8755 796.994L89.8817 796.244C90.1386 796.246 90.3793 796.25 90.6255 796.25L90.6255 797L90.6255 797.75C90.3716 797.75 90.1117 797.746 89.8694 797.744L89.8755 796.994ZM90.6255 797L90.6255 796.25L452.762 796.25L452.762 797L452.762 797.75L90.6255 797.75L90.6255 797ZM452.762 797L452.762 796.25C502.257 796.25 542.387 755.753 542.387 706.25L543.137 706.25L543.887 706.25C543.887 756.573 503.093 797.75 452.762 797.75L452.762 797ZM543.137 706.25L542.387 706.25C542.387 656.747 502.257 616.25 452.762 616.25L452.762 615.5L452.762 614.75C503.093 614.75 543.887 655.927 543.887 706.25L543.137 706.25ZM452.762 615.5L452.762 616.25L264.463 616.25L264.463 615.5L264.463 614.75L452.762 614.75L452.762 615.5ZM181.213 532.25L180.463 532.25L180.463 524.375L181.213 524.375L181.963 524.375L181.963 532.25L181.213 532.25ZM181.213 524.375L180.463 524.375C180.463 474.878 140.232 434.75 90.7319 434.75L90.7319 434L90.7319 433.25C141.058 433.25 181.963 474.047 181.963 524.375L181.213 524.375ZM264.463 615.5L264.463 616.25C218.071 616.25 180.463 578.642 180.463 532.25L181.213 532.25L181.963 532.25C181.963 577.814 218.9 614.75 264.463 614.75L264.463 615.5Z"
-                    fill="url(#paint1_linear_315_252)" mask="url(#path-4-inside-2_315_252)" />
-                </g>
-                <rect x="1136.96" y="612.376" width="180" height="735.114" rx="88.125"
-                  transform="rotate(90 1136.96 612.376)" fill="black" fill-opacity="0.01" />
-                <rect x="1136.96" y="612.376" width="180" height="735.114" rx="88.125"
-                  transform="rotate(90 1136.96 612.376)" stroke="url(#paint2_linear_315_252)" stroke-width="0.75" />
-                <rect x="754.461" y="616.126" width="180" height="171.75" rx="85.875" fill="#CCCCCC"
-                  fill-opacity="0.47" />
-                <rect x="754.461" y="616.126" width="180" height="171.75" rx="85.875"
-                  stroke="url(#paint3_linear_315_252)" stroke-width="0.75" />
-                <defs>
-                  <clipPath id="bgblur_0_315_252_clip_path" transform="translate(-361.737 -165.05)">
-                    <rect x="1279.38" y="175.625" width="181.5" height="907.064" rx="90.75"
-                      transform="rotate(90 1279.38 175.625)" />
-                  </clipPath>
-                  <clipPath id="bgblur_1_315_252_clip_path" transform="translate(14.5995 -419.15)">
-                    <path
-                      d="M90.7319 434C40.8192 434 0.250553 474.462 0.250496 524.375L0.250512 706.625C0.250516 748.258 28.4761 783.314 66.8062 793.8C66.8661 793.816 66.9259 793.833 66.9859 793.85C67.1506 793.894 67.3159 793.938 67.481 793.981C74.5346 795.86 81.9255 796.902 89.5435 796.992C89.6541 796.994 89.7648 796.993 89.8755 796.994C90.1251 796.996 90.3754 797 90.6255 797L452.762 797C502.675 797 543.137 756.163 543.137 706.25C543.137 656.337 502.675 615.5 452.762 615.5L264.463 615.5C218.486 615.5 181.213 578.228 181.213 532.25L181.213 524.375C181.213 474.462 140.645 434 90.7319 434Z" />
-                  </clipPath>
-                  <linearGradient id="paint0_linear_315_252" x1="376" y1="37" x2="148.188" y2="236.431"
-                    gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#CDCDCD" stop-opacity="0.55" />
-                    <stop offset="1" stop-color="white" />
-                  </linearGradient>
-                  <linearGradient id="paint1_linear_315_252" x1="271.694" y1="434" x2="271.694" y2="797"
-                    gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#D4D4D4" />
-                    <stop offset="1" stop-color="white" stop-opacity="0.12" />
-                  </linearGradient>
-                  <linearGradient id="paint2_linear_315_252" x1="1227.71" y1="1347.86" x2="1227.71" y2="612.001"
-                    gradientUnits="userSpaceOnUse">
-                    <stop stop-color="white" />
-                    <stop offset="1" stop-color="#D4D4D4" />
-                  </linearGradient>
-                  <linearGradient id="paint3_linear_315_252" x1="844.461" y1="788.251" x2="844.461" y2="615.751"
-                    gradientUnits="userSpaceOnUse">
-                    <stop stop-color="white" />
-                    <stop offset="1" stop-color="#D4D4D4" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
+        <div class="hero__box --mobile">
+          <div class="hero-decor">
+            <img src="./assets/bg.png" alt="" preloder>
           </div>
-          <h2 class="title">для кого:</h2>
-          <ul class="for-whom__list">
-            <li class="for-whom__item">
-              <svg class="icon" aria-hidden="true">
-                <use href="./assets/sprite.svg#arrow-down"></use>
+          <ul class="hero__data-list">
+            <li class="hero__data-item">29.10</li>
+            <li class="hero__data-item">Москва</li>
+            <li class="hero__data-item">Connect</li>
+          </ul>
+          <ul class="hero__company-list u-border-gradient">
+            <li class="hero__company-item">
+              <svg class="icon">
+                <use href="./assets/sprite.svg#icon-1"></use>
               </svg>
-              <p class="for-whom__text">
-                для тех, кто хочет больше охватов, кликов и лидов
-              </p>
             </li>
-            <li class="for-whom__item">
-              <svg class="icon" aria-hidden="true">
-                <use href="./assets/sprite.svg#arrow-down"></use>
+            <li class="hero__company-item">
+              <svg class="icon">
+                <use href="./assets/sprite.svg#icon-2"></use>
               </svg>
-              <p class="for-whom__text">
-                кто понимает,<br class="predlog" /> что важно не только как,<br><br class="predlog" /> но и когда
-                пользователь видит рекламу
-              </p>
             </li>
-            <li class="for-whom__item">
-              <svg class="icon" aria-hidden="true">
-                <use href="./assets/sprite.svg#arrow-down"></use>
+            <li class="hero__company-item">
+              <svg class="icon">
+                <use href="./assets/sprite.svg#icon-3"></use>
               </svg>
-              <p class="for-whom__text">
-                кто стремится к нативному эмоциональному контакту и эффективному взаимодействию с потенциальным клиентом
-              </p>
             </li>
-            <li class="for-whom__item">
-              <svg class="icon" aria-hidden="true">
-                <use href="./assets/sprite.svg#arrow-down"></use>
+            <li class="hero__company-item">
+              <svg class="icon">
+                <use href="./assets/sprite.svg#icon-4"></use>
               </svg>
-              <p class="for-whom__text">
-                кто хочет, чтобы его заметили<br class="predlog"> в эпоху баннерной слепоты
-              </p>
-            </li>
-            <li class="for-whom__item">
-              <svg class="icon" aria-hidden="true">
-                <use href="./assets/sprite.svg#arrow-down"></use>
-              </svg>
-              <p class="for-whom__text">
-                кто ценит время и бюджеты, <br class="predlog" />и готов получить универсальный инструмент для
-                таргетинга<br class="predlog" /> на самую подходящую
-                аудиторию
-              </p>
             </li>
           </ul>
+          <div class="hero__logo u-border-gradient">
+            <img src="./assets/logo.svg" alt="Яндекс UrbanAds">
+          </div>
+          <div class="key">
+            <span>всё в одном ключе</span>
+          </div>
+          <div class="hero__text">
+            <p>
+              первая конференция Яндекс UrbanAds<br class="display">
+              для брендов и агентств
+            </p>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="program">
-        <div class="program-decor">
+    <section class="marquee">
+      <div class="marquee__wrapper">
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use href="./assets/sprite.svg#arrow-left"></use>
+          </svg>
+          новые возможности ритейл-медиа
+        </span>
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use href="./assets/sprite.svg#arrow-left"></use>
+          </svg>
+          универсальный ключ к Городским сервисам
+        </span>
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use href="./assets/sprite.svg#arrow-left"></use>
+          </svg>
+          видимость в эпоху баннерной слепоты
+        </span>
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use href="./assets/sprite.svg#arrow-left"></use>
+          </svg>
+          эффективные рекламные контакты
+        </span>
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use href="./assets/sprite.svg#arrow-left"></use>
+          </svg>
+          интеграция в ежедневный медиа-путь пользователя
+        </span>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container">
+        <h2 class="title">что в программе:</h2>
+        <ul class="about__list">
+          <li class="about__item">
+            <div class="about__card">
+              <div class="about__card-inner">
+                <svg class="icon" aria-hidden="true">
+                  <use href="./assets/sprite.svg#arrow-down"></use>
+                </svg>
+                <div class="about__card-box">
+                  <h3 class="about__card-title">
+                    команда Яндекс UrbanAds
+                  </h3>
+                  <p class="about__card-description">
+                    презентует обновления платформы и как все работает изнутри: расскажем про форматы, сценарии
+                    эффективного размещения, покажем результативность на реальных кейсах
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="about__item">
+            <div class="about__card">
+              <div class="about__card-inner">
+                <svg class="icon" aria-hidden="true">
+                  <use href="./assets/sprite.svg#arrow-down"></use>
+                </svg>
+                <div class="about__card-box">
+                  <h3 class="about__card-title">
+                    доклады<br> топ-экспертов
+                  </h3>
+                  <p class="about__card-description">
+                    поговорим про рынок рекламы, <br class="predlog"> о его настоящем и будущем; <br class="predlog">
+                    обсудим растущие возможности <br> ритейл-медиа
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="about__item">
+            <div class="about__card">
+              <div class="about__card-inner">
+                <svg class="icon" aria-hidden="true">
+                  <use href="./assets/sprite.svg#arrow-down"></use>
+                </svg>
+                <div class="about__card-box">
+                  <h3 class="about__card-title">
+                    вечеринка и нетворкинг
+                  </h3>
+                  <p class="about__card-description">
+                    после официальной части встретимся у бара, послушаем музыку, обменяемся опытом, идеями
+                    и контактами
+                  </p>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="for-whom">
+      <div class="container">
+        <div class="for-whom-decor">
           <div class="decor">
-            <svg width="1278" height="608" viewBox="0 0 1278 608" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <foreignObject x="874.199" y="223.575" width="420.85" height="401.85">
+            <svg width="1280" height="797" viewBox="0 0 1280 797" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="path-1-inside-1_315_252" fill="white">
+                <path
+                  d="M298.625 180.962C348.538 180.962 389 140.394 389 90.4815C389 40.5688 348.538 4.57589e-05 298.625 3.9206e-05L90.375 1.18652e-05C40.4623 5.31222e-06 1.95752e-05 40.4623 1.18651e-05 90.375C5.35464e-06 140.081 40.2944 180.962 90 180.962L298.625 180.962Z" />
+              </mask>
+              <path
+                d="M298.625 180.962C348.538 180.962 389 140.394 389 90.4815C389 40.5688 348.538 4.57589e-05 298.625 3.9206e-05L90.375 1.18652e-05C40.4623 5.31222e-06 1.95752e-05 40.4623 1.18651e-05 90.375C5.35464e-06 140.081 40.2944 180.962 90 180.962L298.625 180.962Z"
+                fill="#939393" fill-opacity="0.1" />
+              <path
+                d="M298.625 180.962L298.625 180.212L298.625 180.962ZM389 90.4815L389.75 90.4815L389 90.4815ZM298.625 3.9206e-05L298.625 -0.749961L298.625 3.9206e-05ZM90.375 1.18652e-05L90.375 0.750012L90.375 1.18652e-05ZM1.18651e-05 90.375L-0.749988 90.375L1.18651e-05 90.375ZM298.625 180.962L298.625 180.212C348.122 180.212 388.25 139.981 388.25 90.4815L389 90.4815L389.75 90.4815C389.75 140.807 348.953 181.712 298.625 181.712L298.625 180.962ZM389 90.4815L388.25 90.4815C388.25 40.9818 348.122 0.750046 298.625 0.750039L298.625 3.9206e-05L298.625 -0.749961C348.953 -0.749954 389.75 40.1557 389.75 90.4815L389 90.4815ZM298.625 3.9206e-05L298.625 0.750039L90.375 0.750012L90.375 1.18652e-05L90.375 -0.749988L298.625 -0.749961L298.625 3.9206e-05ZM90.375 1.18652e-05L90.375 0.750012C40.8765 0.750005 0.75002 40.8765 0.750012 90.375L1.18651e-05 90.375L-0.749988 90.375C-0.74998 40.048 40.0481 -0.749995 90.375 -0.749988L90.375 1.18652e-05ZM90 180.962L90 180.212L298.625 180.212L298.625 180.962L298.625 181.712L90 181.712L90 180.962ZM1.18651e-05 90.375L0.750012 90.375C0.750005 139.673 40.7149 180.212 90 180.212L90 180.962L90 181.712C39.8738 181.712 -0.749995 140.488 -0.749988 90.375L1.18651e-05 90.375Z"
+                fill="url(#paint0_linear_315_252)" mask="url(#path-1-inside-1_315_252)" />
+              <foreignObject x="361.737" y="165.05" width="928.214" height="202.65">
                 <div xmlns="http://www.w3.org/1999/xhtml"
-                  style="backdrop-filter:blur(8.96px);clip-path:url(#bgblur_0_2014_95_clip_path);height:100%;width:100%">
+                  style="backdrop-filter:blur(5.1px);clip-path:url(#bgblur_0_315_252_clip_path);height:100%;width:100%">
                 </div>
               </foreignObject>
-              <g data-figma-bg-blur-radius="17.925">
-                <path
-                  d="M999.374 607.5C940.141 607.5 892.124 559.483 892.124 500.25L892.124 459.75C892.124 406.593 935.217 363.5 988.374 363.5L1023.62 363.5C1057.31 363.5 1084.62 336.189 1084.62 302.5C1084.62 268.811 1111.93 241.5 1145.62 241.5L1180.87 241.5C1234.03 241.5 1277.12 284.593 1277.12 337.75L1277.12 500.25C1277.12 559.483 1229.11 607.5 1169.87 607.5L999.374 607.5Z"
-                  fill="white" fill-opacity="0.05" />
-                <path
-                  d="M1276.75 337.75L1276.75 500.25C1276.75 559.275 1228.9 607.125 1169.87 607.125L999.374 607.125C940.349 607.125 892.499 559.275 892.499 500.25L892.499 459.75C892.499 406.8 935.424 363.875 988.374 363.875L1023.62 363.875C1057.52 363.875 1085 336.396 1085 302.5C1085 269.018 1112.14 241.875 1145.62 241.875L1180.87 241.875C1233.82 241.875 1276.75 284.8 1276.75 337.75Z"
-                  stroke="url(#paint0_linear_2014_95)" stroke-opacity="0.1" stroke-width="0.75" />
-              </g>
-              <foreignObject x="361.923" y="127.8" width="925.65" height="201.15">
+              <rect data-figma-bg-blur-radius="10.2" x="1279.38" y="175.625" width="181.5" height="907.064" rx="90.75"
+                transform="rotate(90 1279.38 175.625)" fill="#BABABA" fill-opacity="0.1" stroke="white"
+                stroke-width="0.75" />
+              <foreignObject x="-14.5995" y="419.15" width="572.587" height="392.7">
                 <div xmlns="http://www.w3.org/1999/xhtml"
-                  style="backdrop-filter:blur(5.1px);clip-path:url(#bgblur_1_2014_95_clip_path);height:100%;width:100%">
-                </div>
-              </foreignObject>
-              <g data-figma-bg-blur-radius="10.2">
-                <rect x="1277.37" y="138" width="180.75" height="905.25" rx="90.375" transform="rotate(90 1277.37 138)"
-                  fill="#BABABA" fill-opacity="0.03" />
-                <rect x="1276.87" y="138.5" width="179.75" height="904.25" rx="89.875"
-                  transform="rotate(90 1276.87 138.5)" stroke="url(#paint1_linear_2014_95)" stroke-opacity="0.1" />
-              </g>
-              <foreignObject x="-14.85" y="-14.85" width="572.074" height="398.7">
-                <div xmlns="http://www.w3.org/1999/xhtml"
-                  style="backdrop-filter:blur(7.43px);clip-path:url(#bgblur_2_2014_95_clip_path);height:100%;width:100%">
+                  style="backdrop-filter:blur(7.43px);clip-path:url(#bgblur_1_315_252_clip_path);height:100%;width:100%">
                 </div>
               </foreignObject>
               <g data-figma-bg-blur-radius="14.85">
-                <mask id="path-5-inside-1_2014_95" fill="white">
+                <mask id="path-4-inside-2_315_252" fill="white">
                   <path
-                    d="M90.5 369C40.5873 369 0.000127051 328.538 7.90083e-06 278.625L2.43582e-05 90.375C2.86535e-05 41.2424 39.328 1.26692 88.166 0.0292572C88.1735 0.0290659 88.181 0.0294466 88.1885 0.0292572C88.9544 0.010034 89.7227 0.000990336 90.4932 0.000937058C90.4951 0.000936933 90.4971 -3.95043e-05 90.4991 -3.95042e-05L451.999 -7.90083e-06C501.912 1.60293e-05 542.374 40.8373 542.374 90.75C542.374 140.663 501.912 181.5 451.999 181.5L264.25 181.5C218.272 181.5 181 218.772 181 264.75L181 278.625C181 328.537 140.412 369 90.5 369Z" />
+                    d="M90.7319 434C40.8192 434 0.250553 474.462 0.250496 524.375L0.250512 706.625C0.250516 748.258 28.4761 783.314 66.8062 793.8C66.8661 793.816 66.9259 793.833 66.9859 793.85C67.1506 793.894 67.3159 793.938 67.481 793.981C74.5346 795.86 81.9255 796.902 89.5435 796.992C89.6541 796.994 89.7648 796.993 89.8755 796.994C90.1251 796.996 90.3754 797 90.6255 797L452.762 797C502.675 797 543.137 756.163 543.137 706.25C543.137 656.337 502.675 615.5 452.762 615.5L264.463 615.5C218.486 615.5 181.213 578.228 181.213 532.25L181.213 524.375C181.213 474.462 140.645 434 90.7319 434Z" />
                 </mask>
                 <path
-                  d="M90.5 369C40.5873 369 0.000127051 328.538 7.90083e-06 278.625L2.43582e-05 90.375C2.86535e-05 41.2424 39.328 1.26692 88.166 0.0292572C88.1735 0.0290659 88.181 0.0294466 88.1885 0.0292572C88.9544 0.010034 89.7227 0.000990336 90.4932 0.000937058C90.4951 0.000936933 90.4971 -3.95043e-05 90.4991 -3.95042e-05L451.999 -7.90083e-06C501.912 1.60293e-05 542.374 40.8373 542.374 90.75C542.374 140.663 501.912 181.5 451.999 181.5L264.25 181.5C218.272 181.5 181 218.772 181 264.75L181 278.625C181 328.537 140.412 369 90.5 369Z"
-                  fill="#ADADAD" fill-opacity="0.05" />
+                  d="M90.7319 434C40.8192 434 0.250553 474.462 0.250496 524.375L0.250512 706.625C0.250516 748.258 28.4761 783.314 66.8062 793.8C66.8661 793.816 66.9259 793.833 66.9859 793.85C67.1506 793.894 67.3159 793.938 67.481 793.981C74.5346 795.86 81.9255 796.902 89.5435 796.992C89.6541 796.994 89.7648 796.993 89.8755 796.994C90.1251 796.996 90.3754 797 90.6255 797L452.762 797C502.675 797 543.137 756.163 543.137 706.25C543.137 656.337 502.675 615.5 452.762 615.5L264.463 615.5C218.486 615.5 181.213 578.228 181.213 532.25L181.213 524.375C181.213 474.462 140.645 434 90.7319 434Z"
+                  fill="#ADADAD" fill-opacity="0.1" />
                 <path
-                  d="M90.5 369L90.5 369.75L90.5 369.75L90.5 369ZM7.90083e-06 278.625L-0.749992 278.625L-0.749992 278.625L7.90083e-06 278.625ZM88.166 0.0292572L88.185 0.779017L88.1852 0.779012L88.166 0.0292572ZM88.1885 0.0292572L88.1697 -0.720507L88.1695 -0.720502L88.1885 0.0292572ZM90.4932 0.000937058L90.4931 -0.749063L90.4931 -0.749063L90.4932 0.000937058ZM90.4991 -3.95042e-05L90.4991 -0.75004H90.4991L90.4991 -3.95042e-05ZM451.999 -7.90083e-06L451.999 -0.750008L451.999 -0.750008L451.999 -7.90083e-06ZM542.374 90.75L543.124 90.75V90.75L542.374 90.75ZM451.999 181.5L451.999 182.25L451.999 182.25L451.999 181.5ZM181 278.625L181.75 278.625L181.75 278.625L181 278.625ZM90.5 369L90.5 368.25C41.0002 368.25 0.750126 328.122 0.750008 278.625L7.90083e-06 278.625L-0.749992 278.625C-0.749872 328.953 40.1745 369.75 90.5 369.75L90.5 369ZM7.90083e-06 278.625L0.750008 278.625L0.750024 90.375L2.43582e-05 90.375L-0.749976 90.375L-0.749992 278.625L7.90083e-06 278.625ZM2.43582e-05 90.375L0.750024 90.375C0.750029 41.6516 39.7513 2.00643 88.185 0.779017L88.166 0.0292572L88.147 -0.720502C38.9047 0.527408 -0.749971 40.8332 -0.749976 90.375L2.43582e-05 90.375ZM88.166 0.0292572L88.1852 0.779012C88.1777 0.779204 88.172 0.779208 88.1693 0.7792C88.167 0.779192 88.1653 0.779165 88.1677 0.779196C88.169 0.779212 88.1744 0.779287 88.1805 0.779306C88.1869 0.779327 88.1963 0.7793 88.2075 0.779017L88.1885 0.0292572L88.1695 -0.720502C88.177 -0.720691 88.1826 -0.720695 88.1853 -0.720686C88.1876 -0.720679 88.1893 -0.720651 88.1868 -0.720683C88.1855 -0.720699 88.1801 -0.720774 88.174 -0.720793C88.1675 -0.720813 88.1581 -0.720785 88.1469 -0.720498L88.166 0.0292572ZM88.1885 0.0292572L88.2073 0.779021C88.9666 0.759965 89.7286 0.75099 90.4932 0.750937L90.4932 0.000937058L90.4931 -0.749063C89.7168 -0.749009 88.9423 -0.739897 88.1697 -0.720507L88.1885 0.0292572ZM90.4932 0.000937058L90.4932 0.750937C90.5246 0.750935 90.5524 0.748976 90.5755 0.746446C90.5985 0.743926 90.6181 0.740719 90.6329 0.737937C90.6476 0.735178 90.6594 0.732507 90.6665 0.730844C90.6702 0.729989 90.6731 0.729267 90.675 0.728816C90.6759 0.728586 90.6767 0.728396 90.6772 0.728274C90.6776 0.728162 90.678 0.728063 90.678 0.728062C90.6783 0.727976 90.6771 0.728281 90.6757 0.728636C90.6741 0.729026 90.6714 0.72969 90.668 0.730488C90.6614 0.732038 90.65 0.734602 90.6358 0.737271C90.6214 0.739961 90.6024 0.743091 90.5799 0.745557C90.5572 0.748033 90.53 0.749961 90.4991 0.749961L90.4991 -3.95042e-05L90.4991 -0.75004C90.4677 -0.75004 90.4399 -0.748082 90.4168 -0.745552C90.3937 -0.743033 90.3742 -0.739826 90.3594 -0.737044C90.3447 -0.734285 90.3328 -0.731613 90.3257 -0.729949C90.3221 -0.729094 90.3191 -0.728371 90.3173 -0.72792C90.3164 -0.72769 90.3156 -0.727499 90.3151 -0.727377C90.3147 -0.727265 90.3143 -0.727166 90.3142 -0.727165C90.3139 -0.727078 90.3151 -0.727383 90.3166 -0.727737C90.3181 -0.728127 90.3209 -0.72879 90.3243 -0.729588C90.3309 -0.731137 90.3422 -0.733701 90.3564 -0.736369C90.3708 -0.739058 90.3898 -0.742189 90.4124 -0.744655C90.435 -0.747133 90.4622 -0.749061 90.4931 -0.749063L90.4932 0.000937058ZM90.4991 -3.95042e-05L90.4991 0.749961L451.999 0.749992L451.999 -7.90083e-06L451.999 -0.750008L90.4991 -0.75004L90.4991 -3.95042e-05ZM451.999 -7.90083e-06L451.999 0.749992C501.494 0.750016 541.624 41.2474 541.624 90.75L542.374 90.75L543.124 90.75C543.124 40.4271 502.33 -0.749984 451.999 -0.750008L451.999 -7.90083e-06ZM542.374 90.75L541.624 90.75C541.624 140.252 501.493 180.75 451.999 180.75L451.999 181.5L451.999 182.25C502.33 182.25 543.124 141.073 543.124 90.75L542.374 90.75ZM451.999 181.5L451.999 180.75L264.25 180.75L264.25 181.5L264.25 182.25L451.999 182.25L451.999 181.5ZM181 264.75L180.25 264.75L180.25 278.625L181 278.625L181.75 278.625L181.75 264.75L181 264.75ZM181 278.625L180.25 278.625C180.25 328.122 140 368.25 90.5 368.25L90.5 369L90.5 369.75C140.825 369.75 181.75 328.953 181.75 278.625L181 278.625ZM264.25 181.5L264.25 180.75C217.858 180.75 180.25 218.358 180.25 264.75L181 264.75L181.75 264.75C181.75 219.186 218.687 182.25 264.25 182.25L264.25 181.5Z"
-                  fill="white" fill-opacity="0.1" mask="url(#path-5-inside-1_2014_95)" />
+                  d="M90.7319 434L90.7319 433.25L90.7319 434ZM0.250496 524.375L-0.499504 524.375L0.250496 524.375ZM0.250512 706.625L-0.499488 706.625L0.250512 706.625ZM66.8062 793.8L67.0041 793.076L67.0049 793.077L66.8062 793.8ZM66.9859 793.85L66.7895 794.573L66.7887 794.573L66.9859 793.85ZM67.481 793.981L67.6732 793.257L67.674 793.257L67.481 793.981ZM89.5435 796.992L89.5524 796.242L89.5532 796.242L89.5435 796.992ZM89.8755 796.994L89.8694 797.744L89.8686 797.744L89.8755 796.994ZM90.6255 797L90.6255 797.75L90.6255 797ZM452.762 797L452.762 797.75L452.762 797ZM543.137 706.25L543.887 706.25L543.137 706.25ZM452.762 615.5L452.762 614.75L452.762 615.5ZM181.213 524.375L181.963 524.375L181.213 524.375ZM264.463 615.5L264.463 614.75L264.463 615.5ZM90.7319 434L90.7319 434.75C41.2323 434.75 1.00055 474.878 1.0005 524.375L0.250496 524.375L-0.499504 524.375C-0.499447 474.047 40.4062 433.25 90.7319 433.25L90.7319 434ZM0.250496 524.375L1.0005 524.375L1.00051 706.625L0.250512 706.625L-0.499488 706.625L-0.499504 524.375L0.250496 524.375ZM0.250512 706.625L1.00051 706.625C1.00052 747.91 28.9906 782.677 67.0041 793.076L66.8062 793.8L66.6083 794.523C27.9616 783.951 -0.499484 748.605 -0.499488 706.625L0.250512 706.625ZM66.8062 793.8L67.0049 793.077C67.0803 793.097 67.1171 793.108 67.1831 793.126L66.9859 793.85L66.7887 794.573C66.7347 794.559 66.6519 794.535 66.6075 794.523L66.8062 793.8ZM66.9859 793.85L67.1823 793.126C67.3443 793.17 67.5055 793.212 67.6732 793.257L67.481 793.981L67.2887 794.706C67.1263 794.663 66.957 794.619 66.7895 794.573L66.9859 793.85ZM67.481 793.981L67.674 793.257C74.6682 795.12 81.9972 796.153 89.5524 796.242L89.5435 796.992L89.5346 797.742C81.8537 797.651 74.401 796.601 67.288 794.706L67.481 793.981ZM89.5435 796.992L89.5532 796.242C89.672 796.244 89.748 796.243 89.8825 796.244L89.8755 796.994L89.8686 797.744C89.7816 797.743 89.6363 797.743 89.5338 797.742L89.5435 796.992ZM89.8755 796.994L89.8817 796.244C90.1386 796.246 90.3793 796.25 90.6255 796.25L90.6255 797L90.6255 797.75C90.3716 797.75 90.1117 797.746 89.8694 797.744L89.8755 796.994ZM90.6255 797L90.6255 796.25L452.762 796.25L452.762 797L452.762 797.75L90.6255 797.75L90.6255 797ZM452.762 797L452.762 796.25C502.257 796.25 542.387 755.753 542.387 706.25L543.137 706.25L543.887 706.25C543.887 756.573 503.093 797.75 452.762 797.75L452.762 797ZM543.137 706.25L542.387 706.25C542.387 656.747 502.257 616.25 452.762 616.25L452.762 615.5L452.762 614.75C503.093 614.75 543.887 655.927 543.887 706.25L543.137 706.25ZM452.762 615.5L452.762 616.25L264.463 616.25L264.463 615.5L264.463 614.75L452.762 614.75L452.762 615.5ZM181.213 532.25L180.463 532.25L180.463 524.375L181.213 524.375L181.963 524.375L181.963 532.25L181.213 532.25ZM181.213 524.375L180.463 524.375C180.463 474.878 140.232 434.75 90.7319 434.75L90.7319 434L90.7319 433.25C141.058 433.25 181.963 474.047 181.963 524.375L181.213 524.375ZM264.463 615.5L264.463 616.25C218.071 616.25 180.463 578.642 180.463 532.25L181.213 532.25L181.963 532.25C181.963 577.814 218.9 614.75 264.463 614.75L264.463 615.5Z"
+                  fill="url(#paint1_linear_315_252)" mask="url(#path-4-inside-2_315_252)" />
               </g>
+              <rect x="1136.96" y="612.376" width="180" height="735.114" rx="88.125"
+                transform="rotate(90 1136.96 612.376)" fill="black" fill-opacity="0.01" />
+              <rect x="1136.96" y="612.376" width="180" height="735.114" rx="88.125"
+                transform="rotate(90 1136.96 612.376)" stroke="url(#paint2_linear_315_252)" stroke-width="0.75" />
+              <rect x="754.461" y="616.126" width="180" height="171.75" rx="85.875" fill="#CCCCCC"
+                fill-opacity="0.47" />
+              <rect x="754.461" y="616.126" width="180" height="171.75" rx="85.875"
+                stroke="url(#paint3_linear_315_252)" stroke-width="0.75" />
               <defs>
-                <clipPath id="bgblur_0_2014_95_clip_path" transform="translate(-874.199 -223.575)">
+                <clipPath id="bgblur_0_315_252_clip_path" transform="translate(-361.737 -165.05)">
+                  <rect x="1279.38" y="175.625" width="181.5" height="907.064" rx="90.75"
+                    transform="rotate(90 1279.38 175.625)" />
+                </clipPath>
+                <clipPath id="bgblur_1_315_252_clip_path" transform="translate(14.5995 -419.15)">
                   <path
-                    d="M999.374 607.5C940.141 607.5 892.124 559.483 892.124 500.25L892.124 459.75C892.124 406.593 935.217 363.5 988.374 363.5L1023.62 363.5C1057.31 363.5 1084.62 336.189 1084.62 302.5C1084.62 268.811 1111.93 241.5 1145.62 241.5L1180.87 241.5C1234.03 241.5 1277.12 284.593 1277.12 337.75L1277.12 500.25C1277.12 559.483 1229.11 607.5 1169.87 607.5L999.374 607.5Z" />
+                    d="M90.7319 434C40.8192 434 0.250553 474.462 0.250496 524.375L0.250512 706.625C0.250516 748.258 28.4761 783.314 66.8062 793.8C66.8661 793.816 66.9259 793.833 66.9859 793.85C67.1506 793.894 67.3159 793.938 67.481 793.981C74.5346 795.86 81.9255 796.902 89.5435 796.992C89.6541 796.994 89.7648 796.993 89.8755 796.994C90.1251 796.996 90.3754 797 90.6255 797L452.762 797C502.675 797 543.137 756.163 543.137 706.25C543.137 656.337 502.675 615.5 452.762 615.5L264.463 615.5C218.486 615.5 181.213 578.228 181.213 532.25L181.213 524.375C181.213 474.462 140.645 434 90.7319 434Z" />
                 </clipPath>
-                <clipPath id="bgblur_1_2014_95_clip_path" transform="translate(-361.923 -127.8)">
-                  <rect x="1277.37" y="138" width="180.75" height="905.25" rx="90.375"
-                    transform="rotate(90 1277.37 138)" />
-                </clipPath>
-                <clipPath id="bgblur_2_2014_95_clip_path" transform="translate(14.85 14.85)">
-                  <path
-                    d="M90.5 369C40.5873 369 0.000127051 328.538 7.90083e-06 278.625L2.43582e-05 90.375C2.86535e-05 41.2424 39.328 1.26692 88.166 0.0292572C88.1735 0.0290659 88.181 0.0294466 88.1885 0.0292572C88.9544 0.010034 89.7227 0.000990336 90.4932 0.000937058C90.4951 0.000936933 90.4971 -3.95043e-05 90.4991 -3.95042e-05L451.999 -7.90083e-06C501.912 1.60293e-05 542.374 40.8373 542.374 90.75C542.374 140.663 501.912 181.5 451.999 181.5L264.25 181.5C218.272 181.5 181 218.772 181 264.75L181 278.625C181 328.537 140.412 369 90.5 369Z" />
-                </clipPath>
-                <linearGradient id="paint0_linear_2014_95" x1="1277.12" y1="424.5" x2="892.124" y2="424.5"
+                <linearGradient id="paint0_linear_315_252" x1="376" y1="37" x2="148.188" y2="236.431"
                   gradientUnits="userSpaceOnUse">
-                  <stop stop-color="white" stop-opacity="0.58" />
-                  <stop offset="1" stop-color="#C2C2C2" />
-                </linearGradient>
-                <linearGradient id="paint1_linear_2014_95" x1="1467.37" y1="963.749" x2="1279.67" y2="936.507"
-                  gradientUnits="userSpaceOnUse">
-                  <stop stop-color="white" stop-opacity="0.2" />
+                  <stop stop-color="#CDCDCD" stop-opacity="0.55" />
                   <stop offset="1" stop-color="white" />
+                </linearGradient>
+                <linearGradient id="paint1_linear_315_252" x1="271.694" y1="434" x2="271.694" y2="797"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#D4D4D4" />
+                  <stop offset="1" stop-color="white" stop-opacity="0.12" />
+                </linearGradient>
+                <linearGradient id="paint2_linear_315_252" x1="1227.71" y1="1347.86" x2="1227.71" y2="612.001"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="white" />
+                  <stop offset="1" stop-color="#D4D4D4" />
+                </linearGradient>
+                <linearGradient id="paint3_linear_315_252" x1="844.461" y1="788.251" x2="844.461" y2="615.751"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="white" />
+                  <stop offset="1" stop-color="#D4D4D4" />
                 </linearGradient>
               </defs>
             </svg>
           </div>
-          <div class="decor --tablet">
-            <svg width="720" height="369" viewBox="0 0 720 369" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <foreignObject x="440.565" y="175.565" width="291.947" height="278.767">
-                <div xmlns="http://www.w3.org/1999/xhtml"
-                  style="backdrop-filter:blur(6.22px);clip-path:url(#bgblur_0_323_138_clip_path);height:100%;width:100%">
-                </div>
-              </foreignObject>
-              <g data-figma-bg-blur-radius="12.4347">
-                <path
-                  d="M527.4 441.897C486.31 441.897 453 408.587 453 367.497L453 339.402C453 302.526 482.894 272.632 519.769 272.632L544.223 272.632C567.593 272.632 586.539 253.687 586.539 230.316C586.539 206.946 605.484 188 628.855 188L653.308 188C690.184 188 720.078 217.894 720.078 254.769L720.078 367.497C720.078 408.587 686.768 441.897 645.677 441.897L527.4 441.897Z"
-                  fill="white" fill-opacity="0.05" />
-                <path
-                  d="M719.818 254.77L719.818 367.497C719.818 408.443 686.624 441.637 645.677 441.637L527.4 441.637C486.454 441.637 453.26 408.443 453.26 367.497L453.26 339.401C453.26 302.67 483.037 272.893 519.769 272.893L544.223 272.893C567.737 272.892 586.799 253.83 586.799 230.316C586.799 207.09 605.628 188.26 628.855 188.26L653.308 188.26C690.04 188.26 719.818 218.037 719.818 254.77Z"
-                  stroke="url(#paint0_linear_323_138)" stroke-opacity="0.1" stroke-width="0.520281" />
-              </g>
-              <foreignObject x="-23.3016" y="-10.3016" width="396.852" height="276.582">
-                <div xmlns="http://www.w3.org/1999/xhtml"
-                  style="backdrop-filter:blur(5.15px);clip-path:url(#bgblur_1_323_138_clip_path);height:100%;width:100%">
-                </div>
-              </foreignObject>
-              <g data-figma-bg-blur-radius="10.3016">
-                <mask id="path-3-inside-1_323_138" fill="white">
-                  <path
-                    d="M49.7803 255.978C15.1554 255.978 -13 227.909 -13 193.284L-13 62.6943C-13 28.34 14.7171 0.438797 48.9697 0.00485534L49.7803 -2.74043e-05L300.556 -5.48083e-06C335.18 0.000211169 363.249 28.3294 363.249 62.9541C363.249 97.5788 335.18 125.908 300.556 125.908L170.312 125.908C138.417 125.908 112.561 151.764 112.561 183.659L112.561 193.284C112.561 227.909 84.4051 255.978 49.7803 255.978Z" />
-                </mask>
-                <path
-                  d="M49.7803 255.978C15.1554 255.978 -13 227.909 -13 193.284L-13 62.6943C-13 28.34 14.7171 0.438797 48.9697 0.00485534L49.7803 -2.74043e-05L300.556 -5.48083e-06C335.18 0.000211169 363.249 28.3294 363.249 62.9541C363.249 97.5788 335.18 125.908 300.556 125.908L170.312 125.908C138.417 125.908 112.561 151.764 112.561 183.659L112.561 193.284C112.561 227.909 84.4051 255.978 49.7803 255.978Z"
-                  fill="#ADADAD" fill-opacity="0.05" />
-                <path
-                  d="M49.7803 255.978L49.7803 256.499L49.7803 255.978ZM48.9697 0.00485534L48.9666 -0.515439L48.9632 -0.515378L48.9697 0.00485534ZM49.7803 -2.74043e-05L49.7803 -0.520322L49.7772 -0.520291L49.7803 -2.74043e-05ZM300.556 -5.48083e-06L300.556 -0.5203L300.556 -0.5203L300.556 -5.48083e-06ZM363.249 62.9541L363.769 62.9541L363.249 62.9541ZM300.556 125.908L300.556 126.428L300.556 126.428L300.556 125.908ZM49.7803 255.978L49.7803 255.458C15.4418 255.458 -12.4797 227.621 -12.4797 193.284L-13 193.284L-13.5203 193.284C-13.5203 228.197 14.869 256.499 49.7803 256.499L49.7803 255.978ZM-13 193.284L-12.4797 193.284L-12.4797 62.6943L-13 62.6943L-13.5203 62.6943L-13.5203 193.284L-13 193.284ZM-13 62.6943L-12.4797 62.6943C-12.4797 28.6261 15.0071 0.955444 48.9763 0.525088L48.9697 0.00485534L48.9632 -0.515378C14.427 -0.0778503 -13.5203 28.0539 -13.5203 62.6943L-13 62.6943ZM48.9697 0.00485534L48.9729 0.525134L49.7834 0.520252L49.7803 -2.74043e-05L49.7772 -0.520291L48.9666 -0.515408L48.9697 0.00485534ZM49.7803 -2.74043e-05L49.7803 0.520252L300.556 0.520273L300.556 -5.48083e-06L300.556 -0.5203L49.7803 -0.520322L49.7803 -2.74043e-05ZM300.556 -5.48083e-06L300.556 0.520273C334.89 0.52049 362.729 28.6139 362.729 62.9541L363.249 62.9541L363.769 62.9541C363.769 28.0449 335.47 -0.520052 300.556 -0.5203L300.556 -5.48083e-06ZM363.249 62.9541L362.729 62.9541C362.729 97.2943 334.89 125.388 300.556 125.388L300.556 125.908L300.556 126.428C335.471 126.428 363.769 97.8634 363.769 62.9541L363.249 62.9541ZM300.556 125.908L300.556 125.388L170.312 125.388L170.312 125.908L170.312 126.428L300.556 126.428L300.556 125.908ZM112.561 183.659L112.04 183.659L112.04 193.284L112.561 193.284L113.081 193.284L113.081 183.659L112.561 183.659ZM112.561 193.284L112.04 193.284C112.04 227.621 84.1187 255.458 49.7803 255.458L49.7803 255.978L49.7803 256.499C84.6915 256.499 113.081 228.197 113.081 193.284L112.561 193.284ZM170.312 125.908L170.312 125.388C138.129 125.388 112.04 151.477 112.04 183.659L112.561 183.659L113.081 183.659C113.081 152.052 138.704 126.428 170.312 126.428L170.312 125.908Z"
-                  fill="white" fill-opacity="0.1" mask="url(#path-3-inside-1_323_138)" />
-              </g>
-              <foreignObject x="38.9239" y="55.9242" width="642.131" height="139.539">
-                <div xmlns="http://www.w3.org/1999/xhtml"
-                  style="backdrop-filter:blur(3.54px);clip-path:url(#bgblur_2_323_138_clip_path);height:100%;width:100%">
-                </div>
-              </foreignObject>
-              <g data-figma-bg-blur-radius="7.07582">
-                <rect x="673.979" y="63" width="125.388" height="627.979" rx="62.6938" transform="rotate(90 673.979 63)"
-                  fill="#BABABA" fill-opacity="0.03" />
-                <rect x="673.632" y="63.3469" width="124.694" height="627.285" rx="62.347"
-                  transform="rotate(90 673.632 63.3469)" stroke="url(#paint1_linear_323_138)" stroke-opacity="0.1"
-                  stroke-width="0.693708" />
-              </g>
-              <defs>
-                <clipPath id="bgblur_0_323_138_clip_path" transform="translate(-440.565 -175.565)">
-                  <path
-                    d="M527.4 441.897C486.31 441.897 453 408.587 453 367.497L453 339.402C453 302.526 482.894 272.632 519.769 272.632L544.223 272.632C567.593 272.632 586.539 253.687 586.539 230.316C586.539 206.946 605.484 188 628.855 188L653.308 188C690.184 188 720.078 217.894 720.078 254.769L720.078 367.497C720.078 408.587 686.768 441.897 645.677 441.897L527.4 441.897Z" />
-                </clipPath>
-                <clipPath id="bgblur_1_323_138_clip_path" transform="translate(23.3016 10.3016)">
-                  <path
-                    d="M49.7803 255.978C15.1554 255.978 -13 227.909 -13 193.284L-13 62.6943C-13 28.34 14.7171 0.438797 48.9697 0.00485534L49.7803 -2.74043e-05L300.556 -5.48083e-06C335.18 0.000211169 363.249 28.3294 363.249 62.9541C363.249 97.5788 335.18 125.908 300.556 125.908L170.312 125.908C138.417 125.908 112.561 151.764 112.561 183.659L112.561 193.284C112.561 227.909 84.4051 255.978 49.7803 255.978Z" />
-                </clipPath>
-                <clipPath id="bgblur_2_323_138_clip_path" transform="translate(-38.9239 -55.9242)">
-                  <rect x="673.979" y="63" width="125.388" height="627.979" rx="62.6938"
-                    transform="rotate(90 673.979 63)" />
-                </clipPath>
-                <linearGradient id="paint0_linear_323_138" x1="720.078" y1="314.949" x2="453" y2="314.949"
-                  gradientUnits="userSpaceOnUse">
-                  <stop stop-color="white" stop-opacity="0.58" />
-                  <stop offset="1" stop-color="#C2C2C2" />
-                </linearGradient>
-                <linearGradient id="paint1_linear_323_138" x1="805.783" y1="635.829" x2="675.571" y2="616.931"
-                  gradientUnits="userSpaceOnUse">
-                  <stop stop-color="white" stop-opacity="0.2" />
-                  <stop offset="1" stop-color="white" />
-                </linearGradient>
-              </defs>
-            </svg>
-
-          </div>
-          <div class="decor --mobile">
-            <svg width="343" height="444" viewBox="0 0 343 444" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <foreignObject x="84.0275" y="184.027" width="261.945" height="262.945">
-                <div xmlns="http://www.w3.org/1999/xhtml"
-                  style="backdrop-filter:blur(1.49px);clip-path:url(#bgblur_0_323_197_clip_path);height:100%;width:100%">
-                </div>
-              </foreignObject>
-              <g data-figma-bg-blur-radius="2.9725">
-                <path
-                  d="M129.26 444C105.92 444 87 425.08 87 401.74L87 314.926C87 291.587 105.92 272.667 129.26 272.667L215.172 272.667C238.512 272.667 257.432 253.746 257.432 230.407V229.26C257.432 205.92 276.352 187 299.692 187H300.74C324.08 187 343 205.92 343 229.26L343 401.74C343 425.08 324.08 444 300.74 444L129.26 444Z"
-                  fill="#C0C0C0" fill-opacity="0.05" />
-                <path
-                  d="M342.733 229.26L342.733 401.74C342.733 424.932 323.932 443.733 300.74 443.733L129.26 443.733C106.068 443.733 87.2666 424.932 87.2666 401.74L87.2666 314.927C87.2666 291.735 106.068 272.934 129.26 272.934L215.172 272.934C238.658 272.934 257.698 253.894 257.698 230.407V229.26C257.698 206.068 276.499 187.267 299.691 187.267H300.74C323.932 187.267 342.733 206.068 342.733 229.26Z"
-                  stroke="url(#paint0_linear_323_197)" stroke-opacity="0.1" stroke-width="0.533483" />
-              </g>
-              <foreignObject x="252.129" y="133.131" width="95.7412" height="264.741">
-                <div xmlns="http://www.w3.org/1999/xhtml"
-                  style="backdrop-filter:blur(2.44px);clip-path:url(#bgblur_1_323_197_clip_path);height:100%;width:100%">
-                </div>
-              </foreignObject>
-              <g data-figma-bg-blur-radius="4.87061">
-                <rect x="343" y="393.002" width="86" height="255" rx="43" transform="rotate(-180 343 393.002)"
-                  fill="#BABABA" fill-opacity="0.1" />
-                <rect x="342.733" y="392.735" width="85.4665" height="254.467" rx="42.7333"
-                  transform="rotate(-180 342.733 392.735)" stroke="url(#paint1_linear_323_197)" stroke-opacity="0.1"
-                  stroke-width="0.533483" />
-              </g>
-              <foreignObject x="-7.09103" y="-7.09103" width="188.94" height="262.184">
-                <div xmlns="http://www.w3.org/1999/xhtml"
-                  style="backdrop-filter:blur(3.55px);clip-path:url(#bgblur_2_323_197_clip_path);height:100%;width:100%">
-                </div>
-              </foreignObject>
-              <g data-figma-bg-blur-radius="7.09103">
-                <mask id="path-5-inside-1_323_197" fill="white">
-                  <path
-                    d="M174.758 41.3818C174.758 18.5276 156.23 0.000261022 133.376 3.62402e-06L41.3847 1.16802e-05C18.5305 0.000242563 0.00304699 18.5275 0.00291166 41.3819C0.00291168 41.6134 0.00889314 41.8446 0.0126773 42.0752C0.00573462 42.3933 -1.79158e-05 42.7125 -1.78878e-05 43.0322L-3.75076e-06 205.023C-1.6793e-06 228.76 19.2414 248.002 42.9775 248.002C66.7137 248.002 85.9561 228.76 85.9561 205.023L85.956 122.516C85.956 100.562 103.754 82.7637 125.709 82.7637L133.375 82.7637C156.23 82.7637 174.758 64.2364 174.758 41.3818Z" />
-                </mask>
-                <path
-                  d="M174.758 41.3818C174.758 18.5276 156.23 0.000261022 133.376 3.62402e-06L41.3847 1.16802e-05C18.5305 0.000242563 0.00304699 18.5275 0.00291166 41.3819C0.00291168 41.6134 0.00889314 41.8446 0.0126773 42.0752C0.00573462 42.3933 -1.79158e-05 42.7125 -1.78878e-05 43.0322L-3.75076e-06 205.023C-1.6793e-06 228.76 19.2414 248.002 42.9775 248.002C66.7137 248.002 85.9561 228.76 85.9561 205.023L85.956 122.516C85.956 100.562 103.754 82.7637 125.709 82.7637L133.375 82.7637C156.23 82.7637 174.758 64.2364 174.758 41.3818Z"
-                  fill="#ADADAD" fill-opacity="0.05" />
-                <path
-                  d="M174.758 41.3818L175.291 41.3818L174.758 41.3818ZM133.376 3.62402e-06L133.376 -0.533474L133.376 -0.533474L133.376 3.62402e-06ZM41.3847 1.16802e-05L41.3847 -0.533466L41.3847 1.16802e-05ZM0.00291166 41.3819L-0.530566 41.3819L0.00291166 41.3819ZM0.0126773 42.0752L0.546094 42.0665L0.546262 42.0767L0.546033 42.0869L0.0126773 42.0752ZM-1.78878e-05 43.0322L-0.533496 43.0322L-1.78878e-05 43.0322ZM-3.75076e-06 205.023L0.533474 205.023L-3.75076e-06 205.023ZM42.9775 248.002L42.9775 248.535L42.9775 248.002ZM85.9561 205.023L86.4895 205.023L85.9561 205.023ZM85.956 122.516L85.4226 122.516L85.956 122.516ZM174.758 41.3818L174.224 41.3818C174.224 18.8222 155.936 0.533739 133.376 0.533481L133.376 3.62402e-06L133.376 -0.533474C156.525 -0.533217 175.291 18.2329 175.291 41.3818L174.758 41.3818ZM133.376 3.62402e-06L133.376 0.533481L41.3847 0.533489L41.3847 1.16802e-05L41.3847 -0.533466L133.376 -0.533474L133.376 3.62402e-06ZM41.3847 1.16802e-05L41.3847 0.533489C18.8251 0.53372 0.536525 18.8222 0.536389 41.3819L0.00291166 41.3819L-0.530566 41.3819C-0.530431 18.2329 18.2358 -0.533235 41.3847 -0.533466L41.3847 1.16802e-05ZM0.00291166 41.3819L0.536389 41.3819C0.536389 41.6075 0.542188 41.8291 0.546094 42.0665L0.0126773 42.0752L-0.520739 42.084C-0.524417 41.8601 -0.530566 41.6192 -0.530566 41.3819L0.00291166 41.3819ZM0.0126773 42.0752L0.546033 42.0869C0.539106 42.404 0.53346 42.7185 0.53346 43.0322L-1.78878e-05 43.0322L-0.533496 43.0322C-0.533496 42.7065 -0.527652 42.3826 -0.520678 42.0636L0.0126773 42.0752ZM-1.78878e-05 43.0322L0.53346 43.0322L0.533474 205.023L-3.75076e-06 205.023L-0.533482 205.023L-0.533496 43.0322L-1.78878e-05 43.0322ZM-3.75076e-06 205.023L0.533474 205.023C0.533476 228.465 19.5361 247.468 42.9775 247.468L42.9775 248.002L42.9775 248.535C18.9468 248.535 -0.533479 229.054 -0.533482 205.023L-3.75076e-06 205.023ZM42.9775 248.002L42.9775 247.468C66.4191 247.468 85.4226 228.465 85.4226 205.023L85.9561 205.023L86.4895 205.023C86.4895 229.054 67.0083 248.535 42.9775 248.535L42.9775 248.002ZM85.9561 205.023L85.4226 205.023L85.4226 122.516L85.956 122.516L86.4895 122.516L86.4895 205.023L85.9561 205.023ZM125.709 82.7637L125.709 82.2302L133.375 82.2302L133.375 82.7637L133.375 83.2972L125.709 83.2972L125.709 82.7637ZM133.375 82.7637L133.375 82.2302C155.935 82.2302 174.224 63.9417 174.224 41.3818L174.758 41.3818L175.291 41.3818C175.291 64.5311 156.524 83.2972 133.375 83.2972L133.375 82.7637ZM85.956 122.516L85.4226 122.516C85.4226 100.267 103.459 82.2302 125.709 82.2302L125.709 82.7637L125.709 83.2972C104.049 83.2972 86.4895 100.856 86.4895 122.516L85.956 122.516Z"
-                  fill="white" fill-opacity="0.2" mask="url(#path-5-inside-1_323_197)" />
-              </g>
-              <defs>
-                <clipPath id="bgblur_0_323_197_clip_path" transform="translate(-84.0275 -184.027)">
-                  <path
-                    d="M129.26 444C105.92 444 87 425.08 87 401.74L87 314.926C87 291.587 105.92 272.667 129.26 272.667L215.172 272.667C238.512 272.667 257.432 253.746 257.432 230.407V229.26C257.432 205.92 276.352 187 299.692 187H300.74C324.08 187 343 205.92 343 229.26L343 401.74C343 425.08 324.08 444 300.74 444L129.26 444Z" />
-                </clipPath>
-                <clipPath id="bgblur_1_323_197_clip_path" transform="translate(-252.129 -133.131)">
-                  <rect x="343" y="393.002" width="86" height="255" rx="43" transform="rotate(-180 343 393.002)" />
-                </clipPath>
-                <clipPath id="bgblur_2_323_197_clip_path" transform="translate(7.09103 7.09103)">
-                  <path
-                    d="M174.758 41.3818C174.758 18.5276 156.23 0.000261022 133.376 3.62402e-06L41.3847 1.16802e-05C18.5305 0.000242563 0.00304699 18.5275 0.00291166 41.3819C0.00291168 41.6134 0.00889314 41.8446 0.0126773 42.0752C0.00573462 42.3933 -1.79158e-05 42.7125 -1.78878e-05 43.0322L-3.75076e-06 205.023C-1.6793e-06 228.76 19.2414 248.002 42.9775 248.002C66.7137 248.002 85.9561 228.76 85.9561 205.023L85.956 122.516C85.956 100.562 103.754 82.7637 125.709 82.7637L133.375 82.7637C156.23 82.7637 174.758 64.2364 174.758 41.3818Z" />
-                </clipPath>
-                <linearGradient id="paint0_linear_323_197" x1="343" y1="315.5" x2="87" y2="315.5"
-                  gradientUnits="userSpaceOnUse">
-                  <stop stop-color="white" stop-opacity="0.12" />
-                  <stop offset="1" stop-color="#D7D7D7" />
-                </linearGradient>
-                <linearGradient id="paint1_linear_323_197" x1="433.401" y1="625.607" x2="347.379" y2="604.52"
-                  gradientUnits="userSpaceOnUse">
-                  <stop stop-color="white" stop-opacity="0.2" />
-                  <stop offset="1" stop-color="white" />
-                </linearGradient>
-              </defs>
-            </svg>
-
-          </div>
         </div>
-        <div class="container">
-          <ul class="program__list">
-            <li class="program__item">
-              программа и тайминг конференции появятся здесь чуть позже.
-            </li>
-            <li class="program__item">
-              готовим крутых спикеров и сессии — следите за обновлениями!
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="faq">
-        <div class="container">
-          <div class="faq-decor">
-            <div class="decor">
-              <svg width="1281" height="1058" viewBox="0 0 1281 1058" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <foreignObject x="720.075" y="350.075" width="578.1" height="421.35">
-                  <div xmlns="http://www.w3.org/1999/xhtml"
-                    style="backdrop-filter:blur(8.96px);clip-path:url(#bgblur_0_315_193_clip_path);height:100%;width:100%">
-                  </div>
-                </foreignObject>
-                <path data-figma-bg-blur-radius="17.925"
-                  d="M834.375 368.375L1173 368.375C1232.03 368.375 1279.87 416.225 1279.87 475.25L1279.87 646.25C1279.87 705.275 1232.03 753.125 1173 753.125L1015.12 753.125C962.106 753.125 919.125 710.144 919.125 657.125L919.125 651.125C919.125 601.005 878.495 560.375 828.375 560.375C778.669 560.375 738.375 520.081 738.375 470.375L738.375 464.375C738.375 411.356 781.356 368.375 834.375 368.375Z"
-                  fill="white" fill-opacity="0.27" stroke="url(#paint0_linear_315_193)" stroke-width="0.75" />
-                <foreignObject x="-44.775" y="128.225" width="270.3" height="589.55">
-                  <div xmlns="http://www.w3.org/1999/xhtml"
-                    style="backdrop-filter:blur(22.39px);clip-path:url(#bgblur_1_315_193_clip_path);height:100%;width:100%">
-                  </div>
-                </foreignObject>
-                <g data-figma-bg-blur-radius="44.775">
-                  <mask id="path-2-inside-1_315_193" fill="white">
-                    <path
-                      d="M180.75 582.625C180.75 632.538 140.288 673 90.3751 673C40.4625 673 9.07787e-05 632.538 5.37158e-05 582.625L1.18513e-05 263.375C5.306e-06 213.462 40.4624 173 90.375 173C140.081 173 180.75 213.294 180.75 263L180.75 582.625Z" />
-                  </mask>
-                  <path
-                    d="M180.75 582.625C180.75 632.538 140.288 673 90.3751 673C40.4625 673 9.07787e-05 632.538 5.37158e-05 582.625L1.18513e-05 263.375C5.306e-06 213.462 40.4624 173 90.375 173C140.081 173 180.75 213.294 180.75 263L180.75 582.625Z"
-                    fill="#939393" fill-opacity="0.1" />
-                  <path
-                    d="M180.75 582.625L181.5 582.625L180.75 582.625ZM90.3751 673L90.3751 673.75L90.3751 673ZM5.37158e-05 582.625L-0.749946 582.625L5.37158e-05 582.625ZM1.18513e-05 263.375L-0.749988 263.375L1.18513e-05 263.375ZM90.375 173L90.375 172.25L90.375 173ZM180.75 582.625L180 582.625C180 632.123 139.874 672.25 90.3751 672.25L90.3751 673L90.3751 673.75C140.702 673.75 181.5 632.952 181.5 582.625L180.75 582.625ZM90.3751 673L90.3751 672.25C40.8767 672.25 0.750091 632.123 0.750054 582.625L5.37158e-05 582.625L-0.749946 582.625C-0.749909 632.952 40.0483 673.75 90.3751 673.75L90.3751 673ZM5.37158e-05 582.625L0.750054 582.625L0.750012 263.375L1.18513e-05 263.375L-0.749988 263.375L-0.749946 582.625L5.37158e-05 582.625ZM1.18513e-05 263.375L0.750012 263.375C0.750005 213.877 40.8766 173.75 90.375 173.75L90.375 173L90.375 172.25C40.0482 172.25 -0.749995 213.048 -0.749988 263.375L1.18513e-05 263.375ZM180.75 263L180 263L180 582.625L180.75 582.625L181.5 582.625L181.5 263L180.75 263ZM90.375 173L90.375 173.75C139.67 173.75 180 213.713 180 263L180.75 263L181.5 263C181.5 212.876 140.491 172.25 90.375 172.25L90.375 173Z"
-                    fill="url(#paint1_linear_315_193)" mask="url(#path-2-inside-1_315_193)" />
-                </g>
-                <foreignObject x="-14.85" y="-14.85" width="438.7" height="392.95">
-                  <div xmlns="http://www.w3.org/1999/xhtml"
-                    style="backdrop-filter:blur(7.43px);clip-path:url(#bgblur_2_315_193_clip_path);height:100%;width:100%">
-                  </div>
-                </foreignObject>
-                <g data-figma-bg-blur-radius="14.85">
-                  <mask id="path-4-inside-2_315_193" fill="white">
-                    <path
-                      d="M90.376 363.25C40.4633 363.25 0.00104113 322.788 0.000984463 272.875L0.00100035 91.167C0.000908801 91.1113 2.3796e-05 91.0556 2.38009e-05 91C2.38057e-05 90.9446 0.00090882 90.8893 0.00100038 90.8339L0.0010004 90.625C0.00100287 62.322 13.0124 37.0593 33.3789 20.4882C48.929 7.7034 68.7655 -2.97442e-05 90.375 -2.78551e-05L318.625 -7.90083e-06C368.538 2.69803e-05 409 41.0873 409 91C409 140.913 368.538 182 318.625 182L264.001 182C218.023 182 180.751 219.272 180.751 265.25L180.751 272.875C180.751 322.788 140.288 363.25 90.376 363.25Z" />
-                  </mask>
-                  <path
-                    d="M90.376 363.25C40.4633 363.25 0.00104113 322.788 0.000984463 272.875L0.00100035 91.167C0.000908801 91.1113 2.3796e-05 91.0556 2.38009e-05 91C2.38057e-05 90.9446 0.00090882 90.8893 0.00100038 90.8339L0.0010004 90.625C0.00100287 62.322 13.0124 37.0593 33.3789 20.4882C48.929 7.7034 68.7655 -2.97442e-05 90.375 -2.78551e-05L318.625 -7.90083e-06C368.538 2.69803e-05 409 41.0873 409 91C409 140.913 368.538 182 318.625 182L264.001 182C218.023 182 180.751 219.272 180.751 265.25L180.751 272.875C180.751 322.788 140.288 363.25 90.376 363.25Z"
-                    fill="#ADADAD" fill-opacity="0.1" />
-                  <path
-                    d="M90.376 363.25L90.376 364L90.376 363.25ZM0.000984463 272.875L-0.749016 272.875L0.000984463 272.875ZM0.00100035 91.167L0.751 91.167L0.751 91.1656L0.00100035 91.167ZM2.38009e-05 91L-0.749976 91L2.38009e-05 91ZM0.00100038 90.8339L0.751 90.8353L0.751 90.8339L0.00100038 90.8339ZM33.3789 20.4882L33.8523 21.07L33.8553 21.0676L33.3789 20.4882ZM90.375 -2.78551e-05L90.375 -0.750028L90.375 -2.78551e-05ZM318.625 -7.90083e-06L318.625 -0.750008L318.625 -7.90083e-06ZM409 91L409.75 91L409 91ZM318.625 182L318.625 182.75L318.625 182ZM180.751 272.875L181.501 272.875L180.751 272.875ZM90.376 363.25L90.376 362.5C40.8775 362.5 0.751041 322.373 0.750984 272.875L0.000984463 272.875L-0.749016 272.875C-0.748959 323.202 40.0491 364 90.376 364L90.376 363.25ZM0.000984463 272.875L0.750984 272.875L0.751 91.167L0.00100035 91.167L-0.749 91.167L-0.749016 272.875L0.000984463 272.875ZM0.00100035 91.167L0.751 91.1656C0.750817 91.0726 0.750024 91.0782 0.750024 91L2.38009e-05 91L-0.749976 91C-0.749976 91.0331 -0.74903 91.15 -0.749 91.1683L0.00100035 91.167ZM2.38009e-05 91L0.750024 91C0.750024 90.9215 0.750817 90.9287 0.751 90.8353L0.00100038 90.8339L-0.749 90.8326C-0.74903 90.8498 -0.749976 90.9678 -0.749976 91L2.38009e-05 91ZM0.00100038 90.8339L0.751 90.8339L0.751 90.625L0.0010004 90.625L-0.749 90.625L-0.749 90.8339L0.00100038 90.8339ZM0.0010004 90.625L0.751 90.625C0.751003 62.5572 13.6533 37.5048 33.8523 21.07L33.3789 20.4882L32.9056 19.9065C12.3716 36.6138 -0.748997 62.0867 -0.749 90.625L0.0010004 90.625ZM33.3789 20.4882L33.8553 21.0676C49.2773 8.38788 68.9473 0.74997 90.375 0.749972L90.375 -2.78551e-05L90.375 -0.750028C68.5838 -0.75003 48.5805 7.01892 32.9026 19.9089L33.3789 20.4882ZM90.375 -2.78551e-05L90.375 0.749972L318.625 0.749992L318.625 -7.90083e-06L318.625 -0.750008L90.375 -0.750028L90.375 -2.78551e-05ZM318.625 -7.90083e-06L318.625 0.749992C368.117 0.750027 408.25 41.4948 408.25 91L409 91L409.75 91C409.75 40.6798 368.959 -0.749973 318.625 -0.750008L318.625 -7.90083e-06ZM409 91L408.25 91C408.25 140.505 368.117 181.25 318.625 181.25L318.625 182L318.625 182.75C368.959 182.75 409.75 141.32 409.75 91L409 91ZM318.625 182L318.625 181.25L264.001 181.25L264.001 182L264.001 182.75L318.625 182.75L318.625 182ZM180.751 265.25L180.001 265.25L180.001 272.875L180.751 272.875L181.501 272.875L181.501 265.25L180.751 265.25ZM180.751 272.875L180.001 272.875C180.001 322.373 139.874 362.5 90.376 362.5L90.376 363.25L90.376 364C140.703 364 181.501 323.202 181.501 272.875L180.751 272.875ZM264.001 182L264.001 181.25C217.609 181.25 180.001 218.858 180.001 265.25L180.751 265.25L181.501 265.25C181.501 219.686 218.438 182.75 264.001 182.75L264.001 182Z"
-                    fill="url(#paint2_linear_315_193)" mask="url(#path-4-inside-2_315_193)" />
-                </g>
-                <rect x="1279.62" y="877.374" width="180" height="734.25" rx="88.125"
-                  transform="rotate(90 1279.62 877.374)" fill="black" fill-opacity="0.01" />
-                <rect x="1279.62" y="877.374" width="180" height="734.25" rx="88.125"
-                  transform="rotate(90 1279.62 877.374)" stroke="url(#paint3_linear_315_193)" stroke-width="0.75" />
-                <rect x="897.126" y="881.124" width="180" height="171.75" rx="85.875" fill="#CCCCCC"
-                  fill-opacity="0.47" />
-                <rect x="897.126" y="881.124" width="180" height="171.75" rx="85.875"
-                  stroke="url(#paint4_linear_315_193)" stroke-width="0.75" />
-                <defs>
-                  <clipPath id="bgblur_0_315_193_clip_path" transform="translate(-720.075 -350.075)">
-                    <path
-                      d="M834.375 368.375L1173 368.375C1232.03 368.375 1279.87 416.225 1279.87 475.25L1279.87 646.25C1279.87 705.275 1232.03 753.125 1173 753.125L1015.12 753.125C962.106 753.125 919.125 710.144 919.125 657.125L919.125 651.125C919.125 601.005 878.495 560.375 828.375 560.375C778.669 560.375 738.375 520.081 738.375 470.375L738.375 464.375C738.375 411.356 781.356 368.375 834.375 368.375Z" />
-                  </clipPath>
-                  <clipPath id="bgblur_1_315_193_clip_path" transform="translate(44.775 -128.225)">
-                    <path
-                      d="M180.75 582.625C180.75 632.538 140.288 673 90.3751 673C40.4625 673 9.07787e-05 632.538 5.37158e-05 582.625L1.18513e-05 263.375C5.306e-06 213.462 40.4624 173 90.375 173C140.081 173 180.75 213.294 180.75 263L180.75 582.625Z" />
-                  </clipPath>
-                  <clipPath id="bgblur_2_315_193_clip_path" transform="translate(14.85 14.85)">
-                    <path
-                      d="M90.376 363.25C40.4633 363.25 0.00104113 322.788 0.000984463 272.875L0.00100035 91.167C0.000908801 91.1113 2.3796e-05 91.0556 2.38009e-05 91C2.38057e-05 90.9446 0.00090882 90.8893 0.00100038 90.8339L0.0010004 90.625C0.00100287 62.322 13.0124 37.0593 33.3789 20.4882C48.929 7.7034 68.7655 -2.97442e-05 90.375 -2.78551e-05L318.625 -7.90083e-06C368.538 2.69803e-05 409 41.0873 409 91C409 140.913 368.538 182 318.625 182L264.001 182C218.023 182 180.751 219.272 180.751 265.25L180.751 272.875C180.751 322.788 140.288 363.25 90.376 363.25Z" />
-                  </clipPath>
-                  <linearGradient id="paint0_linear_315_193" x1="1009.12" y1="368" x2="1009.12" y2="753.5"
-                    gradientUnits="userSpaceOnUse">
-                    <stop stop-color="white" stop-opacity="0.58" />
-                    <stop offset="1" stop-color="#C2C2C2" />
-                  </linearGradient>
-                  <linearGradient id="paint1_linear_315_193" x1="167.171" y1="215.531" x2="38.5736" y2="235.592"
-                    gradientUnits="userSpaceOnUse">
-                    <stop stop-color="white" stop-opacity="0.55" />
-                    <stop offset="1" stop-color="#ECECEC" />
-                  </linearGradient>
-                  <linearGradient id="paint2_linear_315_193" x1="271.125" y1="363.25" x2="271.125" y2="0.250008"
-                    gradientUnits="userSpaceOnUse">
-                    <stop stop-color="#D4D4D4" />
-                    <stop offset="1" stop-color="white" stop-opacity="0.12" />
-                  </linearGradient>
-                  <linearGradient id="paint3_linear_315_193" x1="1370.37" y1="1612" x2="1370.37" y2="876.999"
-                    gradientUnits="userSpaceOnUse">
-                    <stop stop-color="white" />
-                    <stop offset="1" stop-color="#D4D4D4" />
-                  </linearGradient>
-                  <linearGradient id="paint4_linear_315_193" x1="987.126" y1="1053.25" x2="987.126" y2="880.749"
-                    gradientUnits="userSpaceOnUse">
-                    <stop stop-color="white" />
-                    <stop offset="1" stop-color="#D4D4D4" />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-          </div>
-          <h2 class="title">вопрос-ответ</h2>
-          <ul class="accordion">
-            <li class="accordion__item">
-              <button class="accordion__button" type="button">
-                когда и где пройдет конференция?
-                <div class="accordion__icon u-border-gradient">
-                  <svg class="icon" aria-hidden="true">
-                    <use href="./assets/sprite.svg#open"></use>
-                  </svg>
-                </div>
-              </button>
-              <div class="accordion__content">
-                <p>встречаемся 29 октября в Connect, Москва, 5-й Донской проезд, 17. Регистрация гостей начинается в
-                  13:00.</p>
-                <div class="map">
-                  <iframe
-                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A9a17ee61838df1f9c5881c788f89e0f47478f9447c986c55d677683cecd4d886&amp;source=constructor"
-                    width="100%" height="300" frameborder="0"></iframe>
-                </div>
-              </div>
-            </li>
-
-            <li class="accordion__item">
-              <button class="accordion__button" type="button">
-                будет ли онлайн-версия?
-                <div class="accordion__icon u-border-gradient">
-                  <svg class="icon" aria-hidden="true">
-                    <use href="./assets/sprite.svg#open"></use>
-                  </svg>
-                </div>
-              </button>
-              <div class="accordion__content">
-                <p>мы поделимся материалами после, но для полного погружения будем ждать вас офлайн.</p>
-              </div>
-            </li>
-
-            <li class="accordion__item">
-              <button class="accordion__button" type="button">
-                сколько стоит участие?
-                <div class="accordion__icon u-border-gradient">
-                  <svg class="icon" aria-hidden="true">
-                    <use href="./assets/sprite.svg#open"></use>
-                  </svg>
-                </div>
-              </button>
-              <div class="accordion__content">
-                <p>участие в конференции бесплатное, но обязательна регистрация — количество мест ограничено.</p>
-              </div>
-            </li>
-
-            <li class="accordion__item">
-              <button class="accordion__button" type="button">
-                предусмотрен ли дресс-код?
-                <div class="accordion__icon u-border-gradient">
-                  <svg class="icon" aria-hidden="true">
-                    <use href="./assets/sprite.svg#open"></use>
-                  </svg>
-                </div>
-              </button>
-              <div class="accordion__content">
-                <p>главное, чтобы вам было комфортно как участвовать в официальной части, так и веселиться на афтерпати.
-                </p>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-    </main>
-
-    <footer class="footer" id="form">
-      <section class="footer__top">
-        <div class="container footer__top-container">
-          <h2 class="title">регистрация на мероприятие</h2>
-          <div class="footer__box">
-            <div>
-              <script src="https://forms.yandex.ru/_static/embed.js"></script><iframe src="https://forms.yandex.ru/u/68dabaca4936390da8709b21?iframe=1" frameborder="0" name="ya-form-68dabaca4936390da8709b21"></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="footer__copyright">
-        <div class="container">
-          <div class="footer__copyright-inner">
-            <span class="footer__age">18+</span>
-            <span class="footer__year">© 2025</span>
-            <a href="https://yandex.ru/legal/confidential/" target="_blank" class="footer__privacy-policy">
-              Политика конфиденциальности
-            </a>
-          </div>
-          <a class="telegram-button" href="https://t.me/UrbanAdsConf_bot" target="_blank" rel="noopener noreferrer">
+        <h2 class="title">для кого:</h2>
+        <ul class="for-whom__list">
+          <li class="for-whom__item">
             <svg class="icon" aria-hidden="true">
-              <use href="./assets/sprite.svg#telegram"></use>
+              <use href="./assets/sprite.svg#arrow-down"></use>
             </svg>
-            Telegram бот с информацией о конференции
+            <p class="for-whom__text">
+              для тех, кто хочет больше охватов, кликов и лидов
+            </p>
+          </li>
+          <li class="for-whom__item">
+            <svg class="icon" aria-hidden="true">
+              <use href="./assets/sprite.svg#arrow-down"></use>
+            </svg>
+            <p class="for-whom__text">
+              кто понимает,<br class="predlog" /> что важно не только как,<br><br class="predlog" /> но и когда
+              пользователь видит рекламу
+            </p>
+          </li>
+          <li class="for-whom__item">
+            <svg class="icon" aria-hidden="true">
+              <use href="./assets/sprite.svg#arrow-down"></use>
+            </svg>
+            <p class="for-whom__text">
+              кто стремится к нативному эмоциональному контакту и эффективному взаимодействию с потенциальным клиентом
+            </p>
+          </li>
+          <li class="for-whom__item">
+            <svg class="icon" aria-hidden="true">
+              <use href="./assets/sprite.svg#arrow-down"></use>
+            </svg>
+            <p class="for-whom__text">
+              кто хочет, чтобы его заметили<br class="predlog"> в эпоху баннерной слепоты
+            </p>
+          </li>
+          <li class="for-whom__item">
+            <svg class="icon" aria-hidden="true">
+              <use href="./assets/sprite.svg#arrow-down"></use>
+            </svg>
+            <p class="for-whom__text">
+              кто ценит время и бюджеты, <br class="predlog" />и готов получить универсальный инструмент для
+              таргетинга<br class="predlog" /> на самую подходящую
+              аудиторию
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="speakers">
+      <div class="container">
+        <h2 class="title">топ-спикеры</h2>
+        <p class="speakers__description">
+          поговорим с экспертами рынка о рекламе<br class="predlog hidden-1024"> в одном ключе
+        </p>
+        <div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <div class="speakers__item">
+                  <div class="speakers__item-box">
+                    <img class="speakers__item-photo" src="./assets/speakers/speaker-1.webp" alt="">
+                    <div class="speakers__item-bottom">
+                      <h3 class="speakers__item-name">Юлия Удовенко</h3>
+                      <p class="speakers__item-description">
+                        вице-президент<br class="display"> по маркетингу группы RW+
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="speakers__item">
+                  <div class="speakers__item-box">
+                    <img class="speakers__item-photo" src="./assets/speakers/speaker-2.webp" alt="">
+                    <div class="speakers__item-bottom">
+                      <h3 class="speakers__item-name">Михаил Шкляев</h3>
+                      <p class="speakers__item-description">
+                        главный управляющий<br class="display"> директор Okkam
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="speakers__item">
+                  <div class="speakers__item-box">
+                    <img class="speakers__item-photo" src="./assets/speakers/speaker-3.webp" alt="">
+                    <div class="speakers__item-bottom">
+                      <h3 class="speakers__item-name">Юрий Панов</h3>
+                      <p class="speakers__item-description">
+                        вице-президент по трансформации группы компаний «Родная Речь»
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide wide">
+                <div class="speakers__item">
+                  <div class="speakers__item-box">
+                    <img class="speakers__item-photo" src="./assets/speakers/speaker-4.webp" alt="">
+                    <div class="speakers__item-bottom">
+                      <h3 class="speakers__item-name">Дмитрий Бескромный</h3>
+                      <p class="speakers__item-description">
+                        основатель digital-агентства bQ Group, сооснователь<br> AI Influence, 
+                        автор телеграм-канала «Бескромный»
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="speakers__item">
+                  <div class="speakers__item-box">
+                    <img class="speakers__item-photo" src="./assets/speakers/speaker-5.webp" alt="">
+                    <div class="speakers__item-bottom">
+                      <h3 class="speakers__item-name">Сергей Сёмин</h3>
+                      <p class="speakers__item-description">
+                        директор по маркетингу и рекламе,<br class="display"> KITFORT
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="speakers__item">
+                  <div class="speakers__item-box">
+                    <img class="speakers__item-photo" src="./assets/speakers/speaker-6.webp" alt="">
+                    <div class="speakers__item-bottom">
+                      <h3 class="speakers__item-name">Наталья Бацуева</h3>
+                      <p class="speakers__item-description">
+                        диджитал-директор по контенту,<br class="display"> Пятница!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="speakers__item">
+                  <div class="speakers__item-box">
+                    <img class="speakers__item-photo" src="./assets/speakers/speaker-7.webp" alt="">
+                    <div class="speakers__item-bottom">
+                      <h3 class="speakers__item-name">Екатерина Осауленко</h3>
+                      <p class="speakers__item-description">
+                        лидер маркетинга канала доставки<br class="display">
+                        и B2B-продаж, ROSTIC’S
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="program">
+      <div class="program-decor">
+        <div class="decor">
+          <svg width="1278" height="608" viewBox="0 0 1278 608" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <foreignObject x="874.199" y="223.575" width="420.85" height="401.85">
+              <div xmlns="http://www.w3.org/1999/xhtml"
+                style="backdrop-filter:blur(8.96px);clip-path:url(#bgblur_0_2014_95_clip_path);height:100%;width:100%">
+              </div>
+            </foreignObject>
+            <g data-figma-bg-blur-radius="17.925">
+              <path
+                d="M999.374 607.5C940.141 607.5 892.124 559.483 892.124 500.25L892.124 459.75C892.124 406.593 935.217 363.5 988.374 363.5L1023.62 363.5C1057.31 363.5 1084.62 336.189 1084.62 302.5C1084.62 268.811 1111.93 241.5 1145.62 241.5L1180.87 241.5C1234.03 241.5 1277.12 284.593 1277.12 337.75L1277.12 500.25C1277.12 559.483 1229.11 607.5 1169.87 607.5L999.374 607.5Z"
+                fill="white" fill-opacity="0.05" />
+              <path
+                d="M1276.75 337.75L1276.75 500.25C1276.75 559.275 1228.9 607.125 1169.87 607.125L999.374 607.125C940.349 607.125 892.499 559.275 892.499 500.25L892.499 459.75C892.499 406.8 935.424 363.875 988.374 363.875L1023.62 363.875C1057.52 363.875 1085 336.396 1085 302.5C1085 269.018 1112.14 241.875 1145.62 241.875L1180.87 241.875C1233.82 241.875 1276.75 284.8 1276.75 337.75Z"
+                stroke="url(#paint0_linear_2014_95)" stroke-opacity="0.1" stroke-width="0.75" />
+            </g>
+            <foreignObject x="361.923" y="127.8" width="925.65" height="201.15">
+              <div xmlns="http://www.w3.org/1999/xhtml"
+                style="backdrop-filter:blur(5.1px);clip-path:url(#bgblur_1_2014_95_clip_path);height:100%;width:100%">
+              </div>
+            </foreignObject>
+            <g data-figma-bg-blur-radius="10.2">
+              <rect x="1277.37" y="138" width="180.75" height="905.25" rx="90.375" transform="rotate(90 1277.37 138)"
+                fill="#BABABA" fill-opacity="0.03" />
+              <rect x="1276.87" y="138.5" width="179.75" height="904.25" rx="89.875"
+                transform="rotate(90 1276.87 138.5)" stroke="url(#paint1_linear_2014_95)" stroke-opacity="0.1" />
+            </g>
+            <foreignObject x="-14.85" y="-14.85" width="572.074" height="398.7">
+              <div xmlns="http://www.w3.org/1999/xhtml"
+                style="backdrop-filter:blur(7.43px);clip-path:url(#bgblur_2_2014_95_clip_path);height:100%;width:100%">
+              </div>
+            </foreignObject>
+            <g data-figma-bg-blur-radius="14.85">
+              <mask id="path-5-inside-1_2014_95" fill="white">
+                <path
+                  d="M90.5 369C40.5873 369 0.000127051 328.538 7.90083e-06 278.625L2.43582e-05 90.375C2.86535e-05 41.2424 39.328 1.26692 88.166 0.0292572C88.1735 0.0290659 88.181 0.0294466 88.1885 0.0292572C88.9544 0.010034 89.7227 0.000990336 90.4932 0.000937058C90.4951 0.000936933 90.4971 -3.95043e-05 90.4991 -3.95042e-05L451.999 -7.90083e-06C501.912 1.60293e-05 542.374 40.8373 542.374 90.75C542.374 140.663 501.912 181.5 451.999 181.5L264.25 181.5C218.272 181.5 181 218.772 181 264.75L181 278.625C181 328.537 140.412 369 90.5 369Z" />
+              </mask>
+              <path
+                d="M90.5 369C40.5873 369 0.000127051 328.538 7.90083e-06 278.625L2.43582e-05 90.375C2.86535e-05 41.2424 39.328 1.26692 88.166 0.0292572C88.1735 0.0290659 88.181 0.0294466 88.1885 0.0292572C88.9544 0.010034 89.7227 0.000990336 90.4932 0.000937058C90.4951 0.000936933 90.4971 -3.95043e-05 90.4991 -3.95042e-05L451.999 -7.90083e-06C501.912 1.60293e-05 542.374 40.8373 542.374 90.75C542.374 140.663 501.912 181.5 451.999 181.5L264.25 181.5C218.272 181.5 181 218.772 181 264.75L181 278.625C181 328.537 140.412 369 90.5 369Z"
+                fill="#ADADAD" fill-opacity="0.05" />
+              <path
+                d="M90.5 369L90.5 369.75L90.5 369.75L90.5 369ZM7.90083e-06 278.625L-0.749992 278.625L-0.749992 278.625L7.90083e-06 278.625ZM88.166 0.0292572L88.185 0.779017L88.1852 0.779012L88.166 0.0292572ZM88.1885 0.0292572L88.1697 -0.720507L88.1695 -0.720502L88.1885 0.0292572ZM90.4932 0.000937058L90.4931 -0.749063L90.4931 -0.749063L90.4932 0.000937058ZM90.4991 -3.95042e-05L90.4991 -0.75004H90.4991L90.4991 -3.95042e-05ZM451.999 -7.90083e-06L451.999 -0.750008L451.999 -0.750008L451.999 -7.90083e-06ZM542.374 90.75L543.124 90.75V90.75L542.374 90.75ZM451.999 181.5L451.999 182.25L451.999 182.25L451.999 181.5ZM181 278.625L181.75 278.625L181.75 278.625L181 278.625ZM90.5 369L90.5 368.25C41.0002 368.25 0.750126 328.122 0.750008 278.625L7.90083e-06 278.625L-0.749992 278.625C-0.749872 328.953 40.1745 369.75 90.5 369.75L90.5 369ZM7.90083e-06 278.625L0.750008 278.625L0.750024 90.375L2.43582e-05 90.375L-0.749976 90.375L-0.749992 278.625L7.90083e-06 278.625ZM2.43582e-05 90.375L0.750024 90.375C0.750029 41.6516 39.7513 2.00643 88.185 0.779017L88.166 0.0292572L88.147 -0.720502C38.9047 0.527408 -0.749971 40.8332 -0.749976 90.375L2.43582e-05 90.375ZM88.166 0.0292572L88.1852 0.779012C88.1777 0.779204 88.172 0.779208 88.1693 0.7792C88.167 0.779192 88.1653 0.779165 88.1677 0.779196C88.169 0.779212 88.1744 0.779287 88.1805 0.779306C88.1869 0.779327 88.1963 0.7793 88.2075 0.779017L88.1885 0.0292572L88.1695 -0.720502C88.177 -0.720691 88.1826 -0.720695 88.1853 -0.720686C88.1876 -0.720679 88.1893 -0.720651 88.1868 -0.720683C88.1855 -0.720699 88.1801 -0.720774 88.174 -0.720793C88.1675 -0.720813 88.1581 -0.720785 88.1469 -0.720498L88.166 0.0292572ZM88.1885 0.0292572L88.2073 0.779021C88.9666 0.759965 89.7286 0.75099 90.4932 0.750937L90.4932 0.000937058L90.4931 -0.749063C89.7168 -0.749009 88.9423 -0.739897 88.1697 -0.720507L88.1885 0.0292572ZM90.4932 0.000937058L90.4932 0.750937C90.5246 0.750935 90.5524 0.748976 90.5755 0.746446C90.5985 0.743926 90.6181 0.740719 90.6329 0.737937C90.6476 0.735178 90.6594 0.732507 90.6665 0.730844C90.6702 0.729989 90.6731 0.729267 90.675 0.728816C90.6759 0.728586 90.6767 0.728396 90.6772 0.728274C90.6776 0.728162 90.678 0.728063 90.678 0.728062C90.6783 0.727976 90.6771 0.728281 90.6757 0.728636C90.6741 0.729026 90.6714 0.72969 90.668 0.730488C90.6614 0.732038 90.65 0.734602 90.6358 0.737271C90.6214 0.739961 90.6024 0.743091 90.5799 0.745557C90.5572 0.748033 90.53 0.749961 90.4991 0.749961L90.4991 -3.95042e-05L90.4991 -0.75004C90.4677 -0.75004 90.4399 -0.748082 90.4168 -0.745552C90.3937 -0.743033 90.3742 -0.739826 90.3594 -0.737044C90.3447 -0.734285 90.3328 -0.731613 90.3257 -0.729949C90.3221 -0.729094 90.3191 -0.728371 90.3173 -0.72792C90.3164 -0.72769 90.3156 -0.727499 90.3151 -0.727377C90.3147 -0.727265 90.3143 -0.727166 90.3142 -0.727165C90.3139 -0.727078 90.3151 -0.727383 90.3166 -0.727737C90.3181 -0.728127 90.3209 -0.72879 90.3243 -0.729588C90.3309 -0.731137 90.3422 -0.733701 90.3564 -0.736369C90.3708 -0.739058 90.3898 -0.742189 90.4124 -0.744655C90.435 -0.747133 90.4622 -0.749061 90.4931 -0.749063L90.4932 0.000937058ZM90.4991 -3.95042e-05L90.4991 0.749961L451.999 0.749992L451.999 -7.90083e-06L451.999 -0.750008L90.4991 -0.75004L90.4991 -3.95042e-05ZM451.999 -7.90083e-06L451.999 0.749992C501.494 0.750016 541.624 41.2474 541.624 90.75L542.374 90.75L543.124 90.75C543.124 40.4271 502.33 -0.749984 451.999 -0.750008L451.999 -7.90083e-06ZM542.374 90.75L541.624 90.75C541.624 140.252 501.493 180.75 451.999 180.75L451.999 181.5L451.999 182.25C502.33 182.25 543.124 141.073 543.124 90.75L542.374 90.75ZM451.999 181.5L451.999 180.75L264.25 180.75L264.25 181.5L264.25 182.25L451.999 182.25L451.999 181.5ZM181 264.75L180.25 264.75L180.25 278.625L181 278.625L181.75 278.625L181.75 264.75L181 264.75ZM181 278.625L180.25 278.625C180.25 328.122 140 368.25 90.5 368.25L90.5 369L90.5 369.75C140.825 369.75 181.75 328.953 181.75 278.625L181 278.625ZM264.25 181.5L264.25 180.75C217.858 180.75 180.25 218.358 180.25 264.75L181 264.75L181.75 264.75C181.75 219.186 218.687 182.25 264.25 182.25L264.25 181.5Z"
+                fill="white" fill-opacity="0.1" mask="url(#path-5-inside-1_2014_95)" />
+            </g>
+            <defs>
+              <clipPath id="bgblur_0_2014_95_clip_path" transform="translate(-874.199 -223.575)">
+                <path
+                  d="M999.374 607.5C940.141 607.5 892.124 559.483 892.124 500.25L892.124 459.75C892.124 406.593 935.217 363.5 988.374 363.5L1023.62 363.5C1057.31 363.5 1084.62 336.189 1084.62 302.5C1084.62 268.811 1111.93 241.5 1145.62 241.5L1180.87 241.5C1234.03 241.5 1277.12 284.593 1277.12 337.75L1277.12 500.25C1277.12 559.483 1229.11 607.5 1169.87 607.5L999.374 607.5Z" />
+              </clipPath>
+              <clipPath id="bgblur_1_2014_95_clip_path" transform="translate(-361.923 -127.8)">
+                <rect x="1277.37" y="138" width="180.75" height="905.25" rx="90.375"
+                  transform="rotate(90 1277.37 138)" />
+              </clipPath>
+              <clipPath id="bgblur_2_2014_95_clip_path" transform="translate(14.85 14.85)">
+                <path
+                  d="M90.5 369C40.5873 369 0.000127051 328.538 7.90083e-06 278.625L2.43582e-05 90.375C2.86535e-05 41.2424 39.328 1.26692 88.166 0.0292572C88.1735 0.0290659 88.181 0.0294466 88.1885 0.0292572C88.9544 0.010034 89.7227 0.000990336 90.4932 0.000937058C90.4951 0.000936933 90.4971 -3.95043e-05 90.4991 -3.95042e-05L451.999 -7.90083e-06C501.912 1.60293e-05 542.374 40.8373 542.374 90.75C542.374 140.663 501.912 181.5 451.999 181.5L264.25 181.5C218.272 181.5 181 218.772 181 264.75L181 278.625C181 328.537 140.412 369 90.5 369Z" />
+              </clipPath>
+              <linearGradient id="paint0_linear_2014_95" x1="1277.12" y1="424.5" x2="892.124" y2="424.5"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0.58" />
+                <stop offset="1" stop-color="#C2C2C2" />
+              </linearGradient>
+              <linearGradient id="paint1_linear_2014_95" x1="1467.37" y1="963.749" x2="1279.67" y2="936.507"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0.2" />
+                <stop offset="1" stop-color="white" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="decor --tablet">
+          <svg width="720" height="369" viewBox="0 0 720 369" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <foreignObject x="440.565" y="175.565" width="291.947" height="278.767">
+              <div xmlns="http://www.w3.org/1999/xhtml"
+                style="backdrop-filter:blur(6.22px);clip-path:url(#bgblur_0_323_138_clip_path);height:100%;width:100%">
+              </div>
+            </foreignObject>
+            <g data-figma-bg-blur-radius="12.4347">
+              <path
+                d="M527.4 441.897C486.31 441.897 453 408.587 453 367.497L453 339.402C453 302.526 482.894 272.632 519.769 272.632L544.223 272.632C567.593 272.632 586.539 253.687 586.539 230.316C586.539 206.946 605.484 188 628.855 188L653.308 188C690.184 188 720.078 217.894 720.078 254.769L720.078 367.497C720.078 408.587 686.768 441.897 645.677 441.897L527.4 441.897Z"
+                fill="white" fill-opacity="0.05" />
+              <path
+                d="M719.818 254.77L719.818 367.497C719.818 408.443 686.624 441.637 645.677 441.637L527.4 441.637C486.454 441.637 453.26 408.443 453.26 367.497L453.26 339.401C453.26 302.67 483.037 272.893 519.769 272.893L544.223 272.893C567.737 272.892 586.799 253.83 586.799 230.316C586.799 207.09 605.628 188.26 628.855 188.26L653.308 188.26C690.04 188.26 719.818 218.037 719.818 254.77Z"
+                stroke="url(#paint0_linear_323_138)" stroke-opacity="0.1" stroke-width="0.520281" />
+            </g>
+            <foreignObject x="-23.3016" y="-10.3016" width="396.852" height="276.582">
+              <div xmlns="http://www.w3.org/1999/xhtml"
+                style="backdrop-filter:blur(5.15px);clip-path:url(#bgblur_1_323_138_clip_path);height:100%;width:100%">
+              </div>
+            </foreignObject>
+            <g data-figma-bg-blur-radius="10.3016">
+              <mask id="path-3-inside-1_323_138" fill="white">
+                <path
+                  d="M49.7803 255.978C15.1554 255.978 -13 227.909 -13 193.284L-13 62.6943C-13 28.34 14.7171 0.438797 48.9697 0.00485534L49.7803 -2.74043e-05L300.556 -5.48083e-06C335.18 0.000211169 363.249 28.3294 363.249 62.9541C363.249 97.5788 335.18 125.908 300.556 125.908L170.312 125.908C138.417 125.908 112.561 151.764 112.561 183.659L112.561 193.284C112.561 227.909 84.4051 255.978 49.7803 255.978Z" />
+              </mask>
+              <path
+                d="M49.7803 255.978C15.1554 255.978 -13 227.909 -13 193.284L-13 62.6943C-13 28.34 14.7171 0.438797 48.9697 0.00485534L49.7803 -2.74043e-05L300.556 -5.48083e-06C335.18 0.000211169 363.249 28.3294 363.249 62.9541C363.249 97.5788 335.18 125.908 300.556 125.908L170.312 125.908C138.417 125.908 112.561 151.764 112.561 183.659L112.561 193.284C112.561 227.909 84.4051 255.978 49.7803 255.978Z"
+                fill="#ADADAD" fill-opacity="0.05" />
+              <path
+                d="M49.7803 255.978L49.7803 256.499L49.7803 255.978ZM48.9697 0.00485534L48.9666 -0.515439L48.9632 -0.515378L48.9697 0.00485534ZM49.7803 -2.74043e-05L49.7803 -0.520322L49.7772 -0.520291L49.7803 -2.74043e-05ZM300.556 -5.48083e-06L300.556 -0.5203L300.556 -0.5203L300.556 -5.48083e-06ZM363.249 62.9541L363.769 62.9541L363.249 62.9541ZM300.556 125.908L300.556 126.428L300.556 126.428L300.556 125.908ZM49.7803 255.978L49.7803 255.458C15.4418 255.458 -12.4797 227.621 -12.4797 193.284L-13 193.284L-13.5203 193.284C-13.5203 228.197 14.869 256.499 49.7803 256.499L49.7803 255.978ZM-13 193.284L-12.4797 193.284L-12.4797 62.6943L-13 62.6943L-13.5203 62.6943L-13.5203 193.284L-13 193.284ZM-13 62.6943L-12.4797 62.6943C-12.4797 28.6261 15.0071 0.955444 48.9763 0.525088L48.9697 0.00485534L48.9632 -0.515378C14.427 -0.0778503 -13.5203 28.0539 -13.5203 62.6943L-13 62.6943ZM48.9697 0.00485534L48.9729 0.525134L49.7834 0.520252L49.7803 -2.74043e-05L49.7772 -0.520291L48.9666 -0.515408L48.9697 0.00485534ZM49.7803 -2.74043e-05L49.7803 0.520252L300.556 0.520273L300.556 -5.48083e-06L300.556 -0.5203L49.7803 -0.520322L49.7803 -2.74043e-05ZM300.556 -5.48083e-06L300.556 0.520273C334.89 0.52049 362.729 28.6139 362.729 62.9541L363.249 62.9541L363.769 62.9541C363.769 28.0449 335.47 -0.520052 300.556 -0.5203L300.556 -5.48083e-06ZM363.249 62.9541L362.729 62.9541C362.729 97.2943 334.89 125.388 300.556 125.388L300.556 125.908L300.556 126.428C335.471 126.428 363.769 97.8634 363.769 62.9541L363.249 62.9541ZM300.556 125.908L300.556 125.388L170.312 125.388L170.312 125.908L170.312 126.428L300.556 126.428L300.556 125.908ZM112.561 183.659L112.04 183.659L112.04 193.284L112.561 193.284L113.081 193.284L113.081 183.659L112.561 183.659ZM112.561 193.284L112.04 193.284C112.04 227.621 84.1187 255.458 49.7803 255.458L49.7803 255.978L49.7803 256.499C84.6915 256.499 113.081 228.197 113.081 193.284L112.561 193.284ZM170.312 125.908L170.312 125.388C138.129 125.388 112.04 151.477 112.04 183.659L112.561 183.659L113.081 183.659C113.081 152.052 138.704 126.428 170.312 126.428L170.312 125.908Z"
+                fill="white" fill-opacity="0.1" mask="url(#path-3-inside-1_323_138)" />
+            </g>
+            <foreignObject x="38.9239" y="55.9242" width="642.131" height="139.539">
+              <div xmlns="http://www.w3.org/1999/xhtml"
+                style="backdrop-filter:blur(3.54px);clip-path:url(#bgblur_2_323_138_clip_path);height:100%;width:100%">
+              </div>
+            </foreignObject>
+            <g data-figma-bg-blur-radius="7.07582">
+              <rect x="673.979" y="63" width="125.388" height="627.979" rx="62.6938" transform="rotate(90 673.979 63)"
+                fill="#BABABA" fill-opacity="0.03" />
+              <rect x="673.632" y="63.3469" width="124.694" height="627.285" rx="62.347"
+                transform="rotate(90 673.632 63.3469)" stroke="url(#paint1_linear_323_138)" stroke-opacity="0.1"
+                stroke-width="0.693708" />
+            </g>
+            <defs>
+              <clipPath id="bgblur_0_323_138_clip_path" transform="translate(-440.565 -175.565)">
+                <path
+                  d="M527.4 441.897C486.31 441.897 453 408.587 453 367.497L453 339.402C453 302.526 482.894 272.632 519.769 272.632L544.223 272.632C567.593 272.632 586.539 253.687 586.539 230.316C586.539 206.946 605.484 188 628.855 188L653.308 188C690.184 188 720.078 217.894 720.078 254.769L720.078 367.497C720.078 408.587 686.768 441.897 645.677 441.897L527.4 441.897Z" />
+              </clipPath>
+              <clipPath id="bgblur_1_323_138_clip_path" transform="translate(23.3016 10.3016)">
+                <path
+                  d="M49.7803 255.978C15.1554 255.978 -13 227.909 -13 193.284L-13 62.6943C-13 28.34 14.7171 0.438797 48.9697 0.00485534L49.7803 -2.74043e-05L300.556 -5.48083e-06C335.18 0.000211169 363.249 28.3294 363.249 62.9541C363.249 97.5788 335.18 125.908 300.556 125.908L170.312 125.908C138.417 125.908 112.561 151.764 112.561 183.659L112.561 193.284C112.561 227.909 84.4051 255.978 49.7803 255.978Z" />
+              </clipPath>
+              <clipPath id="bgblur_2_323_138_clip_path" transform="translate(-38.9239 -55.9242)">
+                <rect x="673.979" y="63" width="125.388" height="627.979" rx="62.6938"
+                  transform="rotate(90 673.979 63)" />
+              </clipPath>
+              <linearGradient id="paint0_linear_323_138" x1="720.078" y1="314.949" x2="453" y2="314.949"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0.58" />
+                <stop offset="1" stop-color="#C2C2C2" />
+              </linearGradient>
+              <linearGradient id="paint1_linear_323_138" x1="805.783" y1="635.829" x2="675.571" y2="616.931"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0.2" />
+                <stop offset="1" stop-color="white" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+        </div>
+        <div class="decor --mobile">
+          <svg width="343" height="444" viewBox="0 0 343 444" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <foreignObject x="84.0275" y="184.027" width="261.945" height="262.945">
+              <div xmlns="http://www.w3.org/1999/xhtml"
+                style="backdrop-filter:blur(1.49px);clip-path:url(#bgblur_0_323_197_clip_path);height:100%;width:100%">
+              </div>
+            </foreignObject>
+            <g data-figma-bg-blur-radius="2.9725">
+              <path
+                d="M129.26 444C105.92 444 87 425.08 87 401.74L87 314.926C87 291.587 105.92 272.667 129.26 272.667L215.172 272.667C238.512 272.667 257.432 253.746 257.432 230.407V229.26C257.432 205.92 276.352 187 299.692 187H300.74C324.08 187 343 205.92 343 229.26L343 401.74C343 425.08 324.08 444 300.74 444L129.26 444Z"
+                fill="#C0C0C0" fill-opacity="0.05" />
+              <path
+                d="M342.733 229.26L342.733 401.74C342.733 424.932 323.932 443.733 300.74 443.733L129.26 443.733C106.068 443.733 87.2666 424.932 87.2666 401.74L87.2666 314.927C87.2666 291.735 106.068 272.934 129.26 272.934L215.172 272.934C238.658 272.934 257.698 253.894 257.698 230.407V229.26C257.698 206.068 276.499 187.267 299.691 187.267H300.74C323.932 187.267 342.733 206.068 342.733 229.26Z"
+                stroke="url(#paint0_linear_323_197)" stroke-opacity="0.1" stroke-width="0.533483" />
+            </g>
+            <foreignObject x="252.129" y="133.131" width="95.7412" height="264.741">
+              <div xmlns="http://www.w3.org/1999/xhtml"
+                style="backdrop-filter:blur(2.44px);clip-path:url(#bgblur_1_323_197_clip_path);height:100%;width:100%">
+              </div>
+            </foreignObject>
+            <g data-figma-bg-blur-radius="4.87061">
+              <rect x="343" y="393.002" width="86" height="255" rx="43" transform="rotate(-180 343 393.002)"
+                fill="#BABABA" fill-opacity="0.1" />
+              <rect x="342.733" y="392.735" width="85.4665" height="254.467" rx="42.7333"
+                transform="rotate(-180 342.733 392.735)" stroke="url(#paint1_linear_323_197)" stroke-opacity="0.1"
+                stroke-width="0.533483" />
+            </g>
+            <foreignObject x="-7.09103" y="-7.09103" width="188.94" height="262.184">
+              <div xmlns="http://www.w3.org/1999/xhtml"
+                style="backdrop-filter:blur(3.55px);clip-path:url(#bgblur_2_323_197_clip_path);height:100%;width:100%">
+              </div>
+            </foreignObject>
+            <g data-figma-bg-blur-radius="7.09103">
+              <mask id="path-5-inside-1_323_197" fill="white">
+                <path
+                  d="M174.758 41.3818C174.758 18.5276 156.23 0.000261022 133.376 3.62402e-06L41.3847 1.16802e-05C18.5305 0.000242563 0.00304699 18.5275 0.00291166 41.3819C0.00291168 41.6134 0.00889314 41.8446 0.0126773 42.0752C0.00573462 42.3933 -1.79158e-05 42.7125 -1.78878e-05 43.0322L-3.75076e-06 205.023C-1.6793e-06 228.76 19.2414 248.002 42.9775 248.002C66.7137 248.002 85.9561 228.76 85.9561 205.023L85.956 122.516C85.956 100.562 103.754 82.7637 125.709 82.7637L133.375 82.7637C156.23 82.7637 174.758 64.2364 174.758 41.3818Z" />
+              </mask>
+              <path
+                d="M174.758 41.3818C174.758 18.5276 156.23 0.000261022 133.376 3.62402e-06L41.3847 1.16802e-05C18.5305 0.000242563 0.00304699 18.5275 0.00291166 41.3819C0.00291168 41.6134 0.00889314 41.8446 0.0126773 42.0752C0.00573462 42.3933 -1.79158e-05 42.7125 -1.78878e-05 43.0322L-3.75076e-06 205.023C-1.6793e-06 228.76 19.2414 248.002 42.9775 248.002C66.7137 248.002 85.9561 228.76 85.9561 205.023L85.956 122.516C85.956 100.562 103.754 82.7637 125.709 82.7637L133.375 82.7637C156.23 82.7637 174.758 64.2364 174.758 41.3818Z"
+                fill="#ADADAD" fill-opacity="0.05" />
+              <path
+                d="M174.758 41.3818L175.291 41.3818L174.758 41.3818ZM133.376 3.62402e-06L133.376 -0.533474L133.376 -0.533474L133.376 3.62402e-06ZM41.3847 1.16802e-05L41.3847 -0.533466L41.3847 1.16802e-05ZM0.00291166 41.3819L-0.530566 41.3819L0.00291166 41.3819ZM0.0126773 42.0752L0.546094 42.0665L0.546262 42.0767L0.546033 42.0869L0.0126773 42.0752ZM-1.78878e-05 43.0322L-0.533496 43.0322L-1.78878e-05 43.0322ZM-3.75076e-06 205.023L0.533474 205.023L-3.75076e-06 205.023ZM42.9775 248.002L42.9775 248.535L42.9775 248.002ZM85.9561 205.023L86.4895 205.023L85.9561 205.023ZM85.956 122.516L85.4226 122.516L85.956 122.516ZM174.758 41.3818L174.224 41.3818C174.224 18.8222 155.936 0.533739 133.376 0.533481L133.376 3.62402e-06L133.376 -0.533474C156.525 -0.533217 175.291 18.2329 175.291 41.3818L174.758 41.3818ZM133.376 3.62402e-06L133.376 0.533481L41.3847 0.533489L41.3847 1.16802e-05L41.3847 -0.533466L133.376 -0.533474L133.376 3.62402e-06ZM41.3847 1.16802e-05L41.3847 0.533489C18.8251 0.53372 0.536525 18.8222 0.536389 41.3819L0.00291166 41.3819L-0.530566 41.3819C-0.530431 18.2329 18.2358 -0.533235 41.3847 -0.533466L41.3847 1.16802e-05ZM0.00291166 41.3819L0.536389 41.3819C0.536389 41.6075 0.542188 41.8291 0.546094 42.0665L0.0126773 42.0752L-0.520739 42.084C-0.524417 41.8601 -0.530566 41.6192 -0.530566 41.3819L0.00291166 41.3819ZM0.0126773 42.0752L0.546033 42.0869C0.539106 42.404 0.53346 42.7185 0.53346 43.0322L-1.78878e-05 43.0322L-0.533496 43.0322C-0.533496 42.7065 -0.527652 42.3826 -0.520678 42.0636L0.0126773 42.0752ZM-1.78878e-05 43.0322L0.53346 43.0322L0.533474 205.023L-3.75076e-06 205.023L-0.533482 205.023L-0.533496 43.0322L-1.78878e-05 43.0322ZM-3.75076e-06 205.023L0.533474 205.023C0.533476 228.465 19.5361 247.468 42.9775 247.468L42.9775 248.002L42.9775 248.535C18.9468 248.535 -0.533479 229.054 -0.533482 205.023L-3.75076e-06 205.023ZM42.9775 248.002L42.9775 247.468C66.4191 247.468 85.4226 228.465 85.4226 205.023L85.9561 205.023L86.4895 205.023C86.4895 229.054 67.0083 248.535 42.9775 248.535L42.9775 248.002ZM85.9561 205.023L85.4226 205.023L85.4226 122.516L85.956 122.516L86.4895 122.516L86.4895 205.023L85.9561 205.023ZM125.709 82.7637L125.709 82.2302L133.375 82.2302L133.375 82.7637L133.375 83.2972L125.709 83.2972L125.709 82.7637ZM133.375 82.7637L133.375 82.2302C155.935 82.2302 174.224 63.9417 174.224 41.3818L174.758 41.3818L175.291 41.3818C175.291 64.5311 156.524 83.2972 133.375 83.2972L133.375 82.7637ZM85.956 122.516L85.4226 122.516C85.4226 100.267 103.459 82.2302 125.709 82.2302L125.709 82.7637L125.709 83.2972C104.049 83.2972 86.4895 100.856 86.4895 122.516L85.956 122.516Z"
+                fill="white" fill-opacity="0.2" mask="url(#path-5-inside-1_323_197)" />
+            </g>
+            <defs>
+              <clipPath id="bgblur_0_323_197_clip_path" transform="translate(-84.0275 -184.027)">
+                <path
+                  d="M129.26 444C105.92 444 87 425.08 87 401.74L87 314.926C87 291.587 105.92 272.667 129.26 272.667L215.172 272.667C238.512 272.667 257.432 253.746 257.432 230.407V229.26C257.432 205.92 276.352 187 299.692 187H300.74C324.08 187 343 205.92 343 229.26L343 401.74C343 425.08 324.08 444 300.74 444L129.26 444Z" />
+              </clipPath>
+              <clipPath id="bgblur_1_323_197_clip_path" transform="translate(-252.129 -133.131)">
+                <rect x="343" y="393.002" width="86" height="255" rx="43" transform="rotate(-180 343 393.002)" />
+              </clipPath>
+              <clipPath id="bgblur_2_323_197_clip_path" transform="translate(7.09103 7.09103)">
+                <path
+                  d="M174.758 41.3818C174.758 18.5276 156.23 0.000261022 133.376 3.62402e-06L41.3847 1.16802e-05C18.5305 0.000242563 0.00304699 18.5275 0.00291166 41.3819C0.00291168 41.6134 0.00889314 41.8446 0.0126773 42.0752C0.00573462 42.3933 -1.79158e-05 42.7125 -1.78878e-05 43.0322L-3.75076e-06 205.023C-1.6793e-06 228.76 19.2414 248.002 42.9775 248.002C66.7137 248.002 85.9561 228.76 85.9561 205.023L85.956 122.516C85.956 100.562 103.754 82.7637 125.709 82.7637L133.375 82.7637C156.23 82.7637 174.758 64.2364 174.758 41.3818Z" />
+              </clipPath>
+              <linearGradient id="paint0_linear_323_197" x1="343" y1="315.5" x2="87" y2="315.5"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0.12" />
+                <stop offset="1" stop-color="#D7D7D7" />
+              </linearGradient>
+              <linearGradient id="paint1_linear_323_197" x1="433.401" y1="625.607" x2="347.379" y2="604.52"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="white" stop-opacity="0.2" />
+                <stop offset="1" stop-color="white" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+        </div>
+      </div>
+      <div class="container">
+        <ul class="program__list">
+          <li class="program__item">
+            программа и тайминг конференции появятся здесь чуть позже.
+          </li>
+          <li class="program__item">
+            готовим крутых спикеров и сессии — следите за обновлениями!
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <div class="faq-decor">
+          <div class="decor">
+            <svg width="1281" height="1058" viewBox="0 0 1281 1058" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <foreignObject x="720.075" y="350.075" width="578.1" height="421.35">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                  style="backdrop-filter:blur(8.96px);clip-path:url(#bgblur_0_315_193_clip_path);height:100%;width:100%">
+                </div>
+              </foreignObject>
+              <path data-figma-bg-blur-radius="17.925"
+                d="M834.375 368.375L1173 368.375C1232.03 368.375 1279.87 416.225 1279.87 475.25L1279.87 646.25C1279.87 705.275 1232.03 753.125 1173 753.125L1015.12 753.125C962.106 753.125 919.125 710.144 919.125 657.125L919.125 651.125C919.125 601.005 878.495 560.375 828.375 560.375C778.669 560.375 738.375 520.081 738.375 470.375L738.375 464.375C738.375 411.356 781.356 368.375 834.375 368.375Z"
+                fill="white" fill-opacity="0.27" stroke="url(#paint0_linear_315_193)" stroke-width="0.75" />
+              <foreignObject x="-44.775" y="128.225" width="270.3" height="589.55">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                  style="backdrop-filter:blur(22.39px);clip-path:url(#bgblur_1_315_193_clip_path);height:100%;width:100%">
+                </div>
+              </foreignObject>
+              <g data-figma-bg-blur-radius="44.775">
+                <mask id="path-2-inside-1_315_193" fill="white">
+                  <path
+                    d="M180.75 582.625C180.75 632.538 140.288 673 90.3751 673C40.4625 673 9.07787e-05 632.538 5.37158e-05 582.625L1.18513e-05 263.375C5.306e-06 213.462 40.4624 173 90.375 173C140.081 173 180.75 213.294 180.75 263L180.75 582.625Z" />
+                </mask>
+                <path
+                  d="M180.75 582.625C180.75 632.538 140.288 673 90.3751 673C40.4625 673 9.07787e-05 632.538 5.37158e-05 582.625L1.18513e-05 263.375C5.306e-06 213.462 40.4624 173 90.375 173C140.081 173 180.75 213.294 180.75 263L180.75 582.625Z"
+                  fill="#939393" fill-opacity="0.1" />
+                <path
+                  d="M180.75 582.625L181.5 582.625L180.75 582.625ZM90.3751 673L90.3751 673.75L90.3751 673ZM5.37158e-05 582.625L-0.749946 582.625L5.37158e-05 582.625ZM1.18513e-05 263.375L-0.749988 263.375L1.18513e-05 263.375ZM90.375 173L90.375 172.25L90.375 173ZM180.75 582.625L180 582.625C180 632.123 139.874 672.25 90.3751 672.25L90.3751 673L90.3751 673.75C140.702 673.75 181.5 632.952 181.5 582.625L180.75 582.625ZM90.3751 673L90.3751 672.25C40.8767 672.25 0.750091 632.123 0.750054 582.625L5.37158e-05 582.625L-0.749946 582.625C-0.749909 632.952 40.0483 673.75 90.3751 673.75L90.3751 673ZM5.37158e-05 582.625L0.750054 582.625L0.750012 263.375L1.18513e-05 263.375L-0.749988 263.375L-0.749946 582.625L5.37158e-05 582.625ZM1.18513e-05 263.375L0.750012 263.375C0.750005 213.877 40.8766 173.75 90.375 173.75L90.375 173L90.375 172.25C40.0482 172.25 -0.749995 213.048 -0.749988 263.375L1.18513e-05 263.375ZM180.75 263L180 263L180 582.625L180.75 582.625L181.5 582.625L181.5 263L180.75 263ZM90.375 173L90.375 173.75C139.67 173.75 180 213.713 180 263L180.75 263L181.5 263C181.5 212.876 140.491 172.25 90.375 172.25L90.375 173Z"
+                  fill="url(#paint1_linear_315_193)" mask="url(#path-2-inside-1_315_193)" />
+              </g>
+              <foreignObject x="-14.85" y="-14.85" width="438.7" height="392.95">
+                <div xmlns="http://www.w3.org/1999/xhtml"
+                  style="backdrop-filter:blur(7.43px);clip-path:url(#bgblur_2_315_193_clip_path);height:100%;width:100%">
+                </div>
+              </foreignObject>
+              <g data-figma-bg-blur-radius="14.85">
+                <mask id="path-4-inside-2_315_193" fill="white">
+                  <path
+                    d="M90.376 363.25C40.4633 363.25 0.00104113 322.788 0.000984463 272.875L0.00100035 91.167C0.000908801 91.1113 2.3796e-05 91.0556 2.38009e-05 91C2.38057e-05 90.9446 0.00090882 90.8893 0.00100038 90.8339L0.0010004 90.625C0.00100287 62.322 13.0124 37.0593 33.3789 20.4882C48.929 7.7034 68.7655 -2.97442e-05 90.375 -2.78551e-05L318.625 -7.90083e-06C368.538 2.69803e-05 409 41.0873 409 91C409 140.913 368.538 182 318.625 182L264.001 182C218.023 182 180.751 219.272 180.751 265.25L180.751 272.875C180.751 322.788 140.288 363.25 90.376 363.25Z" />
+                </mask>
+                <path
+                  d="M90.376 363.25C40.4633 363.25 0.00104113 322.788 0.000984463 272.875L0.00100035 91.167C0.000908801 91.1113 2.3796e-05 91.0556 2.38009e-05 91C2.38057e-05 90.9446 0.00090882 90.8893 0.00100038 90.8339L0.0010004 90.625C0.00100287 62.322 13.0124 37.0593 33.3789 20.4882C48.929 7.7034 68.7655 -2.97442e-05 90.375 -2.78551e-05L318.625 -7.90083e-06C368.538 2.69803e-05 409 41.0873 409 91C409 140.913 368.538 182 318.625 182L264.001 182C218.023 182 180.751 219.272 180.751 265.25L180.751 272.875C180.751 322.788 140.288 363.25 90.376 363.25Z"
+                  fill="#ADADAD" fill-opacity="0.1" />
+                <path
+                  d="M90.376 363.25L90.376 364L90.376 363.25ZM0.000984463 272.875L-0.749016 272.875L0.000984463 272.875ZM0.00100035 91.167L0.751 91.167L0.751 91.1656L0.00100035 91.167ZM2.38009e-05 91L-0.749976 91L2.38009e-05 91ZM0.00100038 90.8339L0.751 90.8353L0.751 90.8339L0.00100038 90.8339ZM33.3789 20.4882L33.8523 21.07L33.8553 21.0676L33.3789 20.4882ZM90.375 -2.78551e-05L90.375 -0.750028L90.375 -2.78551e-05ZM318.625 -7.90083e-06L318.625 -0.750008L318.625 -7.90083e-06ZM409 91L409.75 91L409 91ZM318.625 182L318.625 182.75L318.625 182ZM180.751 272.875L181.501 272.875L180.751 272.875ZM90.376 363.25L90.376 362.5C40.8775 362.5 0.751041 322.373 0.750984 272.875L0.000984463 272.875L-0.749016 272.875C-0.748959 323.202 40.0491 364 90.376 364L90.376 363.25ZM0.000984463 272.875L0.750984 272.875L0.751 91.167L0.00100035 91.167L-0.749 91.167L-0.749016 272.875L0.000984463 272.875ZM0.00100035 91.167L0.751 91.1656C0.750817 91.0726 0.750024 91.0782 0.750024 91L2.38009e-05 91L-0.749976 91C-0.749976 91.0331 -0.74903 91.15 -0.749 91.1683L0.00100035 91.167ZM2.38009e-05 91L0.750024 91C0.750024 90.9215 0.750817 90.9287 0.751 90.8353L0.00100038 90.8339L-0.749 90.8326C-0.74903 90.8498 -0.749976 90.9678 -0.749976 91L2.38009e-05 91ZM0.00100038 90.8339L0.751 90.8339L0.751 90.625L0.0010004 90.625L-0.749 90.625L-0.749 90.8339L0.00100038 90.8339ZM0.0010004 90.625L0.751 90.625C0.751003 62.5572 13.6533 37.5048 33.8523 21.07L33.3789 20.4882L32.9056 19.9065C12.3716 36.6138 -0.748997 62.0867 -0.749 90.625L0.0010004 90.625ZM33.3789 20.4882L33.8553 21.0676C49.2773 8.38788 68.9473 0.74997 90.375 0.749972L90.375 -2.78551e-05L90.375 -0.750028C68.5838 -0.75003 48.5805 7.01892 32.9026 19.9089L33.3789 20.4882ZM90.375 -2.78551e-05L90.375 0.749972L318.625 0.749992L318.625 -7.90083e-06L318.625 -0.750008L90.375 -0.750028L90.375 -2.78551e-05ZM318.625 -7.90083e-06L318.625 0.749992C368.117 0.750027 408.25 41.4948 408.25 91L409 91L409.75 91C409.75 40.6798 368.959 -0.749973 318.625 -0.750008L318.625 -7.90083e-06ZM409 91L408.25 91C408.25 140.505 368.117 181.25 318.625 181.25L318.625 182L318.625 182.75C368.959 182.75 409.75 141.32 409.75 91L409 91ZM318.625 182L318.625 181.25L264.001 181.25L264.001 182L264.001 182.75L318.625 182.75L318.625 182ZM180.751 265.25L180.001 265.25L180.001 272.875L180.751 272.875L181.501 272.875L181.501 265.25L180.751 265.25ZM180.751 272.875L180.001 272.875C180.001 322.373 139.874 362.5 90.376 362.5L90.376 363.25L90.376 364C140.703 364 181.501 323.202 181.501 272.875L180.751 272.875ZM264.001 182L264.001 181.25C217.609 181.25 180.001 218.858 180.001 265.25L180.751 265.25L181.501 265.25C181.501 219.686 218.438 182.75 264.001 182.75L264.001 182Z"
+                  fill="url(#paint2_linear_315_193)" mask="url(#path-4-inside-2_315_193)" />
+              </g>
+              <rect x="1279.62" y="877.374" width="180" height="734.25" rx="88.125"
+                transform="rotate(90 1279.62 877.374)" fill="black" fill-opacity="0.01" />
+              <rect x="1279.62" y="877.374" width="180" height="734.25" rx="88.125"
+                transform="rotate(90 1279.62 877.374)" stroke="url(#paint3_linear_315_193)" stroke-width="0.75" />
+              <rect x="897.126" y="881.124" width="180" height="171.75" rx="85.875" fill="#CCCCCC"
+                fill-opacity="0.47" />
+              <rect x="897.126" y="881.124" width="180" height="171.75" rx="85.875"
+                stroke="url(#paint4_linear_315_193)" stroke-width="0.75" />
+              <defs>
+                <clipPath id="bgblur_0_315_193_clip_path" transform="translate(-720.075 -350.075)">
+                  <path
+                    d="M834.375 368.375L1173 368.375C1232.03 368.375 1279.87 416.225 1279.87 475.25L1279.87 646.25C1279.87 705.275 1232.03 753.125 1173 753.125L1015.12 753.125C962.106 753.125 919.125 710.144 919.125 657.125L919.125 651.125C919.125 601.005 878.495 560.375 828.375 560.375C778.669 560.375 738.375 520.081 738.375 470.375L738.375 464.375C738.375 411.356 781.356 368.375 834.375 368.375Z" />
+                </clipPath>
+                <clipPath id="bgblur_1_315_193_clip_path" transform="translate(44.775 -128.225)">
+                  <path
+                    d="M180.75 582.625C180.75 632.538 140.288 673 90.3751 673C40.4625 673 9.07787e-05 632.538 5.37158e-05 582.625L1.18513e-05 263.375C5.306e-06 213.462 40.4624 173 90.375 173C140.081 173 180.75 213.294 180.75 263L180.75 582.625Z" />
+                </clipPath>
+                <clipPath id="bgblur_2_315_193_clip_path" transform="translate(14.85 14.85)">
+                  <path
+                    d="M90.376 363.25C40.4633 363.25 0.00104113 322.788 0.000984463 272.875L0.00100035 91.167C0.000908801 91.1113 2.3796e-05 91.0556 2.38009e-05 91C2.38057e-05 90.9446 0.00090882 90.8893 0.00100038 90.8339L0.0010004 90.625C0.00100287 62.322 13.0124 37.0593 33.3789 20.4882C48.929 7.7034 68.7655 -2.97442e-05 90.375 -2.78551e-05L318.625 -7.90083e-06C368.538 2.69803e-05 409 41.0873 409 91C409 140.913 368.538 182 318.625 182L264.001 182C218.023 182 180.751 219.272 180.751 265.25L180.751 272.875C180.751 322.788 140.288 363.25 90.376 363.25Z" />
+                </clipPath>
+                <linearGradient id="paint0_linear_315_193" x1="1009.12" y1="368" x2="1009.12" y2="753.5"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="white" stop-opacity="0.58" />
+                  <stop offset="1" stop-color="#C2C2C2" />
+                </linearGradient>
+                <linearGradient id="paint1_linear_315_193" x1="167.171" y1="215.531" x2="38.5736" y2="235.592"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="white" stop-opacity="0.55" />
+                  <stop offset="1" stop-color="#ECECEC" />
+                </linearGradient>
+                <linearGradient id="paint2_linear_315_193" x1="271.125" y1="363.25" x2="271.125" y2="0.250008"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#D4D4D4" />
+                  <stop offset="1" stop-color="white" stop-opacity="0.12" />
+                </linearGradient>
+                <linearGradient id="paint3_linear_315_193" x1="1370.37" y1="1612" x2="1370.37" y2="876.999"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="white" />
+                  <stop offset="1" stop-color="#D4D4D4" />
+                </linearGradient>
+                <linearGradient id="paint4_linear_315_193" x1="987.126" y1="1053.25" x2="987.126" y2="880.749"
+                  gradientUnits="userSpaceOnUse">
+                  <stop stop-color="white" />
+                  <stop offset="1" stop-color="#D4D4D4" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+        <h2 class="title">вопрос-ответ</h2>
+        <ul class="accordion">
+          <li class="accordion__item">
+            <button class="accordion__button" type="button">
+              когда и где пройдет конференция?
+              <div class="accordion__icon u-border-gradient">
+                <svg class="icon" aria-hidden="true">
+                  <use href="./assets/sprite.svg#open"></use>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion__content">
+              <p>встречаемся 29 октября в Connect, Москва, 5-й Донской проезд, 17. Регистрация гостей начинается в
+                13:00.</p>
+              <div class="map">
+                <iframe
+                  src="https://yandex.ru/map-widget/v1/?um=constructor%3A9a17ee61838df1f9c5881c788f89e0f47478f9447c986c55d677683cecd4d886&amp;source=constructor"
+                  width="100%" height="300" frameborder="0"></iframe>
+              </div>
+            </div>
+          </li>
+
+          <li class="accordion__item">
+            <button class="accordion__button" type="button">
+              будет ли онлайн-версия?
+              <div class="accordion__icon u-border-gradient">
+                <svg class="icon" aria-hidden="true">
+                  <use href="./assets/sprite.svg#open"></use>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion__content">
+              <p>мы поделимся материалами после, но для полного погружения будем ждать вас офлайн.</p>
+            </div>
+          </li>
+
+          <li class="accordion__item">
+            <button class="accordion__button" type="button">
+              сколько стоит участие?
+              <div class="accordion__icon u-border-gradient">
+                <svg class="icon" aria-hidden="true">
+                  <use href="./assets/sprite.svg#open"></use>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion__content">
+              <p>участие в конференции бесплатное, но обязательна регистрация — количество мест ограничено.</p>
+            </div>
+          </li>
+
+          <li class="accordion__item">
+            <button class="accordion__button" type="button">
+              предусмотрен ли дресс-код?
+              <div class="accordion__icon u-border-gradient">
+                <svg class="icon" aria-hidden="true">
+                  <use href="./assets/sprite.svg#open"></use>
+                </svg>
+              </div>
+            </button>
+            <div class="accordion__content">
+              <p>главное, чтобы вам было комфортно как участвовать в официальной части, так и веселиться на афтерпати.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="form">
+    <section class="footer__top">
+      <div class="container footer__top-container">
+        <h2 class="title">регистрация на мероприятие</h2>
+        <div class="footer__box">
+          <div>
+            <script src="https://forms.yandex.ru/_static/embed.js"></script><iframe src="https://forms.yandex.ru/u/68dabaca4936390da8709b21?iframe=1" frameborder="0" name="ya-form-68dabaca4936390da8709b21"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer__copyright">
+      <div class="container">
+        <div class="footer__copyright-inner">
+          <span class="footer__age">18+</span>
+          <span class="footer__year">© 2025</span>
+          <a href="https://yandex.ru/legal/confidential/" target="_blank" class="footer__privacy-policy">
+            Политика конфиденциальности
           </a>
         </div>
-      </section>
-    </footer>
-  </div>
+        <a class="telegram-button" href="https://t.me/UrbanAdsConf_bot" target="_blank" rel="noopener noreferrer">
+          <svg class="icon" aria-hidden="true">
+            <use href="./assets/sprite.svg#telegram"></use>
+          </svg>
+          Telegram бот с информацией о конференции
+        </a>
+      </div>
+    </section>
+  </footer>
 
   <script src="./scripts/gsap.min.js"></script>
   <script src="./scripts/ScrollTrigger.min.js"></script>
-  <script src="./scripts/scripts.min.js"></script>
+  <script src="./scripts/swiper-bundle.min.js"></script>
+  <script src="./scripts/scripts.js"></script>
 </body>
 
 </html>
