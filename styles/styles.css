@@ -2162,6 +2162,7 @@ br.predlog {
   .what-else__item {
     padding: 12px;
     border-radius: 40px;
+    transition: transform var(--bs-transition);
   }
 
   @media (hover: hover) {
