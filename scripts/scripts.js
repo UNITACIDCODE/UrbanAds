@@ -32,7 +32,7 @@ class AnimationsManager {
   }
 
   isMobile() {
-    return window.innerWidth <= 768
+    return window.innerWidth < 820
   }
 
   safeQuerySelectorAll(selector, context = document) {
@@ -46,11 +46,13 @@ class AnimationsManager {
   initAllAnimations() {
     this.killAllAnimations()
     
-    this.initHeroAnimation()
+    if (!this.isMobile()) {
+      this.initHeroAnimation()
+      this.initDecorAnimations()
+    }
+    
     this.initMarquee()
     this.initAccordion()
-    
-    !this.isMobile() && this.initDecorAnimations()
     
     setTimeout(() => ScrollTrigger.refresh(), 100)
   }
@@ -123,7 +125,7 @@ class AnimationsManager {
     const sections = [
       { selector: ".hero-decor *", type: "disappear", start: "center 6%" },
       { selector: ".for-whom-decor .decor *", type: "disappear", start: "center 42%" },
-      { selector: ".program-decor .decor", type: "disappear", start: "center 30%" },
+      { selector: ".program-decor .decor *", type: "disappear", start: "center 30%" },
       { selector: ".faq-decor .decor", type: "appear", start: "top top" }
     ]
 
