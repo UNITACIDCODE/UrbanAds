@@ -324,8 +324,8 @@ const initSpeakersSlider = () => {
       }
     })
   }, { 
-    threshold: 0.3,
-    rootMargin: '0px'
+    threshold: 0.1,
+    rootMargin: '250px'
   })
 
   observer.observe(speakersEl)
