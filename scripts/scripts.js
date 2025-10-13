@@ -4,6 +4,7 @@ class AnimationsManager {
   constructor() {
     this.isInitialized = false
     this.previousWidth = window.innerWidth
+    this.rafId = null
     this.init()
   }
 
@@ -19,15 +20,18 @@ class AnimationsManager {
   }
 
   setupEventListeners() {
-    window.addEventListener('resize', () => this.handleResize())
+    let resizeTimer
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer)
+      resizeTimer = setTimeout(() => this.handleResize(), 150)
+    }, { passive: true })
   }
 
   handleResize() {
-    ScrollTrigger.refresh()
-    
-    if (this.previousWidth !== window.innerWidth) {
-      setTimeout(() => ScrollTrigger.refresh(), 300)
-      this.previousWidth = window.innerWidth
+    const currentWidth = window.innerWidth
+    if (this.previousWidth !== currentWidth) {
+      ScrollTrigger.refresh()
+      this.previousWidth = currentWidth
     }
   }
 
@@ -37,7 +41,7 @@ class AnimationsManager {
 
   safeQuerySelectorAll(selector, context = document) {
     try {
-      return context.querySelectorAll(selector)
+      return Array.from(context.querySelectorAll(selector))
     } catch {
       return []
     }
@@ -54,10 +58,16 @@ class AnimationsManager {
     this.initMarquee()
     this.initAccordion()
     
-    setTimeout(() => ScrollTrigger.refresh(), 100)
+    requestAnimationFrame(() => {
+      setTimeout(() => ScrollTrigger.refresh(), 100)
+    })
   }
 
   killAllAnimations() {
+    if (this.rafId) {
+      cancelAnimationFrame(this.rafId)
+      this.rafId = null
+    }
     ScrollTrigger.getAll().forEach(t => t.kill())
   }
 
@@ -74,12 +84,16 @@ class AnimationsManager {
 
     elements.forEach(({ selector, position, ...props }) => {
       const els = this.safeQuerySelectorAll(selector)
-      els.length && tl.from(els, {
-        duration: 0.8,
-        opacity: 0,
-        ease: "back.out(1.7)",
-        ...props
-      }, position)
+      if (els.length) {
+        tl.from(els, {
+          duration: 0.8,
+          opacity: 0,
+          ease: "back.out(1.7)",
+          ...props,
+          force3D: true,
+          willChange: "transform, opacity"
+        }, position)
+      }
     })
   }
 
@@ -126,12 +140,14 @@ class AnimationsManager {
       { selector: ".hero-decor *", type: "disappear", start: "center 6%" },
       { selector: ".for-whom-decor .decor *", type: "disappear", start: "center 42%" },
       { selector: ".program-decor .decor *", type: "disappear", start: "center 30%" },
-      { selector: ".faq-decor .decor", type: "appear", start: "top top" }
+      { selector: ".faq-decor .decor *", type: "appear", start: "top top" }
     ]
 
     sections.forEach(({ selector, type, start }) => {
       const els = this.safeQuerySelectorAll(selector)
-      els.length && this.animateDecorElements(els, type, start)
+      if (els.length) {
+        this.animateDecorElements(els, type, start)
+      }
     })
   }
 
@@ -156,12 +172,14 @@ class AnimationsManager {
         opacity: 0,
         filter: "blur(8px)",
         ease: "power3.out",
+        force3D: true,
         scrollTrigger: {
           trigger: el,
           start,
           end: "bottom 20%",
           scrub: 2,
-          toggleActions: "play none none reverse"
+          toggleActions: "play none none reverse",
+          invalidateOnRefresh: true
         },
         delay: i * 0.025
       }
@@ -179,11 +197,13 @@ class AnimationsManager {
         opacity: 1,
         filter: "blur(0px)",
         ease: "power2.out",
+        force3D: true,
         scrollTrigger: {
           trigger: el,
           start: "top 80%",
           end: "top 30%",
-          scrub: 1.5
+          scrub: 1.5,
+          invalidateOnRefresh: true
         },
         delay: i * 0.05
       }
@@ -204,8 +224,9 @@ class AnimationsManager {
     const animate = () => {
       pos += speed
       if (pos >= 0) pos = -totalWidth
-      wrapper.style.transform = `translateX(${pos}px)`
-      requestAnimationFrame(animate)
+      
+      wrapper.style.transform = `translate3d(${pos}px, 0, 0)`
+      this.rafId = requestAnimationFrame(animate)
     }
 
     animate()
@@ -220,10 +241,11 @@ class AnimationsManager {
       
       if (!btn || !content) return
 
-      gsap.set(content, item.classList.contains('is-open') 
-        ? { height: 'auto', overflow: 'visible' }
-        : { height: 0, overflow: 'hidden' }
-      )
+      const isOpen = item.classList.contains('is-open')
+      gsap.set(content, {
+        height: isOpen ? 'auto' : 0,
+        overflow: isOpen ? 'visible' : 'hidden'
+      })
 
       btn.addEventListener('click', () => this.handleAccordionClick(item, content, items))
     })
@@ -237,25 +259,34 @@ class AnimationsManager {
       
       item.classList.remove('is-open')
       const c = item.querySelector('.accordion__content')
-      c && gsap.to(c, {
-        height: 0,
-        duration: 0.4,
-        ease: "power2.inOut",
-        onComplete: () => c.style.overflow = 'hidden'
-      })
+      if (c) {
+        gsap.to(c, {
+          height: 0,
+          duration: 0.4,
+          ease: "power2.inOut",
+          onComplete: () => {
+            c.style.overflow = 'hidden'
+          }
+        })
+      }
     })
 
     if (!isOpen) {
       clicked.classList.add('is-open')
+      
+      content.style.height = 'auto'
       content.style.overflow = 'visible'
-      const h = content.scrollHeight + 20
+      const targetHeight = content.scrollHeight + 20
+      content.style.height = '0px'
       content.style.overflow = 'hidden'
       
       gsap.to(content, {
-        height: h,
+        height: targetHeight,
         duration: 0.4,
         ease: "power2.out",
-        onComplete: () => content.style.overflow = 'visible'
+        onComplete: () => {
+          content.style.overflow = 'visible'
+        }
       })
     }
   }
@@ -263,18 +294,45 @@ class AnimationsManager {
 
 const animationsManager = new AnimationsManager()
 
-const speakers = new Swiper('.speakers .swiper', {
-  direction: 'horizontal',
-  speed: 800,
-  spaceBetween: 16,
-  slidesPerView: 'auto',
+const initSpeakersSlider = () => {
+  const speakersEl = document.querySelector('.speakers')
+  if (!speakersEl) return
 
-  breakpoints: {
-    0: {
-      spaceBetween: 12,
+  const speakers = new Swiper('.speakers .swiper', {
+    direction: 'horizontal',
+    speed: 800,
+    spaceBetween: 16,
+    slidesPerView: 'auto',
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
     },
-    768: {
-      spaceBetween: 16,
+    breakpoints: {
+      0: { spaceBetween: 12 },
+      768: { spaceBetween: 16 },
     },
-  },
-});
+  })
+
+  speakers.autoplay.stop()
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        speakers.autoplay.start()
+      } else {
+        speakers.autoplay.stop()
+      }
+    })
+  }, { 
+    threshold: 0.3,
+    rootMargin: '0px'
+  })
+
+  observer.observe(speakersEl)
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initSpeakersSlider)
+} else {
+  initSpeakersSlider()
+}

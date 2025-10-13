@@ -1079,6 +1079,14 @@ br.predlog {
   flex-shrink: 0;
   width: 27px;
   height: 27px;
+  background-image: url('../assets/arrow-program.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.program__item.--invert .program__item-time .icon  {
+  background-image: url('../assets/arrow-program-invert.png');
 }
 
 .program__item-text {
@@ -1220,10 +1228,6 @@ br.predlog {
   opacity: 0.8;
 }
 
-.directions {
-  padding-top: 80px;
-}
-
 .directions .container {
   display: flex;
   flex-direction: column;
@@ -1324,7 +1328,8 @@ br.predlog {
 }
 
 .faq {
-  padding-top: 80px;
+  padding-block: 80px;
+  overflow-y: hidden;
 }
 
 .faq-decor {
@@ -1736,10 +1741,6 @@ br.predlog {
     font-size: 16px;
   }
 
-  .directions {
-    padding-top: 100px;
-  }
-
   .directions__box-inner .icon {
     width: 24px;
     height: 24px;
@@ -2022,6 +2023,11 @@ br.predlog {
     font-size: 30px;
   }
 
+  .program__item-text,
+  .program__speaker-description {
+    max-width: 100%;
+  }
+
   .what-else {
     padding-block: 100px;
   }
@@ -2299,10 +2305,6 @@ br.predlog {
     font-size: 18px;
   }
 
-  .directions {
-    padding-top: 135px;
-  }
-
   .faq-decor {
     display: block;
     top: 220px;
@@ -2348,7 +2350,6 @@ br.predlog {
   }
 
   .faq .container {
-    padding-top: 135px;
     gap: 64px;
   }
 
