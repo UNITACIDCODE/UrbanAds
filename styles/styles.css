@@ -1973,6 +1973,10 @@ br.predlog {
     padding: 34px 20px;
   }
 
+  .program__speaker {
+    flex-shrink: 0;
+  }
+
   .program__speaker-list {
     margin-left: auto;
     gap: 24px;
@@ -1987,6 +1991,7 @@ br.predlog {
     flex-direction: column;
     gap: 6px;
     width: 218px;
+    flex-shrink: 0;
   }
 
   .program__speaker-avatar {
