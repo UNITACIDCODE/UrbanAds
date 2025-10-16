@@ -1279,8 +1279,11 @@ br.predlog {
 
 .directions__box {
   position: relative;
-  min-width: 322px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   padding: 4px;
+  min-width: 322px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(20px);
@@ -2074,9 +2077,26 @@ br.predlog {
     flex-grow: 1;
     margin-top: unset;
   }
+
+  .directions__box {
+    width: 298px;
+    padding: 12px;
+    border-radius: 40px;
+  }
+
+  .directions__box-inner {
+    border-radius: 30px;
+  }
+
+  .directions__box-inner .icon {
+    width: 28px;
+    height: 27px;
+  }
   
   .directions__box-text {
-    font-size: 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
   }
 
   .accordion {
