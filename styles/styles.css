@@ -1002,6 +1002,10 @@ br.predlog {
   color: var(--color-neutral-950);
 }
 
+.speakers__item-description strong {
+  font-weight: 500;
+}
+
 .program-decor {
   display: none;
 }
@@ -1123,11 +1127,15 @@ br.predlog {
 }
 
 .program__speaker-name {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .program__speaker-description {
-  color: #292B31CC;
+  color: rgba(41, 43, 49, 0.8);
+}
+
+.program__speaker-description strong {
+  font-weight: 500;
 }
 
 .program__title {
