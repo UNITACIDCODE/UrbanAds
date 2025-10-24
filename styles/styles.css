@@ -1537,6 +1537,19 @@ br.predlog {
   text-decoration: underline;
 }
 
+.closed {
+  background-color: #292B31;
+}
+
+.closed .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 80px;
+}
+
+
 @media (hover:hover) {
   .footer__privacy-policy:hover {
     text-decoration: none;
@@ -1822,6 +1835,11 @@ br.predlog {
 @media (min-width:1024px) {
   .button--primary {
     font-size: 21px;
+  }
+
+  .closed .container {
+    padding-top: 0;
+    padding-bottom: 135px;
   }
 
   .header {
@@ -2376,6 +2394,8 @@ br.predlog {
   .button--primary {
     padding: 10px 30px;
     font-size: 21px;
+    opacity: 0.5;
+    pointer-events: none;
   }
 
   .button--light span {
