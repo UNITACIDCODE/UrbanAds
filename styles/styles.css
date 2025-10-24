@@ -135,6 +135,9 @@ body {
   .container {
     max-width: calc(1024px + var(--bs-container) * 2);
   }
+
+
+
 }
 
 @media (min-width:1280px) {
@@ -153,6 +156,10 @@ br {
 
 br.display {
   display: unset;
+}
+
+  .directions {
+  padding-top: 80px;
 }
 
 .hidden-640 {
@@ -1236,6 +1243,8 @@ br.predlog {
   opacity: 0.8;
 }
 
+
+
 .directions .container {
   display: flex;
   flex-direction: column;
@@ -1841,6 +1850,10 @@ br.predlog {
     padding-top: 0;
     padding-bottom: 135px;
   }
+
+  .directions {
+    padding-top: 135px;
+  } 
 
   .header {
     top: 20px;
