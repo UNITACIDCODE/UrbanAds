@@ -1820,7 +1820,7 @@ br.predlog {
 
   .footer__copyright .container {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: end;
   }
 
   .telegram-button {
