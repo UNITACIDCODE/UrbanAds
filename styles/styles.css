@@ -1634,8 +1634,7 @@ br.predlog {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 80px;
 }
 
 
@@ -1927,8 +1926,8 @@ br.predlog {
   }
 
   .closed .container {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 80px;
+    padding-bottom: 0;
   }
 
 
