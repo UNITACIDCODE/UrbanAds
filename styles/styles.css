@@ -1249,14 +1249,21 @@ br.predlog {
   opacity: 0.8;
 }
 
+.closed-bg {
+    border-radius: 20px;
+    background-color: #292B31;
+}
+
 .closed__box {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     padding: 4px;
     width: 100%;
+    min-height: 145px;
     border-radius: 20px;
     background: linear-gradient(5.39deg, rgba(255, 255, 255, 0.07) 29.89%, rgba(126, 133, 151, 0.07) 108.33%);
     backdrop-filter: blur(20px);
@@ -1619,7 +1626,7 @@ br.predlog {
   text-decoration: underline;
 }
 
-.closed {
+.closed-bg {
   background-color: #292B31;
 }
 
@@ -1627,7 +1634,7 @@ br.predlog {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 20px;
   padding-bottom: 20px;
 }
 
@@ -1920,9 +1927,11 @@ br.predlog {
   }
 
   .closed .container {
-    padding-top: 135px;
+    padding-top: 40px;
     padding-bottom: 40px;
   }
+
+
 
     .closed__box {
         padding: 8px;
@@ -2460,6 +2469,10 @@ br.predlog {
 
   .what-else__box-description {
     font-size: 18px;
+  }
+
+  .closed-bg {
+    border-radius: 40px;
   }
 
     .closed__box {
